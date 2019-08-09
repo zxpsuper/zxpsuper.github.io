@@ -1,144 +1,60 @@
-
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gridea</title>
-<meta name="description" content="温故而知新">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1565338045588">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1565323096035">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zxpsuper.github.io/styles/main.css">
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://zxpsuper.github.io">
-        <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1565323096035" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://zxpsuper.github.io">
-        <h1 class="site-title">Gridea</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zxpsuper.github.io">
+  <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1565338045588" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
   </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
-        
-        
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/event-loop">
-        <h2 class="post-title">浏览器 Event Loop 机制</h2>
-      </a>
-      <div class="post-abstract">
-        
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-09</span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/hello-gridea">
-        <h2 class="post-title">Hello Gridea</h2>
-      </a>
-      <div class="post-abstract">
-        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2018-12-12</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/4qSHM77eT">
-                Gridea
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://zxpsuper.github.io/post/hello-gridea">
-        <div class="feature-container" style="background-image: url('https://zxpsuper.github.io/post-images/hello-gridea.png')">
-        </div>
-      </a>
-    
-  </section>
-
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
-
-      <div class="site-footer">
-  <div class="slogan">温故而知新</div>
   <div class="social-container">
     
       
@@ -152,26 +68,128 @@
       
     
   </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://zxpsuper.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
+    
+        <div class="post-container">
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/event-loop">
+        <h2 class="post-title">浏览器 Event Loop 机制</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-09 11:44:21
+        </span>
+        <span>
+          2 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/KgIUl6sd4" class="post-tag">
+            # javascript
+          </a>
+        
+          <a href="https://zxpsuper.github.io/tag/btc2dZ7uSS" class="post-tag">
+            # event loop
+          </a>
+        
+      </div>
+      
+        <a href="https://zxpsuper.github.io/post/event-loop" class="post-feature-image" style="background-image: url('https://user-gold-cdn.xitu.io/2019/1/15/168506e429d954a9?imageView2/1/w/1304/h/734/q/85/format/webp/interlace/1')">
+        </a>
+      
+      <div class="post-abstract">
+        <h2 id="1-event-loop是什么">1. Event Loop是什么</h2>
+<p>event loop是一个执行模型，在不同的地方有不同的实现。浏览器和NodeJS基于不同的技术实现了各自的Event Loop。</p>
 
-    </div>
-    <script type="application/javascript">
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/hello-gridea">
+        <h2 class="post-title">Hello Gridea</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2018-12-12 12:00:00
+        </span>
+        <span>
+          1 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/4qSHM77eT" class="post-tag">
+            # Gridea
+          </a>
+        
+      </div>
+      
+        <a href="https://zxpsuper.github.io/post/hello-gridea" class="post-feature-image" style="background-image: url('https://zxpsuper.github.io/post-images/hello-gridea.png')">
+        </a>
+      
+      <div class="post-abstract">
+        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
-hljs.initHighlightingOnLoad()
+      </di>
+    </article>
+  
+</div>
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+    
+        <div class="pagination-container">
+  
+  
+</div>
+
+    
+        <div class="site-footer">
+  Powered by <a href="https://github.com/zxpsuper" target="_blank">suporka</a> | 
+  <a class="rss" href="https://zxpsuper.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      console.log('section.offsetHeight', section.offsetHeight);
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
 
 </script>
 
-
-
-
+      </div>
+    </div>
   </body>
 </html>

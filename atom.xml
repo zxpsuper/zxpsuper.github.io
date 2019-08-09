@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxpsuper.github.io</id>
     <title>Gridea</title>
-    <updated>2019-08-09T05:44:35.806Z</updated>
+    <updated>2019-08-09T08:07:28.577Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zxpsuper.github.io"/>
     <link rel="self" href="https://zxpsuper.github.io/atom.xml"/>
@@ -16,8 +16,12 @@
         <link href="https://zxpsuper.github.io/post/event-loop">
         </link>
         <updated>2019-08-09T03:44:21.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="1-event-loop是什么">1. Event Loop是什么</h2>
+<p>event loop是一个执行模型，在不同的地方有不同的实现。浏览器和NodeJS基于不同的技术实现了各自的Event Loop。</p>
+]]></summary>
         <content type="html"><![CDATA[<h2 id="1-event-loop是什么">1. Event Loop是什么</h2>
 <p>event loop是一个执行模型，在不同的地方有不同的实现。浏览器和NodeJS基于不同的技术实现了各自的Event Loop。</p>
+<!-- more -->
 <h2 id="2-宏队列和微队列">2. 宏队列和微队列</h2>
 <p><strong>宏队列，macrotask，也叫tasks。</strong> 一些异步任务的回调会依次进入macro task queue，等待后续被调用，这些异步任务包括：</p>
 <ul>
