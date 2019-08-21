@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>手动实现 call、apply、bind | 小皮咖</title>
+<title>手动实现一个 EvenEmitter | 小皮咖</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,9 +86,9 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">手动实现 call、apply、bind</h2>
+          <h2 class="post-title">手动实现一个 EvenEmitter</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-08-21 05:47:34</span>
+            <span><i class="icon-calendar-outline"></i> 2019-08-21 05:52:02</span>
             
               <span>
                 <i class="icon-pricetags-outline"></i>
@@ -102,61 +102,125 @@
             
           </div>
           <div class="post-content">
-            <p>改变 <code>this</code> 的指向，就是将函数<code>fn</code>放入传入的<code>context</code>中，然后执行<code>context[fn]()</code>,此时的<code>fn</code>中的<code>this</code>就变成了<code>context</code>，在函数执行完毕之后，需删除<code>context</code>中的<code>fn</code></p>
+            <p>原理:</p>
+<p><code>EvenEmitter</code> 的原理便是发布订阅者模式。</p>
+<ul>
+<li>
+<p>用户订阅一个事件并将执行函数交给 <code>EvenEmiter</code>, <code>EvenEmitter</code>注册此事件类型，并将执行函数存入该类型事件的数组中。</p>
+</li>
+<li>
+<p>一旦用户发布事件及参数，<code>EvenEmitter</code>便会找到该类型事件的数组，并逐一执行数组内的函数</p>
+</li>
+</ul>
 <!-- more -->
-<h2 id="call">call</h2>
-<ol>
-<li>判断当前 <code>this</code> 是否为函数，防止 <code>Function.prototype.myCall()</code> 直接调用</li>
-<li><code>context</code> 为可选参数，如果不传的话默认上下文为 <code>window</code></li>
-<li>为 <code>context</code> 创建一个 <code>Symbol</code>（保证不会重名）属性，将当前函数赋值给这个属性</li>
-<li>处理参数，传入第一个参数后的其余参数</li>
-<li>调用函数后即删除该 <code>Symbol</code> 属性</li>
-</ol>
-<pre><code class="language-js">Function.prototype.myCall = function(context = window, ...args) {
-    if (this === Function.prototype) {
-        return undefined; // 用于防止 Function.prototype.myCall() 直接调用
-    }
-    context = context || window;
-    const fn = Symbol();
-    context[fn] = this;
-    const result = context[fn](...args);
-    delete context[fn];
-    return result;
+<p>接下来我们来实现一个简单版和一个高级版。</p>
+<h2 id="简单版本">简单版本</h2>
+<pre><code class="language-js">// 发布订阅者模式
+var EvenEmitter = function() {
+    this.obj = {};
 };
-</code></pre>
-<h2 id="apply">apply</h2>
-<p><code>apply</code> 实现类似 <code>call</code>，参数为数组</p>
-<pre><code class="language-js">Function.prototype.myApply = function(context = window, args) {
-    if (this === Function.prototype) {
-        return undefined; // 用于防止 Function.prototype.myCall() 直接调用
+
+EvenEmitter.prototype.on = function(eventType, fn) {
+    if (!this.obj[eventType]) {
+        this.obj[eventType] = [];
     }
-    const fn = Symbol();
-    context[fn] = this;
-    let result;
-    if (Array.isArray(args)) {
-        result = context[fn](...args);
-    } else {
-        result = context[fn]();
-    }
-    delete context[fn];
-    return result;
+    this.obj[eventType].push(fn);
 };
-</code></pre>
-<h2 id="bind">bind</h2>
-<p>因为 <code>bind()</code> 返回一个方法需手动执行，因此利用闭包实现。</p>
-<pre><code class="language-js">Function.prototype.myBind = function(context, ...args1) {
-    if (this === Function.prototype) {
-        throw new TypeError('Error');
+
+EvenEmitter.prototype.emit = function(...arguments) {
+    // arguments是类数组对象，不可直接使用数组方法，下面使arguments使用shift方法
+    var eventType = Array.prototype.shift.call(arguments);
+
+    var arr = this.obj[eventType];
+    for (let i = 0; i &lt; arr.length; i++) {
+        // arguments上一步骤已经去除了第一个元素，剩下后面的元素,调用所对应的方法
+        arr[i].apply(arr[i], arguments);
     }
-    const _this = this;
-    return function F(...args2) {
-        // 判断是否用于构造函数
-        if (this instanceof F) {
-            return new _this(...args1, ...args2);
+};
+
+var ev = new EvenEmitter();
+
+ev.on('click', function(a) {
+    // 订阅函数
+    console.log(a); // 1
+});
+
+ev.emit('click', 888); // 发布函数
+</code></pre>
+<h2 id="高级版本">高级版本</h2>
+<pre><code class="language-js">// 高级版本，实现remove once等功能
+function EventEmitter() {
+    this._events = Object.create(null);
+}
+
+// 向事件队列添加事件
+// prepend为true表示向事件队列头部添加事件
+EventEmitter.prototype.addListener = function(type, listener, prepend) {
+    if (!this._events) {
+        this._events = Object.create(null);
+    }
+    if (this._events[type]) {
+        if (prepend) {
+            this._events[type].unshift(listener);
+        } else {
+            this._events[type].push(listener);
         }
-        return _this.apply(context, args1.concat(args2));
-    };
+    } else {
+        this._events[type] = [listener];
+    }
 };
+
+// 移除某个事件
+EventEmitter.prototype.removeListener = function(type, listener) {
+    if (Array.isArray(this._events[type])) {
+        if (!listener) {
+            delete this._events[type];
+        } else {
+            this._events[type] = this._events[type].filter(
+                e =&gt; e !== listener &amp;&amp; e.origin !== listener
+            );
+        }
+    }
+};
+
+// 向事件队列添加事件，只执行一次
+EventEmitter.prototype.once = function(type, listener) {
+    const only = (...args) =&gt; {
+        // 这里的args是 emit 时用apply传入的
+        listener.apply(this, args);
+        this.removeListener(type, listener);
+    };
+    only.origin = listener;
+    this.addListener(type, only);
+};
+
+// 执行某类事件
+EventEmitter.prototype.emit = function(type, ...args) {
+    if (Array.isArray(this._events[type])) {
+        this._events[type].forEach(fn =&gt; {
+            fn.apply(this, args);
+        });
+    }
+};
+
+var emitter = new EventEmitter();
+
+var onceListener = function(args) {
+    console.log('我只能被执行一次', args, this);
+};
+
+var listener = function(args) {
+    console.log('我是一个listener', args, this);
+};
+
+emitter.once('click', onceListener);
+emitter.addListener('click', listener);
+
+emitter.emit('click', '参数');
+emitter.emit('click');
+
+emitter.removeListener('click', listener);
+emitter.emit('click');
 </code></pre>
 
           </div>
@@ -164,9 +228,9 @@
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu">
+            <a class="purple-link" href="https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind">
               <h3 class="post-title">
-                下一篇：函数的防抖与节流
+                下一篇：手动实现 call、apply、bind
               </h3>
             </a>
           </div>

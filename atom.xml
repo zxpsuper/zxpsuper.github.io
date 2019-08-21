@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxpsuper.github.io</id>
     <title>小皮咖</title>
-    <updated>2019-08-21T09:48:12.174Z</updated>
+    <updated>2019-08-21T09:57:50.602Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zxpsuper.github.io"/>
     <link rel="self" href="https://zxpsuper.github.io/atom.xml"/>
@@ -10,6 +10,667 @@
     <logo>https://zxpsuper.github.io/images/avatar.png</logo>
     <icon>https://zxpsuper.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 小皮咖</rights>
+    <entry>
+        <title type="html"><![CDATA[手动实现 promise]]></title>
+        <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-promise</id>
+        <link href="https://zxpsuper.github.io/post/shou-dong-shi-xian-promise">
+        </link>
+        <updated>2019-08-21T09:56:33.000Z</updated>
+        <summary type="html"><![CDATA[<p><code>promise</code>  提供了异步操作的解决方案，本文带你一步步实现一个 <code>promise</code>.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><code>promise</code>  提供了异步操作的解决方案，本文带你一步步实现一个 <code>promise</code>.</p>
+<!-- more -->
+<h2 id="基础版本">基础版本</h2>
+<ul>
+<li>设定三个状态 <code>pending、fulfilled、rejected</code> ，只能由 <code>pending</code> 改变为 <code>fulfilled、rejected</code>，并且只能改变一次</li>
+<li>MyPromise 接收一个函数 <code>executor</code>，<code>executor</code> 有两个参数 <code>resolve</code> 方法和 <code>reject</code> 方法</li>
+<li><code>resolve</code> 将 <code>PENDING</code> 改变为 <code>fulfilled</code></li>
+<li><code>reject</code> 将 <code>PENDING</code> 改变为 <code>fulfilled</code></li>
+<li><code>promise</code> 变为 <code>fulfilled</code> 状态后具有一个唯一的 <code>value</code></li>
+<li>promise 变为 <code>rejected</code> 状态后具有一个唯一的 <code>reason</code></li>
+</ul>
+<pre><code class="language-js">function MyPromise(executor) {
+    this.state = PENDING;
+    this.value = null;
+    this.reason = null;
+
+    const resolve = value =&gt; {
+        if (this.state === PENDING) {
+            this.state = FULFILLED;
+            this.value = value;
+        }
+    };
+
+    const reject = reason =&gt; {
+        if (this.state === PENDING) {
+            this.state = REJECTED;
+            this.reason = reason;
+        }
+    };
+
+    try {
+        executor(resolve, reject);
+    } catch (reason) {
+        reject(reason);
+    }
+}
+</code></pre>
+<h2 id="then-方法">then 方法</h2>
+<ul>
+<li>then 方法接受两个参数 <code>onFulfilled、onRejected</code>，它们分别在状态由 <code>PENDING</code>改变为 <code>FULFILLED、REJECTED</code> 后调用</li>
+<li>一个 <code>promise</code> 可绑定多个 <code>then</code> 方法</li>
+<li><code>then</code> 方法可以同步调用也可以异步调用</li>
+<li>同步调用：状态已经改变，直接调用 <code>onFulfilled</code> 方法</li>
+<li>异步调用：状态还是 <code>PENDING</code>，将 <code>onFulfilled、onRejected</code> 分别加入两个函数数组 <code>onFulfilledCallbacks、onRejectedCallbacks</code>，当异步调用 <code>resolve</code> 和<code>reject</code> 时，将两个数组中绑定的事件循环执行。</li>
+</ul>
+<pre><code class="language-js">// 虽然resolve是同步执行的，我们必须保证then是异步调用的，我们用settimeout来模拟异步调用（并不能实现微任务和宏任务的执行机制，只是保证异步调用）
+MyPromise.prototype.then = function(onFulfilled, onRejected) {
+    if (typeof onFulfilled != 'function') {
+        onFulfilled = function(value) {
+            return value;
+        };
+    }
+    if (typeof onRejected != 'function') {
+        onRejected = function(reason) {
+            throw reason;
+        };
+    }
+    switch (this.state) {
+        case FULFILLED:
+            setTimeout(() =&gt; {
+                onFulfilled(this.value);
+            }, 0);
+            break;
+        case REJECTED:
+            setTimeout(() =&gt; {
+                onRejected(this.reason);
+            }, 0);
+            break;
+        case PENDING:
+            this.onFulfilledCallbacks.push(() =&gt; {
+                setTimeout(() =&gt; {
+                    onFulfilled(this.value);
+                }, 0);
+            });
+            this.onRejectedCallbacks.push(() =&gt; {
+                setTimeout(() =&gt; {
+                    onRejected(this.reason);
+                }, 0);
+            });
+            break;
+    }
+};
+</code></pre>
+<h2 id="then-方法链式调用">then 方法链式调用</h2>
+<p>保证链式调用，即 <code>then</code> 方法中要返回一个新的 <code>promise</code>，并将 <code>then</code> 方法的返回值进行 <code>resolve</code>。</p>
+<pre><code class="language-js">MyPromise.prototype.then = function(onFulfilled, onRejected) {
+    if (typeof onFulfilled != 'function') {
+        onFulfilled = function(value) {
+            return value;
+        };
+    }
+    if (typeof onRejected != 'function') {
+        onRejected = function(reason) {
+            throw reason;
+        };
+    }
+    const promise2 = new MyPromise((resolve, reject) =&gt; {
+        switch (this.state) {
+            case FULFILLED:
+                setTimeout(() =&gt; {
+                    try {
+                        const x = onFulfilled(this.value);
+                        resolve(x);
+                    } catch (reason) {
+                        reject(reason);
+                    }
+                }, 0);
+                break;
+            case REJECTED:
+                setTimeout(() =&gt; {
+                    try {
+                        const x = onRejected(this.reason);
+                        resolve(x);
+                    } catch (reason) {
+                        reject(reason);
+                    }
+                }, 0);
+                break;
+            case PENDING:
+                this.onFulfilledCallbacks.push(() =&gt; {
+                    setTimeout(() =&gt; {
+                        try {
+                            const x = onFulfilled(this.value);
+                            resolve(x);
+                        } catch (reason) {
+                            reject(reason);
+                        }
+                    }, 0);
+                });
+                this.onRejectedCallbacks.push(() =&gt; {
+                    setTimeout(() =&gt; {
+                        try {
+                            const x = onRejected(this.reason);
+                            resolve(x);
+                        } catch (reason) {
+                            reject(reason);
+                        }
+                    }, 0);
+                });
+                break;
+        }
+    });
+    return promise2;
+};
+</code></pre>
+<h2 id="catch-方法">catch 方法</h2>
+<p>若上面没有定义 <code>reject</code> 方法，所有的异常会走向 <code>catch</code> 方法：</p>
+<pre><code class="language-js">MyPromise.prototype.catch = function(onRejected) {
+    return this.then(null, onRejected);
+};
+</code></pre>
+<h2 id="finally-方法">finally 方法</h2>
+<p>不管是 <code>resolve</code> 还是 <code>reject</code> 都会调用 <code>finally</code>。</p>
+<pre><code class="language-js">MyPromise.prototype.finally = function(fn) {
+    return this.then(
+        value =&gt; {
+            fn();
+            return value;
+        },
+        reason =&gt; {
+            fn();
+            throw reason;
+        }
+    );
+};
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[继承的几种方式]]></title>
+        <id>https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi</id>
+        <link href="https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi">
+        </link>
+        <updated>2019-08-21T09:55:18.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>继承优先寻找本身，没有找到的话再从原型链 (__proto__属性) 一层层往上找</strong></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>继承优先寻找本身，没有找到的话再从原型链 (__proto__属性) 一层层往上找</strong></p>
+<!-- more -->
+<h2 id="类式继承">类式继承</h2>
+<pre><code class="language-js">// 声明父类
+function SupperClass(value) {
+  this.value = value;
+  this.fn = function() {
+    console.log(this.value);
+  };
+}
+SupperClass.prototype.otherValue = &quot;other value&quot;;
+
+// 子类
+function SubClass(value) {
+  this.subValue = value;
+}
+SubClass.prototype = new SupperClass(&quot;I'm supper value&quot;);
+//声明子类，并使得子类继承自SupperClass
+</code></pre>
+<h3 id="缺点">缺点:</h3>
+<ol>
+<li>
+<p>子类继承自父类的实例，而实例化父类的过程在声明阶段，因此在实际使用过程中无法根据实际情况向父类穿参</p>
+</li>
+<li>
+<p>子类的家庭关系不完善。Instance.constructor = SupperClass，因为 SubClass 并没有 constructor 属性，所以最终会从 SupperClass.prototype 处继承得到该属性。</p>
+</li>
+<li>
+<p>不能为 SubClass.prototype 设置 constructor 属性，该属性会造成属性屏蔽，导致 SubClass.prototype 不能正确获取自己的 constructor 属性</p>
+</li>
+</ol>
+<h2 id="构造函数继承">构造函数继承</h2>
+<pre><code class="language-js">function SupperClass(value1) {
+  this.xx = value1;
+}
+function SubClass(value1, value2) {
+  SupperClass.call(this, value1);
+  this.xx = value2;
+}
+
+//实际使用
+var Instance = new SubClass(&quot;value1&quot;, &quot;value2&quot;);
+</code></pre>
+<ul>
+<li>
+<p>优点: 可以传参</p>
+</li>
+<li>
+<p>缺点: 构造函数继承方式的本质就是将父类的构造方法在子类的上下文环境运行一次，从而达到复制父类属性的目的，在这个过程中并没有构造出一条完整的原型链。</p>
+</li>
+</ul>
+<h2 id="组合式继承">组合式继承</h2>
+<pre><code class="language-js">function SupperClass(value) {
+  this.value = value;
+  this.fn = function() {
+    console.log(this.value);
+  };
+}
+SupperClass.prototype.otherValue = &quot;other value&quot;;
+//声明父类
+
+function SubClass(value1, value2) {
+  SupperClass.call(this, value1);
+  this.subValue = value2;
+}
+SubClass.prototype = new SupperClass(&quot;I'm supper value&quot;);
+//声明子类，并使得子类继承自SupperClass
+//以上为声明阶段
+
+//通过以下方式使用
+var Instance = new SubClass(&quot;I'm supper value&quot;, &quot;I'm sub value&quot;);
+</code></pre>
+<ul>
+<li>
+<p>优点: 组合式继承集合了以上两种继承方式的优点，从而实现了“完美”继承所有属性并能动态传参的功能</p>
+</li>
+<li>
+<p>缺点: 但是这种方式仍然不能补齐子类的家庭成员关系，因为 SubClass.prototype 仍然是父类的实例。</p>
+</li>
+</ul>
+<h2 id="原型式继承">原型式继承</h2>
+<p>原型式继承又被成为纯洁继承，它的重点只关注对象与对象之间的继承关系，淡化了类与构造函数的概念，这样能避免开发者花费过多的精力去维护类与类/类与原型之间的关系，从而将重心转移到开发业务逻辑上面来。</p>
+<pre><code class="language-js">var supperObj = {
+    key1: 'value',
+    func: function(){
+        console.log(this.key1);
+    }
+}
+
+function Factory(obj){
+    function F(){}
+    F.prototype = obj;
+    return new F()
+}
+
+//实际使用方法
+//var Instance = new Factory(supperObj);
+var Instance = Factory(supperObj);
+
+</code></pre>
+<ul>
+<li>缺点：</li>
+</ul>
+<ol>
+<li>无法根据使用的实际情况动态生成supperObj（无法动态传参）。</li>
+<li>虽然实现了对象的继承，但是生成的子类还没有添加自己的属性与方法。</li>
+</ol>
+<ul>
+<li>优点:</li>
+</ul>
+<ol>
+<li>由于其纯洁性，开发者不必再去维护constructor与prototype属性，仅仅只需要关注原型链。</li>
+<li>更少的内存开销。</li>
+</ol>
+<h2 id="寄生式继承">寄生式继承</h2>
+<p>ES5提供了Object.create()，并且在原型式继承，以及多继承中起着重要的作用。在寄生式继承中我们会对原型继承做一次优化。</p>
+<p><code>var subObj = Object.create(obj);</code> = <code>subObj.prototype = obj</code></p>
+<pre><code class="language-js">var supperObj = {
+    key1: 'value',
+    func: function(){
+        console.log(this.key1);
+    }
+}
+function inheritPrototype(obj,value){
+    //var subObj = Factory(obj);
+    var subObj = Object.create(obj);
+    subObj.name = value;
+    subObj.say = function(){
+        console.log(this.name);
+    }
+    return subObj;
+}
+
+var Instance = inheritPrototype(supperObj,'sub');
+Instance.func();
+Instance.say();
+
+</code></pre>
+<p>寄生式继承实际上就是对原型式继承的二次封装，在这次封装过程中实现了根据提供的参数添加子类的自定义属性。但是缺点仍然存在，<strong>被继承对象无法动态生成</strong>。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[This 的几种使用场景]]></title>
+        <id>https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing</id>
+        <link href="https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing">
+        </link>
+        <updated>2019-08-21T09:54:35.000Z</updated>
+        <summary type="html"><![CDATA[<p><code>JavaScript</code> 中的 <code>this</code> 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。<code>JavaScript</code> 中函数的调用有以下几种方式：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><code>JavaScript</code> 中的 <code>this</code> 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。<code>JavaScript</code> 中函数的调用有以下几种方式：</p>
+<!-- more -->
+<h2 id="1-作为对象方法调用">1. 作为对象方法调用</h2>
+<p>在 <code>JavaScript</code> 中，函数也是对象，因此函数可以作为一个对象的属性，此时该函数被称为该对象的方法，在使用这种调用方式时，<code>this</code> 被自然绑定到该对象</p>
+<pre><code class="language-js">var test = {
+    a:0,
+    b:0
+    get:function(){
+        return this.a;
+    }
+}
+</code></pre>
+<h2 id="2-作为函数调用全局调用">2. 作为函数调用(全局调用)</h2>
+<p>函数也可以直接被调用，此时 <code>this</code> 绑定到全局对象。在浏览器中，<code>window</code> 就是该全局对象。比如下面的例子：函数被调用时，<code>this</code> 被绑定到全局对象，接下来执行赋值语句，相当于隐式的声明了一个全局变量。</p>
+<pre><code class="language-js">var x = 10;
+function foo() {
+    console.log(this); //Window
+    console.log(this.x); //10
+}
+foo();
+</code></pre>
+<h2 id="3-作为构造函数调用">3. 作为构造函数调用</h2>
+<p><code>javaScript</code> 支持面向对象式编程，与主流的面向对象式编程语言不同，<code>JavaScript</code> 并没有类（<code>class</code>）的概念，而是使用基于原型（<code>prototype</code>）的继承方式。相应的，<code>JavaScript</code> 中的构造函数也很特殊，如果不使用 <code>new</code> 调用，则和普通函数一样。作为又一项约定俗成的准则，构造函数以大写字母开头，提醒调用者使用正确的方式调用。如果调用正确，<code>this</code> 绑定到新创建的对象上。</p>
+<pre><code class="language-js">function Foo() {
+    this.x = 10;
+    console.log(this); //Foo {x:10}
+}
+var foo = new Foo();
+console.log(foo.x); //10
+</code></pre>
+<h2 id="4-在-call-或者-applybind-中调用">4. 在 <code>call</code> 或者 <code>apply</code>，<code>bind</code> 中调用</h2>
+<p>当一个函数被 call、apply 或者 bind 调用时，this 的值就取传入的对象的值。</p>
+<pre><code class="language-js">var obj = {
+    x: 10,
+};
+function foo() {
+    console.log(this); //{x: 10}
+    console.log(this.x); //10
+}
+foo.call(obj);
+foo.apply(obj);
+foo.bind(obj)();
+</code></pre>
+<h2 id="5-dom-event-this">5. <code>DOM event this</code></h2>
+<p>在一个 <code>HTML DOM</code> 事件处理程序里，<code>this</code> 始终指向这个处理程序所绑定的 <code>HTML DOM</code> 节点</p>
+<pre><code class="language-js">function Listener() {
+    document.getElementById('foo').addEventListener('click', this.handleClick); //这里的 this 指向 Listener 这个对象。不是强调的是这里的 this
+}
+Listener.prototype.handleClick = function(event) {
+    console.log(this); //&lt;div id=&quot;foo&quot;&gt;&lt;/div&gt;
+};
+var listener = new Listener();
+document.getElementById('foo').click();
+</code></pre>
+<h2 id="6-箭头函数中的-this">6. 箭头函数中的 <code>this</code></h2>
+<p>箭头函数内部的 <code>this</code> 是词法作用域，由上下文确定。</p>
+<pre><code class="language-js">var obj = {
+    x: 10,
+    foo: function() {
+        var fn = () =&gt; {
+            return () =&gt; {
+                return () =&gt; {
+                    console.log(this); //Object {x: 10}
+                    console.log(this.x); //10
+                };
+            };
+        };
+        fn()()();
+    },
+};
+obj.foo();
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数组的去重与扁平化]]></title>
+        <id>https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua</id>
+        <link href="https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua">
+        </link>
+        <updated>2019-08-21T09:52:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>顾名思义,就是去掉数组中重复的元素，针对基本类型数据的数组, 有以下几种方法：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>顾名思义,就是去掉数组中重复的元素，针对基本类型数据的数组, 有以下几种方法：</p>
+<!-- more -->
+<h3 id="1-set">1. <code>Set</code></h3>
+<p><code>ES6</code> 提供了新的数据结构 <code>Set</code>。它类似于数组，但是成员的值都是唯一的，没有重复的值。</p>
+<p>因此可以利用这一点实现数组去重。</p>
+<pre><code class="language-js">let arr = [1, 1, 2, 2, 3, 3];
+
+arr2 = [...new Set(arr)];
+
+console.log(arr2); // [1,2,3]
+</code></pre>
+<h3 id="2-objectkeys">2. <code>Object.keys()</code></h3>
+<p>我们知道：对象 <code>Object</code> 的 <code>key</code> 名都是唯一的，一个对象不可能存在两个一模一样的 <code>key</code>, 利用这一特性实现数组去重：</p>
+<pre><code class="language-js">let arr = [1, 1, 2, 2, 3, 3, null];
+arr2 = {};
+for (let i in arr) {
+    arr2[arr[i]] = true;
+}
+let arr3 = Object.keys(arr2);
+console.log(arr3); // [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;null&quot;]
+</code></pre>
+<p>这种方法存在的问题是，拿到去重的结果数组元素都变成了字符串,因此只适用单一类型的数组。</p>
+<h3 id="3-arrayindexof">3. <code>Array.indexOf()</code></h3>
+<p>创建一个新数组，遍历原数组，每次遍历查询新数组是否已经存在该元素，若不存在，则 <code>push</code> 新元素进新数组</p>
+<pre><code class="language-js">var arr = ['a', 'c', 'b', 'd', 'a', 'b'];
+
+var arr2 = [];
+
+for (var i = 0; i &lt; arr.length; i++) {
+    if (arr2.indexOf(arr[i]) &lt; 0) {
+        arr2.push(arr[i]);
+    }
+}
+
+console.log(arr2); // ['a', 'c', 'b', 'd']
+</code></pre>
+<h2 id="数组扁平化">数组扁平化</h2>
+<p>数组扁平化是指将一个多维数组变为一维数组，如</p>
+<pre><code>[1, [2, 3, [4, 5]]]  ------&gt;    [1, 2, 3, 4, 5]
+</code></pre>
+<p>方法是将子元素数组不断的展开，具体如下：</p>
+<h3 id="1-arrayreduce">1. <code>Array.reduce()</code></h3>
+<p>遍历数组每一项，若值为数组则递归遍历，否则 <code>concat</code>。</p>
+<pre><code class="language-js">function flatten(arr) {
+    return arr.reduce((result, item) =&gt; {
+        return result.concat(Array.isArray(item) ? flatten(item) : item);
+    }, []);
+}
+</code></pre>
+<h3 id="2-objecttostring-stringsplit">2. <code>Object.toString()</code> &amp; <code>String.split()</code></h3>
+<pre><code class="language-js">// 我们知道：
+[1, 2, 3].toString(); // 1,2,3
+// 因此
+[1, [2, 3, [4, 5]]].toString(); // &quot;1,2,3,4,5&quot;
+</code></pre>
+<p>再将所得的字符串切割成数组，</p>
+<pre><code class="language-js">'1,2,3,4,5'.split(','); // [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;]
+</code></pre>
+<p>综合，写成一个函数：</p>
+<pre><code class="language-js">function flatten(arr) {
+    return arr
+        .toString()
+        .split(',')
+        .map(function(item) {
+            return Number(item);
+        });
+}
+</code></pre>
+<h3 id="3-arrayjoin-stringsplit">3. <code>Array.join()</code> &amp; <code>String.split()</code></h3>
+<p>和上面的 <code>toString</code> 一样，<code>join</code> 也可以将数组转换为字符串</p>
+<pre><code class="language-js">function flatten(arr) {
+    return arr
+        .join(',')
+        .split(',')
+        .map(function(item) {
+            return parseInt(item);
+        });
+}
+</code></pre>
+<h3 id="4-递归">4. 递归</h3>
+<p>递归的遍历每一项，若为数组则继续遍历，否则 <code>concat</code></p>
+<pre><code class="language-js">function flatten(arr) {
+    var res = [];
+    arr.map(item =&gt; {
+        if (Array.isArray(item)) {
+            res = res.concat(flatten(item));
+        } else {
+            res.push(item);
+        }
+    });
+    return res;
+}
+</code></pre>
+<h3 id="5-扩展运算符">5. 扩展运算符</h3>
+<p><code>es6</code> 的扩展运算符能将二维数组变为一维.</p>
+<pre><code class="language-js">[].concat(...[1, 2, 3, [4, 5]]); // [1, 2, 3, 4, 5]
+</code></pre>
+<p>我们可以做一个遍历，若 <code>arr</code> 中含有数组则使用一次扩展运算符，直至没有为止。</p>
+<pre><code class="language-js">function flatten(arr) {
+    while (arr.some(item =&gt; Array.isArray(item))) {
+        arr = [].concat(...arr);
+    }
+    return arr;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[手动实现一个 EvenEmitter]]></title>
+        <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter</id>
+        <link href="https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter">
+        </link>
+        <updated>2019-08-21T09:52:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>原理:</p>
+<p><code>EvenEmitter</code> 的原理便是发布订阅者模式。</p>
+<ul>
+<li>
+<p>用户订阅一个事件并将执行函数交给 <code>EvenEmiter</code>, <code>EvenEmitter</code>注册此事件类型，并将执行函数存入该类型事件的数组中。</p>
+</li>
+<li>
+<p>一旦用户发布事件及参数，<code>EvenEmitter</code>便会找到该类型事件的数组，并逐一执行数组内的函数</p>
+</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<p>原理:</p>
+<p><code>EvenEmitter</code> 的原理便是发布订阅者模式。</p>
+<ul>
+<li>
+<p>用户订阅一个事件并将执行函数交给 <code>EvenEmiter</code>, <code>EvenEmitter</code>注册此事件类型，并将执行函数存入该类型事件的数组中。</p>
+</li>
+<li>
+<p>一旦用户发布事件及参数，<code>EvenEmitter</code>便会找到该类型事件的数组，并逐一执行数组内的函数</p>
+</li>
+</ul>
+<!-- more -->
+<p>接下来我们来实现一个简单版和一个高级版。</p>
+<h2 id="简单版本">简单版本</h2>
+<pre><code class="language-js">// 发布订阅者模式
+var EvenEmitter = function() {
+    this.obj = {};
+};
+
+EvenEmitter.prototype.on = function(eventType, fn) {
+    if (!this.obj[eventType]) {
+        this.obj[eventType] = [];
+    }
+    this.obj[eventType].push(fn);
+};
+
+EvenEmitter.prototype.emit = function(...arguments) {
+    // arguments是类数组对象，不可直接使用数组方法，下面使arguments使用shift方法
+    var eventType = Array.prototype.shift.call(arguments);
+
+    var arr = this.obj[eventType];
+    for (let i = 0; i &lt; arr.length; i++) {
+        // arguments上一步骤已经去除了第一个元素，剩下后面的元素,调用所对应的方法
+        arr[i].apply(arr[i], arguments);
+    }
+};
+
+var ev = new EvenEmitter();
+
+ev.on('click', function(a) {
+    // 订阅函数
+    console.log(a); // 1
+});
+
+ev.emit('click', 888); // 发布函数
+</code></pre>
+<h2 id="高级版本">高级版本</h2>
+<pre><code class="language-js">// 高级版本，实现remove once等功能
+function EventEmitter() {
+    this._events = Object.create(null);
+}
+
+// 向事件队列添加事件
+// prepend为true表示向事件队列头部添加事件
+EventEmitter.prototype.addListener = function(type, listener, prepend) {
+    if (!this._events) {
+        this._events = Object.create(null);
+    }
+    if (this._events[type]) {
+        if (prepend) {
+            this._events[type].unshift(listener);
+        } else {
+            this._events[type].push(listener);
+        }
+    } else {
+        this._events[type] = [listener];
+    }
+};
+
+// 移除某个事件
+EventEmitter.prototype.removeListener = function(type, listener) {
+    if (Array.isArray(this._events[type])) {
+        if (!listener) {
+            delete this._events[type];
+        } else {
+            this._events[type] = this._events[type].filter(
+                e =&gt; e !== listener &amp;&amp; e.origin !== listener
+            );
+        }
+    }
+};
+
+// 向事件队列添加事件，只执行一次
+EventEmitter.prototype.once = function(type, listener) {
+    const only = (...args) =&gt; {
+        // 这里的args是 emit 时用apply传入的
+        listener.apply(this, args);
+        this.removeListener(type, listener);
+    };
+    only.origin = listener;
+    this.addListener(type, only);
+};
+
+// 执行某类事件
+EventEmitter.prototype.emit = function(type, ...args) {
+    if (Array.isArray(this._events[type])) {
+        this._events[type].forEach(fn =&gt; {
+            fn.apply(this, args);
+        });
+    }
+};
+
+var emitter = new EventEmitter();
+
+var onceListener = function(args) {
+    console.log('我只能被执行一次', args, this);
+};
+
+var listener = function(args) {
+    console.log('我是一个listener', args, this);
+};
+
+emitter.once('click', onceListener);
+emitter.addListener('click', listener);
+
+emitter.emit('click', '参数');
+emitter.emit('click');
+
+emitter.removeListener('click', listener);
+emitter.emit('click');
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[手动实现 call、apply、bind]]></title>
         <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind</id>
@@ -179,13 +840,13 @@ function throttle(func, wait) {
         <link href="https://zxpsuper.github.io/post/event-loop">
         </link>
         <updated>2019-08-09T03:44:21.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="1-event-loop是什么">1. Event Loop是什么</h2>
+        <summary type="html"><![CDATA[<p>Event Loop是什么?</p>
 <p>event loop是一个执行模型，在不同的地方有不同的实现。浏览器和NodeJS基于不同的技术实现了各自的Event Loop。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<h2 id="1-event-loop是什么">1. Event Loop是什么</h2>
+        <content type="html"><![CDATA[<p>Event Loop是什么?</p>
 <p>event loop是一个执行模型，在不同的地方有不同的实现。浏览器和NodeJS基于不同的技术实现了各自的Event Loop。</p>
 <!-- more -->
-<h2 id="2-宏队列和微队列">2. 宏队列和微队列</h2>
+<h2 id="1-宏队列和微队列">1. 宏队列和微队列</h2>
 <p><strong>宏队列，macrotask，也叫tasks。</strong> 一些异步任务的回调会依次进入macro task queue，等待后续被调用，这些异步任务包括：</p>
 <ul>
 <li>setTimeout</li>
@@ -202,7 +863,7 @@ function throttle(func, wait) {
 <li>Object.observe</li>
 <li>MutationObserver</li>
 </ul>
-<h2 id="3-实例介绍">3. 实例介绍</h2>
+<h2 id="2-实例介绍">2. 实例介绍</h2>
 <p>执行顺序，先微队列，后宏队列。</p>
 <p>看下面一个例子：</p>
 <pre><code class="language-js">console.log(1);

@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>手动实现 call、apply、bind | 小皮咖</title>
+<title>This 的几种使用场景 | 小皮咖</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,9 +86,9 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">手动实现 call、apply、bind</h2>
+          <h2 class="post-title">This 的几种使用场景</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-08-21 05:47:34</span>
+            <span><i class="icon-calendar-outline"></i> 2019-08-21 05:54:35</span>
             
               <span>
                 <i class="icon-pricetags-outline"></i>
@@ -102,61 +102,77 @@
             
           </div>
           <div class="post-content">
-            <p>改变 <code>this</code> 的指向，就是将函数<code>fn</code>放入传入的<code>context</code>中，然后执行<code>context[fn]()</code>,此时的<code>fn</code>中的<code>this</code>就变成了<code>context</code>，在函数执行完毕之后，需删除<code>context</code>中的<code>fn</code></p>
+            <p><code>JavaScript</code> 中的 <code>this</code> 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。<code>JavaScript</code> 中函数的调用有以下几种方式：</p>
 <!-- more -->
-<h2 id="call">call</h2>
-<ol>
-<li>判断当前 <code>this</code> 是否为函数，防止 <code>Function.prototype.myCall()</code> 直接调用</li>
-<li><code>context</code> 为可选参数，如果不传的话默认上下文为 <code>window</code></li>
-<li>为 <code>context</code> 创建一个 <code>Symbol</code>（保证不会重名）属性，将当前函数赋值给这个属性</li>
-<li>处理参数，传入第一个参数后的其余参数</li>
-<li>调用函数后即删除该 <code>Symbol</code> 属性</li>
-</ol>
-<pre><code class="language-js">Function.prototype.myCall = function(context = window, ...args) {
-    if (this === Function.prototype) {
-        return undefined; // 用于防止 Function.prototype.myCall() 直接调用
+<h2 id="1-作为对象方法调用">1. 作为对象方法调用</h2>
+<p>在 <code>JavaScript</code> 中，函数也是对象，因此函数可以作为一个对象的属性，此时该函数被称为该对象的方法，在使用这种调用方式时，<code>this</code> 被自然绑定到该对象</p>
+<pre><code class="language-js">var test = {
+    a:0,
+    b:0
+    get:function(){
+        return this.a;
     }
-    context = context || window;
-    const fn = Symbol();
-    context[fn] = this;
-    const result = context[fn](...args);
-    delete context[fn];
-    return result;
-};
+}
 </code></pre>
-<h2 id="apply">apply</h2>
-<p><code>apply</code> 实现类似 <code>call</code>，参数为数组</p>
-<pre><code class="language-js">Function.prototype.myApply = function(context = window, args) {
-    if (this === Function.prototype) {
-        return undefined; // 用于防止 Function.prototype.myCall() 直接调用
-    }
-    const fn = Symbol();
-    context[fn] = this;
-    let result;
-    if (Array.isArray(args)) {
-        result = context[fn](...args);
-    } else {
-        result = context[fn]();
-    }
-    delete context[fn];
-    return result;
-};
+<h2 id="2-作为函数调用全局调用">2. 作为函数调用(全局调用)</h2>
+<p>函数也可以直接被调用，此时 <code>this</code> 绑定到全局对象。在浏览器中，<code>window</code> 就是该全局对象。比如下面的例子：函数被调用时，<code>this</code> 被绑定到全局对象，接下来执行赋值语句，相当于隐式的声明了一个全局变量。</p>
+<pre><code class="language-js">var x = 10;
+function foo() {
+    console.log(this); //Window
+    console.log(this.x); //10
+}
+foo();
 </code></pre>
-<h2 id="bind">bind</h2>
-<p>因为 <code>bind()</code> 返回一个方法需手动执行，因此利用闭包实现。</p>
-<pre><code class="language-js">Function.prototype.myBind = function(context, ...args1) {
-    if (this === Function.prototype) {
-        throw new TypeError('Error');
-    }
-    const _this = this;
-    return function F(...args2) {
-        // 判断是否用于构造函数
-        if (this instanceof F) {
-            return new _this(...args1, ...args2);
-        }
-        return _this.apply(context, args1.concat(args2));
-    };
+<h2 id="3-作为构造函数调用">3. 作为构造函数调用</h2>
+<p><code>javaScript</code> 支持面向对象式编程，与主流的面向对象式编程语言不同，<code>JavaScript</code> 并没有类（<code>class</code>）的概念，而是使用基于原型（<code>prototype</code>）的继承方式。相应的，<code>JavaScript</code> 中的构造函数也很特殊，如果不使用 <code>new</code> 调用，则和普通函数一样。作为又一项约定俗成的准则，构造函数以大写字母开头，提醒调用者使用正确的方式调用。如果调用正确，<code>this</code> 绑定到新创建的对象上。</p>
+<pre><code class="language-js">function Foo() {
+    this.x = 10;
+    console.log(this); //Foo {x:10}
+}
+var foo = new Foo();
+console.log(foo.x); //10
+</code></pre>
+<h2 id="4-在-call-或者-applybind-中调用">4. 在 <code>call</code> 或者 <code>apply</code>，<code>bind</code> 中调用</h2>
+<p>当一个函数被 call、apply 或者 bind 调用时，this 的值就取传入的对象的值。</p>
+<pre><code class="language-js">var obj = {
+    x: 10,
 };
+function foo() {
+    console.log(this); //{x: 10}
+    console.log(this.x); //10
+}
+foo.call(obj);
+foo.apply(obj);
+foo.bind(obj)();
+</code></pre>
+<h2 id="5-dom-event-this">5. <code>DOM event this</code></h2>
+<p>在一个 <code>HTML DOM</code> 事件处理程序里，<code>this</code> 始终指向这个处理程序所绑定的 <code>HTML DOM</code> 节点</p>
+<pre><code class="language-js">function Listener() {
+    document.getElementById('foo').addEventListener('click', this.handleClick); //这里的 this 指向 Listener 这个对象。不是强调的是这里的 this
+}
+Listener.prototype.handleClick = function(event) {
+    console.log(this); //&lt;div id=&quot;foo&quot;&gt;&lt;/div&gt;
+};
+var listener = new Listener();
+document.getElementById('foo').click();
+</code></pre>
+<h2 id="6-箭头函数中的-this">6. 箭头函数中的 <code>this</code></h2>
+<p>箭头函数内部的 <code>this</code> 是词法作用域，由上下文确定。</p>
+<pre><code class="language-js">var obj = {
+    x: 10,
+    foo: function() {
+        var fn = () =&gt; {
+            return () =&gt; {
+                return () =&gt; {
+                    console.log(this); //Object {x: 10}
+                    console.log(this.x); //10
+                };
+            };
+        };
+        fn()()();
+    },
+};
+obj.foo();
 </code></pre>
 
           </div>
@@ -164,9 +180,9 @@
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu">
+            <a class="purple-link" href="https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua">
               <h3 class="post-title">
-                下一篇：函数的防抖与节流
+                下一篇：数组的去重与扁平化
               </h3>
             </a>
           </div>

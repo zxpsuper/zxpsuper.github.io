@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1566380887310">
+<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1566381462481">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zxpsuper.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://zxpsuper.github.io">
-        <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1566380887310" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1566381462481" alt="" width="32px" height="32px">
       </a>
       <a href="https://zxpsuper.github.io">
         <h1 class="site-title">小皮咖</h1>
@@ -112,10 +112,10 @@
             
           </div>
           <div class="post-content">
-            <h2 id="1-event-loop是什么">1. Event Loop是什么</h2>
+            <p>Event Loop是什么?</p>
 <p>event loop是一个执行模型，在不同的地方有不同的实现。浏览器和NodeJS基于不同的技术实现了各自的Event Loop。</p>
 <!-- more -->
-<h2 id="2-宏队列和微队列">2. 宏队列和微队列</h2>
+<h2 id="1-宏队列和微队列">1. 宏队列和微队列</h2>
 <p><strong>宏队列，macrotask，也叫tasks。</strong> 一些异步任务的回调会依次进入macro task queue，等待后续被调用，这些异步任务包括：</p>
 <ul>
 <li>setTimeout</li>
@@ -132,7 +132,7 @@
 <li>Object.observe</li>
 <li>MutationObserver</li>
 </ul>
-<h2 id="3-实例介绍">3. 实例介绍</h2>
+<h2 id="2-实例介绍">2. 实例介绍</h2>
 <p>执行顺序，先微队列，后宏队列。</p>
 <p>看下面一个例子：</p>
 <pre><code class="language-js">console.log(1);

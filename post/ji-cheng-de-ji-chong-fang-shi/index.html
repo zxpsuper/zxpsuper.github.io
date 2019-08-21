@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>继承的几种方式 | 小皮咖</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1566381462481">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://zxpsuper.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://zxpsuper.github.io">
+        <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1566381462481" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://zxpsuper.github.io">
+        <h1 class="site-title">小皮咖</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">继承的几种方式</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-08-21 05:55:18</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
+                    javascript
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p><strong>继承优先寻找本身，没有找到的话再从原型链 (__proto__属性) 一层层往上找</strong></p>
+<!-- more -->
+<h2 id="类式继承">类式继承</h2>
+<pre><code class="language-js">// 声明父类
+function SupperClass(value) {
+  this.value = value;
+  this.fn = function() {
+    console.log(this.value);
+  };
+}
+SupperClass.prototype.otherValue = &quot;other value&quot;;
+
+// 子类
+function SubClass(value) {
+  this.subValue = value;
+}
+SubClass.prototype = new SupperClass(&quot;I'm supper value&quot;);
+//声明子类，并使得子类继承自SupperClass
+</code></pre>
+<h3 id="缺点">缺点:</h3>
+<ol>
+<li>
+<p>子类继承自父类的实例，而实例化父类的过程在声明阶段，因此在实际使用过程中无法根据实际情况向父类穿参</p>
+</li>
+<li>
+<p>子类的家庭关系不完善。Instance.constructor = SupperClass，因为 SubClass 并没有 constructor 属性，所以最终会从 SupperClass.prototype 处继承得到该属性。</p>
+</li>
+<li>
+<p>不能为 SubClass.prototype 设置 constructor 属性，该属性会造成属性屏蔽，导致 SubClass.prototype 不能正确获取自己的 constructor 属性</p>
+</li>
+</ol>
+<h2 id="构造函数继承">构造函数继承</h2>
+<pre><code class="language-js">function SupperClass(value1) {
+  this.xx = value1;
+}
+function SubClass(value1, value2) {
+  SupperClass.call(this, value1);
+  this.xx = value2;
+}
+
+//实际使用
+var Instance = new SubClass(&quot;value1&quot;, &quot;value2&quot;);
+</code></pre>
+<ul>
+<li>
+<p>优点: 可以传参</p>
+</li>
+<li>
+<p>缺点: 构造函数继承方式的本质就是将父类的构造方法在子类的上下文环境运行一次，从而达到复制父类属性的目的，在这个过程中并没有构造出一条完整的原型链。</p>
+</li>
+</ul>
+<h2 id="组合式继承">组合式继承</h2>
+<pre><code class="language-js">function SupperClass(value) {
+  this.value = value;
+  this.fn = function() {
+    console.log(this.value);
+  };
+}
+SupperClass.prototype.otherValue = &quot;other value&quot;;
+//声明父类
+
+function SubClass(value1, value2) {
+  SupperClass.call(this, value1);
+  this.subValue = value2;
+}
+SubClass.prototype = new SupperClass(&quot;I'm supper value&quot;);
+//声明子类，并使得子类继承自SupperClass
+//以上为声明阶段
+
+//通过以下方式使用
+var Instance = new SubClass(&quot;I'm supper value&quot;, &quot;I'm sub value&quot;);
+</code></pre>
+<ul>
+<li>
+<p>优点: 组合式继承集合了以上两种继承方式的优点，从而实现了“完美”继承所有属性并能动态传参的功能</p>
+</li>
+<li>
+<p>缺点: 但是这种方式仍然不能补齐子类的家庭成员关系，因为 SubClass.prototype 仍然是父类的实例。</p>
+</li>
+</ul>
+<h2 id="原型式继承">原型式继承</h2>
+<p>原型式继承又被成为纯洁继承，它的重点只关注对象与对象之间的继承关系，淡化了类与构造函数的概念，这样能避免开发者花费过多的精力去维护类与类/类与原型之间的关系，从而将重心转移到开发业务逻辑上面来。</p>
+<pre><code class="language-js">var supperObj = {
+    key1: 'value',
+    func: function(){
+        console.log(this.key1);
+    }
+}
+
+function Factory(obj){
+    function F(){}
+    F.prototype = obj;
+    return new F()
+}
+
+//实际使用方法
+//var Instance = new Factory(supperObj);
+var Instance = Factory(supperObj);
+
+</code></pre>
+<ul>
+<li>缺点：</li>
+</ul>
+<ol>
+<li>无法根据使用的实际情况动态生成supperObj（无法动态传参）。</li>
+<li>虽然实现了对象的继承，但是生成的子类还没有添加自己的属性与方法。</li>
+</ol>
+<ul>
+<li>优点:</li>
+</ul>
+<ol>
+<li>由于其纯洁性，开发者不必再去维护constructor与prototype属性，仅仅只需要关注原型链。</li>
+<li>更少的内存开销。</li>
+</ol>
+<h2 id="寄生式继承">寄生式继承</h2>
+<p>ES5提供了Object.create()，并且在原型式继承，以及多继承中起着重要的作用。在寄生式继承中我们会对原型继承做一次优化。</p>
+<p><code>var subObj = Object.create(obj);</code> = <code>subObj.prototype = obj</code></p>
+<pre><code class="language-js">var supperObj = {
+    key1: 'value',
+    func: function(){
+        console.log(this.key1);
+    }
+}
+function inheritPrototype(obj,value){
+    //var subObj = Factory(obj);
+    var subObj = Object.create(obj);
+    subObj.name = value;
+    subObj.say = function(){
+        console.log(this.name);
+    }
+    return subObj;
+}
+
+var Instance = inheritPrototype(supperObj,'sub');
+Instance.func();
+Instance.say();
+
+</code></pre>
+<p>寄生式继承实际上就是对原型式继承的二次封装，在这次封装过程中实现了根据提供的参数添加子类的自定义属性。但是缺点仍然存在，<strong>被继承对象无法动态生成</strong>。</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing">
+              <h3 class="post-title">
+                下一篇：This 的几种使用场景
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/zxpsuper" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/zxpsuper" target="_blank">suporka</a> | <a class="rss" href="https://zxpsuper.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cb31bdcfdf25adf47495',
+        clientSecret: 'dcd64a2c7f116fbb48c445f0e948cee1ea298570',
+        repo: 'zxpsuper.github.io',
+        owner: 'zxpsuper',
+        admin: ['zxpsuper'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>手动实现 promise | 小皮咖</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1566381462481">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://zxpsuper.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://zxpsuper.github.io">
+        <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1566381462481" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://zxpsuper.github.io">
+        <h1 class="site-title">小皮咖</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">手动实现 promise</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-08-21 05:56:33</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
+                    javascript
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p><code>promise</code>  提供了异步操作的解决方案，本文带你一步步实现一个 <code>promise</code>.</p>
+<!-- more -->
+<h2 id="基础版本">基础版本</h2>
+<ul>
+<li>设定三个状态 <code>pending、fulfilled、rejected</code> ，只能由 <code>pending</code> 改变为 <code>fulfilled、rejected</code>，并且只能改变一次</li>
+<li>MyPromise 接收一个函数 <code>executor</code>，<code>executor</code> 有两个参数 <code>resolve</code> 方法和 <code>reject</code> 方法</li>
+<li><code>resolve</code> 将 <code>PENDING</code> 改变为 <code>fulfilled</code></li>
+<li><code>reject</code> 将 <code>PENDING</code> 改变为 <code>fulfilled</code></li>
+<li><code>promise</code> 变为 <code>fulfilled</code> 状态后具有一个唯一的 <code>value</code></li>
+<li>promise 变为 <code>rejected</code> 状态后具有一个唯一的 <code>reason</code></li>
+</ul>
+<pre><code class="language-js">function MyPromise(executor) {
+    this.state = PENDING;
+    this.value = null;
+    this.reason = null;
+
+    const resolve = value =&gt; {
+        if (this.state === PENDING) {
+            this.state = FULFILLED;
+            this.value = value;
+        }
+    };
+
+    const reject = reason =&gt; {
+        if (this.state === PENDING) {
+            this.state = REJECTED;
+            this.reason = reason;
+        }
+    };
+
+    try {
+        executor(resolve, reject);
+    } catch (reason) {
+        reject(reason);
+    }
+}
+</code></pre>
+<h2 id="then-方法">then 方法</h2>
+<ul>
+<li>then 方法接受两个参数 <code>onFulfilled、onRejected</code>，它们分别在状态由 <code>PENDING</code>改变为 <code>FULFILLED、REJECTED</code> 后调用</li>
+<li>一个 <code>promise</code> 可绑定多个 <code>then</code> 方法</li>
+<li><code>then</code> 方法可以同步调用也可以异步调用</li>
+<li>同步调用：状态已经改变，直接调用 <code>onFulfilled</code> 方法</li>
+<li>异步调用：状态还是 <code>PENDING</code>，将 <code>onFulfilled、onRejected</code> 分别加入两个函数数组 <code>onFulfilledCallbacks、onRejectedCallbacks</code>，当异步调用 <code>resolve</code> 和<code>reject</code> 时，将两个数组中绑定的事件循环执行。</li>
+</ul>
+<pre><code class="language-js">// 虽然resolve是同步执行的，我们必须保证then是异步调用的，我们用settimeout来模拟异步调用（并不能实现微任务和宏任务的执行机制，只是保证异步调用）
+MyPromise.prototype.then = function(onFulfilled, onRejected) {
+    if (typeof onFulfilled != 'function') {
+        onFulfilled = function(value) {
+            return value;
+        };
+    }
+    if (typeof onRejected != 'function') {
+        onRejected = function(reason) {
+            throw reason;
+        };
+    }
+    switch (this.state) {
+        case FULFILLED:
+            setTimeout(() =&gt; {
+                onFulfilled(this.value);
+            }, 0);
+            break;
+        case REJECTED:
+            setTimeout(() =&gt; {
+                onRejected(this.reason);
+            }, 0);
+            break;
+        case PENDING:
+            this.onFulfilledCallbacks.push(() =&gt; {
+                setTimeout(() =&gt; {
+                    onFulfilled(this.value);
+                }, 0);
+            });
+            this.onRejectedCallbacks.push(() =&gt; {
+                setTimeout(() =&gt; {
+                    onRejected(this.reason);
+                }, 0);
+            });
+            break;
+    }
+};
+</code></pre>
+<h2 id="then-方法链式调用">then 方法链式调用</h2>
+<p>保证链式调用，即 <code>then</code> 方法中要返回一个新的 <code>promise</code>，并将 <code>then</code> 方法的返回值进行 <code>resolve</code>。</p>
+<pre><code class="language-js">MyPromise.prototype.then = function(onFulfilled, onRejected) {
+    if (typeof onFulfilled != 'function') {
+        onFulfilled = function(value) {
+            return value;
+        };
+    }
+    if (typeof onRejected != 'function') {
+        onRejected = function(reason) {
+            throw reason;
+        };
+    }
+    const promise2 = new MyPromise((resolve, reject) =&gt; {
+        switch (this.state) {
+            case FULFILLED:
+                setTimeout(() =&gt; {
+                    try {
+                        const x = onFulfilled(this.value);
+                        resolve(x);
+                    } catch (reason) {
+                        reject(reason);
+                    }
+                }, 0);
+                break;
+            case REJECTED:
+                setTimeout(() =&gt; {
+                    try {
+                        const x = onRejected(this.reason);
+                        resolve(x);
+                    } catch (reason) {
+                        reject(reason);
+                    }
+                }, 0);
+                break;
+            case PENDING:
+                this.onFulfilledCallbacks.push(() =&gt; {
+                    setTimeout(() =&gt; {
+                        try {
+                            const x = onFulfilled(this.value);
+                            resolve(x);
+                        } catch (reason) {
+                            reject(reason);
+                        }
+                    }, 0);
+                });
+                this.onRejectedCallbacks.push(() =&gt; {
+                    setTimeout(() =&gt; {
+                        try {
+                            const x = onRejected(this.reason);
+                            resolve(x);
+                        } catch (reason) {
+                            reject(reason);
+                        }
+                    }, 0);
+                });
+                break;
+        }
+    });
+    return promise2;
+};
+</code></pre>
+<h2 id="catch-方法">catch 方法</h2>
+<p>若上面没有定义 <code>reject</code> 方法，所有的异常会走向 <code>catch</code> 方法：</p>
+<pre><code class="language-js">MyPromise.prototype.catch = function(onRejected) {
+    return this.then(null, onRejected);
+};
+</code></pre>
+<h2 id="finally-方法">finally 方法</h2>
+<p>不管是 <code>resolve</code> 还是 <code>reject</code> 都会调用 <code>finally</code>。</p>
+<pre><code class="language-js">MyPromise.prototype.finally = function(fn) {
+    return this.then(
+        value =&gt; {
+            fn();
+            return value;
+        },
+        reason =&gt; {
+            fn();
+            throw reason;
+        }
+    );
+};
+</code></pre>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi">
+              <h3 class="post-title">
+                下一篇：继承的几种方式
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/zxpsuper" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/zxpsuper" target="_blank">suporka</a> | <a class="rss" href="https://zxpsuper.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'cb31bdcfdf25adf47495',
+        clientSecret: 'dcd64a2c7f116fbb48c445f0e948cee1ea298570',
+        repo: 'zxpsuper.github.io',
+        owner: 'zxpsuper',
+        admin: ['zxpsuper'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
