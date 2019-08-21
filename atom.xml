@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxpsuper.github.io</id>
     <title>小皮咖</title>
-    <updated>2019-08-21T09:57:50.602Z</updated>
+    <updated>2019-08-21T10:26:20.416Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zxpsuper.github.io"/>
     <link rel="self" href="https://zxpsuper.github.io/atom.xml"/>
@@ -10,6 +10,66 @@
     <logo>https://zxpsuper.github.io/images/avatar.png</logo>
     <icon>https://zxpsuper.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 小皮咖</rights>
+    <entry>
+        <title type="html"><![CDATA[斐波纳契数列]]></title>
+        <id>https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie</id>
+        <link href="https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie">
+        </link>
+        <updated>2019-08-21T10:06:58.000Z</updated>
+        <summary type="html"><![CDATA[<p>在数学上，斐波纳契数列以如下被以递推的方法定义：<code>F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)（n&gt;=3，n∈N*）</code></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在数学上，斐波纳契数列以如下被以递推的方法定义：<code>F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)（n&gt;=3，n∈N*）</code></p>
+<!-- more -->
+<h2 id="题目">题目</h2>
+<blockquote>
+<p>要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）</p>
+</blockquote>
+<h2 id="解法">解法</h2>
+<ol>
+<li>递归解法<br>
+使用递归方法将问题不断分解实现</li>
+</ol>
+<pre><code class="language-js">function Fibonacci(n) {
+		if (n &lt; 2) {
+			return n;
+		}
+		return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+</code></pre>
+<p>递归的本质是吧一个问题分解成两个或者多个小问题，如果多个小问题存在互相重叠的情况，那么就存在重复计算。因此我们在递归过程中添加记忆数组缓存数据</p>
+<pre><code class="language-js">function Fibonacci(n, memory = []) {
+		if (n &lt; 2) {
+				return n;
+		}
+		if (!memory[n]) {
+				memory[n] = Fibonacci(n - 1, memory) + Fibonacci(n - 2, memory);
+		}
+		return memory[n];
+}
+</code></pre>
+<ol start="2">
+<li>循环正向解法<br>
+上面递归解法是从最大数开始，不断拆解成小的数计算，如果不去考虑递归，我们只需要从小数开始算起，从底层不断往上累加就可以了，其实思路也很简单。</li>
+</ol>
+<pre><code class="language-js">function Fibonacci(n){
+    if(n&lt;=1){
+        return n;
+    }
+    let i = 1;
+    let pre = 0;
+    let current = 1;
+    let result = 0;
+    while(i++ &lt; n){
+        result = pre + current;
+        pre = current;
+        current = result;
+    }
+    return result;
+}
+
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[手动实现 promise]]></title>
         <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-promise</id>

@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>This 的几种使用场景 | 小皮咖</title>
+<title>斐波纳契数列 | 小皮咖</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -86,15 +86,15 @@
       <div class="content-container">
         <div class="post-detail">
           
-          <h2 class="post-title">This 的几种使用场景</h2>
+          <h2 class="post-title">斐波纳契数列</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-08-21 05:54:35</span>
+            <span><i class="icon-calendar-outline"></i> 2019-08-21 06:06:58</span>
             
               <span>
                 <i class="icon-pricetags-outline"></i>
                 
-                  <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
-                    javascript
+                  <a href="https://zxpsuper.github.io/tag/mxq_QsMjf">
+                    算法
                     
                   </a>
                 
@@ -102,77 +102,55 @@
             
           </div>
           <div class="post-content">
-            <p><code>JavaScript</code> 中的 <code>this</code> 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。<code>JavaScript</code> 中函数的调用有以下几种方式：</p>
+            <p>在数学上，斐波纳契数列以如下被以递推的方法定义：<code>F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)（n&gt;=3，n∈N*）</code></p>
 <!-- more -->
-<h2 id="1-作为对象方法调用">1. 作为对象方法调用</h2>
-<p>在 <code>JavaScript</code> 中，函数也是对象，因此函数可以作为一个对象的属性，此时该函数被称为该对象的方法，在使用这种调用方式时，<code>this</code> 被自然绑定到该对象</p>
-<pre><code class="language-js">var test = {
-    a:0,
-    b:0
-    get:function(){
-        return this.a;
+<h2 id="题目">题目</h2>
+<blockquote>
+<p>要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）</p>
+</blockquote>
+<h2 id="解法">解法</h2>
+<ol>
+<li>递归解法<br>
+使用递归方法将问题不断分解实现</li>
+</ol>
+<pre><code class="language-js">function Fibonacci(n) {
+		if (n &lt; 2) {
+			return n;
+		}
+		return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+</code></pre>
+<p>递归的本质是吧一个问题分解成两个或者多个小问题，如果多个小问题存在互相重叠的情况，那么就存在重复计算。因此我们在递归过程中添加记忆数组缓存数据</p>
+<pre><code class="language-js">function Fibonacci(n, memory = []) {
+		if (n &lt; 2) {
+				return n;
+		}
+		if (!memory[n]) {
+				memory[n] = Fibonacci(n - 1, memory) + Fibonacci(n - 2, memory);
+		}
+		return memory[n];
+}
+</code></pre>
+<ol start="2">
+<li>循环正向解法<br>
+上面递归解法是从最大数开始，不断拆解成小的数计算，如果不去考虑递归，我们只需要从小数开始算起，从底层不断往上累加就可以了，其实思路也很简单。</li>
+</ol>
+<pre><code class="language-js">function Fibonacci(n){
+    if(n&lt;=1){
+        return n;
     }
+    let i = 1;
+    let pre = 0;
+    let current = 1;
+    let result = 0;
+    while(i++ &lt; n){
+        result = pre + current;
+        pre = current;
+        current = result;
+    }
+    return result;
 }
-</code></pre>
-<h2 id="2-作为函数调用全局调用">2. 作为函数调用(全局调用)</h2>
-<p>函数也可以直接被调用，此时 <code>this</code> 绑定到全局对象。在浏览器中，<code>window</code> 就是该全局对象。比如下面的例子：函数被调用时，<code>this</code> 被绑定到全局对象，接下来执行赋值语句，相当于隐式的声明了一个全局变量。</p>
-<pre><code class="language-js">var x = 10;
-function foo() {
-    console.log(this); //Window
-    console.log(this.x); //10
-}
-foo();
-</code></pre>
-<h2 id="3-作为构造函数调用">3. 作为构造函数调用</h2>
-<p><code>javaScript</code> 支持面向对象式编程，与主流的面向对象式编程语言不同，<code>JavaScript</code> 并没有类（<code>class</code>）的概念，而是使用基于原型（<code>prototype</code>）的继承方式。相应的，<code>JavaScript</code> 中的构造函数也很特殊，如果不使用 <code>new</code> 调用，则和普通函数一样。作为又一项约定俗成的准则，构造函数以大写字母开头，提醒调用者使用正确的方式调用。如果调用正确，<code>this</code> 绑定到新创建的对象上。</p>
-<pre><code class="language-js">function Foo() {
-    this.x = 10;
-    console.log(this); //Foo {x:10}
-}
-var foo = new Foo();
-console.log(foo.x); //10
-</code></pre>
-<h2 id="4-在-call-或者-applybind-中调用">4. 在 <code>call</code> 或者 <code>apply</code>，<code>bind</code> 中调用</h2>
-<p>当一个函数被 call、apply 或者 bind 调用时，this 的值就取传入的对象的值。</p>
-<pre><code class="language-js">var obj = {
-    x: 10,
-};
-function foo() {
-    console.log(this); //{x: 10}
-    console.log(this.x); //10
-}
-foo.call(obj);
-foo.apply(obj);
-foo.bind(obj)();
-</code></pre>
-<h2 id="5-dom-event-this">5. <code>DOM event this</code></h2>
-<p>在一个 <code>HTML DOM</code> 事件处理程序里，<code>this</code> 始终指向这个处理程序所绑定的 <code>HTML DOM</code> 节点</p>
-<pre><code class="language-js">function Listener() {
-    document.getElementById('foo').addEventListener('click', this.handleClick); //这里的 this 指向 Listener 这个对象。不是强调的是这里的 this
-}
-Listener.prototype.handleClick = function(event) {
-    console.log(this); //&lt;div id=&quot;foo&quot;&gt;&lt;/div&gt;
-};
-var listener = new Listener();
-document.getElementById('foo').click();
-</code></pre>
-<h2 id="6-箭头函数中的-this">6. 箭头函数中的 <code>this</code></h2>
-<p>箭头函数内部的 <code>this</code> 是词法作用域，由上下文确定。</p>
-<pre><code class="language-js">var obj = {
-    x: 10,
-    foo: function() {
-        var fn = () =&gt; {
-            return () =&gt; {
-                return () =&gt; {
-                    console.log(this); //Object {x: 10}
-                    console.log(this.x); //10
-                };
-            };
-        };
-        fn()()();
-    },
-};
-obj.foo();
+
 </code></pre>
 
           </div>
@@ -180,9 +158,9 @@ obj.foo();
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua">
+            <a class="purple-link" href="https://zxpsuper.github.io/post/shou-dong-shi-xian-promise">
               <h3 class="post-title">
-                下一篇：数组的去重与扁平化
+                下一篇：手动实现 promise
               </h3>
             </a>
           </div>
