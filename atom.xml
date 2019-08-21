@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxpsuper.github.io</id>
     <title>小皮咖</title>
-    <updated>2019-08-09T08:16:54.654Z</updated>
+    <updated>2019-08-21T09:48:12.174Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zxpsuper.github.io"/>
     <link rel="self" href="https://zxpsuper.github.io/atom.xml"/>
@@ -10,6 +10,169 @@
     <logo>https://zxpsuper.github.io/images/avatar.png</logo>
     <icon>https://zxpsuper.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 小皮咖</rights>
+    <entry>
+        <title type="html"><![CDATA[手动实现 call、apply、bind]]></title>
+        <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind</id>
+        <link href="https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind">
+        </link>
+        <updated>2019-08-21T09:47:34.000Z</updated>
+        <summary type="html"><![CDATA[<p>改变 <code>this</code> 的指向，就是将函数<code>fn</code>放入传入的<code>context</code>中，然后执行<code>context[fn]()</code>,此时的<code>fn</code>中的<code>this</code>就变成了<code>context</code>，在函数执行完毕之后，需删除<code>context</code>中的<code>fn</code></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>改变 <code>this</code> 的指向，就是将函数<code>fn</code>放入传入的<code>context</code>中，然后执行<code>context[fn]()</code>,此时的<code>fn</code>中的<code>this</code>就变成了<code>context</code>，在函数执行完毕之后，需删除<code>context</code>中的<code>fn</code></p>
+<!-- more -->
+<h2 id="call">call</h2>
+<ol>
+<li>判断当前 <code>this</code> 是否为函数，防止 <code>Function.prototype.myCall()</code> 直接调用</li>
+<li><code>context</code> 为可选参数，如果不传的话默认上下文为 <code>window</code></li>
+<li>为 <code>context</code> 创建一个 <code>Symbol</code>（保证不会重名）属性，将当前函数赋值给这个属性</li>
+<li>处理参数，传入第一个参数后的其余参数</li>
+<li>调用函数后即删除该 <code>Symbol</code> 属性</li>
+</ol>
+<pre><code class="language-js">Function.prototype.myCall = function(context = window, ...args) {
+    if (this === Function.prototype) {
+        return undefined; // 用于防止 Function.prototype.myCall() 直接调用
+    }
+    context = context || window;
+    const fn = Symbol();
+    context[fn] = this;
+    const result = context[fn](...args);
+    delete context[fn];
+    return result;
+};
+</code></pre>
+<h2 id="apply">apply</h2>
+<p><code>apply</code> 实现类似 <code>call</code>，参数为数组</p>
+<pre><code class="language-js">Function.prototype.myApply = function(context = window, args) {
+    if (this === Function.prototype) {
+        return undefined; // 用于防止 Function.prototype.myCall() 直接调用
+    }
+    const fn = Symbol();
+    context[fn] = this;
+    let result;
+    if (Array.isArray(args)) {
+        result = context[fn](...args);
+    } else {
+        result = context[fn]();
+    }
+    delete context[fn];
+    return result;
+};
+</code></pre>
+<h2 id="bind">bind</h2>
+<p>因为 <code>bind()</code> 返回一个方法需手动执行，因此利用闭包实现。</p>
+<pre><code class="language-js">Function.prototype.myBind = function(context, ...args1) {
+    if (this === Function.prototype) {
+        throw new TypeError('Error');
+    }
+    const _this = this;
+    return function F(...args2) {
+        // 判断是否用于构造函数
+        if (this instanceof F) {
+            return new _this(...args1, ...args2);
+        }
+        return _this.apply(context, args1.concat(args2));
+    };
+};
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[函数的防抖与节流]]></title>
+        <id>https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu</id>
+        <link href="https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu">
+        </link>
+        <updated>2019-08-21T09:45:29.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>有个人总结出：</strong></p>
+<ul>
+<li>
+<p>防抖如同下班，在你准备收拾东西走人的这段时间里有新工作出现你就下不了班。</p>
+</li>
+<li>
+<p>节流如同怀孕，在分娩之前来的都怀不上。</p>
+</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>有个人总结出：</strong></p>
+<ul>
+<li>
+<p>防抖如同下班，在你准备收拾东西走人的这段时间里有新工作出现你就下不了班。</p>
+</li>
+<li>
+<p>节流如同怀孕，在分娩之前来的都怀不上。</p>
+</li>
+</ul>
+<!-- more -->
+<h2 id="防抖">防抖</h2>
+<p>所谓防抖，就是指触发事件后在 <code>n</code> 秒内函数只能执行一次，如果在 <code>n</code> 秒内又触发了事件，则会重新计算函数执行时间。（防误触）</p>
+<pre><code class="language-js">// 延缓执行
+function debounce(func, wait) {
+    var timeout;
+
+    return function() {
+        var context = this;
+        var args = arguments;
+        console.log(args);
+        console.log(func);
+        if (timeout) clearTimeout(timeout);
+
+        timeout = setTimeout(function() {
+            func.apply(context, args);
+        }, wait);
+    };
+}
+// 立即执行
+function debounce(func, wait) {
+    var timeout;
+
+    return function() {
+        var context = this;
+        var args = arguments;
+
+        if (timeout) clearTimeout(timeout);
+
+        var callNow = !timeout;
+        timeout = setTimeout(function() {
+            timeout = null;
+        }, wait);
+
+        if (callNow) func.apply(context, args);
+    };
+}
+</code></pre>
+<h2 id="节流">节流</h2>
+<p>所谓节流，就是指连续触发事件但是在 <code>n</code> 秒中只执行一次函数。（限制流量）</p>
+<pre><code class="language-js">// 时间戳
+function throttle(func, wait) {
+    var previous = 0;
+
+    return function() {
+        var now = Date.now();
+        var context = this;
+        var args = arguments;
+        if (now - previous &gt; wait) {
+            func.apply(context, args);
+            previous = now;
+        }
+    };
+}
+// 定时器
+function throttle(func, wait) {
+    var timeout;
+
+    return function() {
+        var context = this;
+        var args = arguments;
+        if (!timeout) {
+            timeout = setTimeout(function() {
+                timeout = null;
+                func.apply(context, args);
+            }, wait);
+        }
+    };
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[浏览器 Event Loop 机制]]></title>
         <id>https://zxpsuper.github.io/post/event-loop</id>
