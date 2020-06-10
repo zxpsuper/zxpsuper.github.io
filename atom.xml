@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxpsuper.github.io</id>
     <title>小皮咖</title>
-    <updated>2019-11-05T01:54:56.677Z</updated>
+    <updated>2020-06-10T15:15:15.873Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zxpsuper.github.io"/>
     <link rel="self" href="https://zxpsuper.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://zxpsuper.github.io/images/avatar.png</logo>
     <icon>https://zxpsuper.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, 小皮咖</rights>
+    <rights>All rights reserved 2020, 小皮咖</rights>
     <entry>
         <title type="html"><![CDATA[记一次微信前端面试🤓🤓]]></title>
         <id>https://zxpsuper.github.io/post/ji-yi-ci-wei-xin-qian-duan-mian-shi</id>
