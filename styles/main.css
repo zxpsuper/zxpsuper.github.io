@@ -580,12 +580,12 @@ td {
 }
 .post-detail .post .post-content pre {
   margin-bottom: 1.5rem;
-  font-size: 0.75rem;
+  font-size: 1.36rem;
   padding: 0;
   position: relative;
 }
 .post-detail .post .post-content pre code {
-  font-size: 0.86rem;
+  font-size: 1.36rem;
   font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace;
   padding: 1em;
   border-radius: 5px;
