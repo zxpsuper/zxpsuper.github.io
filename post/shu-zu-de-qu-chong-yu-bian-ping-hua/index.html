@@ -1,101 +1,95 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>数组的去重与扁平化 | 小皮咖</title>
-<meta name="description" content="温故而知新">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1591803719729">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1591802103431">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zxpsuper.github.io/styles/main.css">
 
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://zxpsuper.github.io">
-        <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1591802103431" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://zxpsuper.github.io">
-        <h1 class="site-title">小皮咖</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zxpsuper.github.io">
+  <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1591803719729" alt="">
+  </a>
+  <h1 class="site-title">
+    小皮咖
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
         <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('http://img.dm456.co/Uploads/news/2017-10-16/1463032651931028.jpg')">
+          <article class="post">
+            <h2 class="post-title">
+              数组的去重与扁平化
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-08-21 05:52:56
+              </span>
+              <span>
+                4 min read
+              </span>
+              
             </div>
-          
-          <h2 class="post-title">数组的去重与扁平化</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-08-21 05:52:56</span>
             
-          </div>
-          <div class="post-content">
-            <p>顾名思义,就是去掉数组中重复的元素，针对基本类型数据的数组, 有以下几种方法：</p>
+              <img class="post-feature-image" src="http://img.dm456.co/Uploads/news/2017-10-16/1463032651931028.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>顾名思义,就是去掉数组中重复的元素，针对基本类型数据的数组, 有以下几种方法：</p>
 <!-- more -->
 <h3 id="1-set">1. <code>Set</code></h3>
 <p><code>ES6</code> 提供了新的数据结构 <code>Set</code>。它类似于数组，但是成员的值都是唯一的，没有重复的值。</p>
@@ -201,90 +195,123 @@ console.log(arr2); // ['a', 'c', 'b', 'd']
 }
 </code></pre>
 
-          </div>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-set">1. <code>Set</code></a></li>
+<li><a href="#2-objectkeys">2. <code>Object.keys()</code></a></li>
+<li><a href="#3-arrayindexof">3. <code>Array.indexOf()</code></a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96">数组扁平化</a>
+<ul>
+<li><a href="#1-arrayreduce">1. <code>Array.reduce()</code></a></li>
+<li><a href="#2-objecttostring-stringsplit">2. <code>Object.toString()</code> &amp; <code>String.split()</code></a></li>
+<li><a href="#3-arrayjoin-stringsplit">3. <code>Array.join()</code> &amp; <code>String.split()</code></a></li>
+<li><a href="#4-%E9%80%92%E5%BD%92">4. 递归</a></li>
+<li><a href="#5-%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6">5. 扩展运算符</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter">
+            <div class="next">下一篇</div>
+            <a href="https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter/">
               <h3 class="post-title">
-                下一篇：手动实现一个 EvenEmitter
+                手动实现一个 EvenEmitter
               </h3>
             </a>
           </div>
+        
+
+        
           
-      </div>
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-      
-        
-          <div id="gitalk-container"></div>
-        
+<div id="gitalk-container"></div>
 
-        
-      
+<script>
 
-      <div class="site-footer">
-  <div class="slogan">温故而知新</div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/zxpsuper" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/zxpsuper" target="_blank">suporka</a> | <a class="rss" href="https://zxpsuper.github.io/atom.xml" target="_blank">RSS</a>
-</div>
+  var gitalk = new Gitalk({
+    clientID: 'cb31bdcfdf25adf47495',
+    clientSecret: 'dcd64a2c7f116fbb48c445f0e948cee1ea298570',
+    repo: 'zxpsuper.github.io',
+    owner: 'zxpsuper',
+    admin: ['zxpsuper'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
 
-
-    </div>
-    <script type="application/javascript">
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  gitalk.render('gitalk-container')
 
 </script>
 
+          
 
+          
+        
 
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
+        <div class="site-footer">
+  Powered by <a href="https://github.com/zxpsuper" target="_blank">suporka</a> | 
+  <a class="rss" href="https://zxpsuper.github.io/atom.xml" target="_blank">RSS</a>
+</div>
 
-      var gitalk = new Gitalk({
-        clientID: 'cb31bdcfdf25adf47495',
-        clientSecret: 'dcd64a2c7f116fbb48c445f0e948cee1ea298570',
-        repo: 'zxpsuper.github.io',
-        owner: 'zxpsuper',
-        admin: ['zxpsuper'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
+<script>
+  hljs.initHighlightingOnLoad()
 
-      gitalk.render('gitalk-container')
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-    </script>
-  
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
 
-  
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
 
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      console.log('section.offsetHeight', section.offsetHeight);
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
 
+</script>
 
-
+      </div>
+    </div>
   </body>
 </html>

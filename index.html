@@ -1,424 +1,65 @@
-
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>小皮咖</title>
-<meta name="description" content="温故而知新">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1591803719729">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zxpsuper.github.io/favicon.ico?v=1591802103431">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zxpsuper.github.io/styles/main.css">
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://zxpsuper.github.io">
-        <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1591802103431" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://zxpsuper.github.io">
-        <h1 class="site-title">小皮咖</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
-        
-        
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/ji-yi-ci-wei-xin-qian-duan-mian-shi">
-        <h2 class="post-title">记一次微信前端面试🤓🤓</h2>
-      </a>
-      <div class="post-abstract">
-        <p>抱着尝试一下的心态投了微信的前端简历，没想到还收到了面试邀请，仅以此文记录一下面试过程中遇到的问题</p>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-11-01 10:59:08</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
-                javascript
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://zxpsuper.github.io/post/ji-yi-ci-wei-xin-qian-duan-mian-shi">
-        <div class="feature-container" style="background-image: url('https://zxpsuper.github.io/post-images/ji-yi-ci-wei-xin-qian-duan-mian-shi.jpg')">
-        </div>
-      </a>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie">
-        <h2 class="post-title">斐波纳契数列</h2>
-      </a>
-      <div class="post-abstract">
-        <p>在数学上，斐波纳契数列以如下被以递推的方法定义：<code>F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)（n&gt;=3，n∈N*）</code></p>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-21 06:06:58</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/mxq_QsMjf">
-                算法
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie">
-        <div class="feature-container" style="background-image: url('https://zxpsuper.github.io/post-images/fei-bo-na-qi-shu-lie.jpg')">
-        </div>
-      </a>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/shou-dong-shi-xian-promise">
-        <h2 class="post-title">手动实现 promise</h2>
-      </a>
-      <div class="post-abstract">
-        <p><code>promise</code>  提供了异步操作的解决方案，本文带你一步步实现一个 <code>promise</code>.</p>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-21 05:56:33</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
-                javascript
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://zxpsuper.github.io/post/shou-dong-shi-xian-promise">
-        <div class="feature-container" style="background-image: url('http://data.whicdn.com/images/38250459/large.jpg')">
-        </div>
-      </a>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi">
-        <h2 class="post-title">继承的几种方式</h2>
-      </a>
-      <div class="post-abstract">
-        <p><strong>继承优先寻找本身，没有找到的话再从原型链 (__proto__属性) 一层层往上找</strong></p>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-21 05:55:18</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
-                javascript
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi">
-        <div class="feature-container" style="background-image: url('http://u.maxlaw.cn/UploadPic/10722/2018092753805909.jpg')">
-        </div>
-      </a>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing">
-        <h2 class="post-title">This 的几种使用场景</h2>
-      </a>
-      <div class="post-abstract">
-        <p><code>JavaScript</code> 中的 <code>this</code> 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。<code>JavaScript</code> 中函数的调用有以下几种方式：</p>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-21 05:54:35</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
-                javascript
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing">
-        <div class="feature-container" style="background-image: url('http://pic.kekenet.com/2016/1013/41841476329549.png')">
-        </div>
-      </a>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua">
-        <h2 class="post-title">数组的去重与扁平化</h2>
-      </a>
-      <div class="post-abstract">
-        <p>顾名思义,就是去掉数组中重复的元素，针对基本类型数据的数组, 有以下几种方法：</p>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-21 05:52:56</span>
-        
-      </div>
-    </div>
-    
-      <a href="https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua">
-        <div class="feature-container" style="background-image: url('http://img.dm456.co/Uploads/news/2017-10-16/1463032651931028.jpg')">
-        </div>
-      </a>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter">
-        <h2 class="post-title">手动实现一个 EvenEmitter</h2>
-      </a>
-      <div class="post-abstract">
-        <p>原理:</p>
-<p><code>EvenEmitter</code> 的原理便是发布订阅者模式。</p>
-<ul>
-<li>
-<p>用户订阅一个事件并将执行函数交给 <code>EvenEmiter</code>, <code>EvenEmitter</code>注册此事件类型，并将执行函数存入该类型事件的数组中。</p>
-</li>
-<li>
-<p>一旦用户发布事件及参数，<code>EvenEmitter</code>便会找到该类型事件的数组，并逐一执行数组内的函数</p>
-</li>
-</ul>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-21 05:52:02</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
-                javascript
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind">
-        <h2 class="post-title">手动实现 call、apply、bind</h2>
-      </a>
-      <div class="post-abstract">
-        <p>改变 <code>this</code> 的指向，就是将函数<code>fn</code>放入传入的<code>context</code>中，然后执行<code>context[fn]()</code>,此时的<code>fn</code>中的<code>this</code>就变成了<code>context</code>，在函数执行完毕之后，需删除<code>context</code>中的<code>fn</code></p>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-21 05:47:34</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
-                javascript
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu">
-        <h2 class="post-title">函数的防抖与节流</h2>
-      </a>
-      <div class="post-abstract">
-        <p><strong>有个人总结出：</strong></p>
-<ul>
-<li>
-<p>防抖如同下班，在你准备收拾东西走人的这段时间里有新工作出现你就下不了班。</p>
-</li>
-<li>
-<p>节流如同怀孕，在分娩之前来的都怀不上。</p>
-</li>
-</ul>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-21 05:45:29</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
-                javascript
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-  </section>
-
-<section class="post-item">
-    <div class="content">
-      <a href="https://zxpsuper.github.io/post/event-loop">
-        <h2 class="post-title">浏览器 Event Loop 机制</h2>
-      </a>
-      <div class="post-abstract">
-        <p>Event Loop是什么?</p>
-<p>event loop是一个执行模型，在不同的地方有不同的实现。浏览器和NodeJS基于不同的技术实现了各自的Event Loop。</p>
-
-      </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2019-08-09 11:44:21</span>
-        
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://zxpsuper.github.io/tag/KgIUl6sd4">
-                javascript
-                
-                  ，
-                
-              </a>
-            
-              <a href="https://zxpsuper.github.io/tag/btc2dZ7uSS">
-                event loop
-                
-              </a>
-            
-          </span>
-        
-      </div>
-    </div>
-    
-      <a href="https://zxpsuper.github.io/post/event-loop">
-        <div class="feature-container" style="background-image: url('https://zxpsuper.github.io/post-images/event-loop.jpg')">
-        </div>
-      </a>
-    
-  </section>
-
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
-
-      <div class="site-footer">
-  <div class="slogan">温故而知新</div>
-  <div class="social-container">
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://zxpsuper.github.io">
+  <img class="avatar" src="https://zxpsuper.github.io/images/avatar.png?v=1591803719729" alt="">
+  </a>
+  <h1 class="site-title">
+    小皮咖
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
     
       
-        <a href="https://github.com/zxpsuper" target="_blank">
-          <i class="fab fa-github"></i>
+        <a href="/" class="menu">
+          首页
         </a>
       
     
       
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
     
       
     
@@ -427,26 +68,327 @@
       
     
   </div>
-  Powered by <a href="https://github.com/zxpsuper" target="_blank">suporka</a> | <a class="rss" href="https://zxpsuper.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
+    
+        <div class="post-container">
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/ji-yi-ci-wei-xin-qian-duan-mian-shi/">
+        <h2 class="post-title">记一次微信前端面试🤓🤓</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-11-01 10:59:08
+        </span>
+        <span>
+          3 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/KgIUl6sd4/" class="post-tag">
+            # javascript
+          </a>
+        
+      </div>
+      
+        <a href="https://zxpsuper.github.io/post/ji-yi-ci-wei-xin-qian-duan-mian-shi/" class="post-feature-image" style="background-image: url('https://zxpsuper.github.io/post-images/ji-yi-ci-wei-xin-qian-duan-mian-shi.jpg')">
+        </a>
+      
+      <div class="post-abstract">
+        <p>抱着尝试一下的心态投了微信的前端简历，没想到还收到了面试邀请，仅以此文记录一下面试过程中遇到的问题</p>
 
-    </div>
-    <script type="application/javascript">
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie/">
+        <h2 class="post-title">斐波纳契数列</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-21 06:06:58
+        </span>
+        <span>
+          2 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/mxq_QsMjf/" class="post-tag">
+            # 算法
+          </a>
+        
+      </div>
+      
+        <a href="https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie/" class="post-feature-image" style="background-image: url('https://zxpsuper.github.io/post-images/fei-bo-na-qi-shu-lie.jpg')">
+        </a>
+      
+      <div class="post-abstract">
+        <p>在数学上，斐波纳契数列以如下被以递推的方法定义：<code>F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)（n&gt;=3，n∈N*）</code></p>
 
-hljs.initHighlightingOnLoad()
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/shou-dong-shi-xian-promise/">
+        <h2 class="post-title">手动实现 promise</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-21 05:56:33
+        </span>
+        <span>
+          4 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/KgIUl6sd4/" class="post-tag">
+            # javascript
+          </a>
+        
+      </div>
+      
+        <a href="https://zxpsuper.github.io/post/shou-dong-shi-xian-promise/" class="post-feature-image" style="background-image: url('http://data.whicdn.com/images/38250459/large.jpg')">
+        </a>
+      
+      <div class="post-abstract">
+        <p><code>promise</code>  提供了异步操作的解决方案，本文带你一步步实现一个 <code>promise</code>.</p>
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi/">
+        <h2 class="post-title">继承的几种方式</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-21 05:55:18
+        </span>
+        <span>
+          4 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/KgIUl6sd4/" class="post-tag">
+            # javascript
+          </a>
+        
+      </div>
+      
+        <a href="https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi/" class="post-feature-image" style="background-image: url('http://u.maxlaw.cn/UploadPic/10722/2018092753805909.jpg')">
+        </a>
+      
+      <div class="post-abstract">
+        <p><strong>继承优先寻找本身，没有找到的话再从原型链 (__proto__属性) 一层层往上找</strong></p>
+
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing/">
+        <h2 class="post-title">This 的几种使用场景</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-21 05:54:35
+        </span>
+        <span>
+          3 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/KgIUl6sd4/" class="post-tag">
+            # javascript
+          </a>
+        
+      </div>
+      
+        <a href="https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing/" class="post-feature-image" style="background-image: url('http://pic.kekenet.com/2016/1013/41841476329549.png')">
+        </a>
+      
+      <div class="post-abstract">
+        <p><code>JavaScript</code> 中的 <code>this</code> 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。<code>JavaScript</code> 中函数的调用有以下几种方式：</p>
+
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua/">
+        <h2 class="post-title">数组的去重与扁平化</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-21 05:52:56
+        </span>
+        <span>
+          4 min read
+        </span>
+        
+      </div>
+      
+        <a href="https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua/" class="post-feature-image" style="background-image: url('http://img.dm456.co/Uploads/news/2017-10-16/1463032651931028.jpg')">
+        </a>
+      
+      <div class="post-abstract">
+        <p>顾名思义,就是去掉数组中重复的元素，针对基本类型数据的数组, 有以下几种方法：</p>
+
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter/">
+        <h2 class="post-title">手动实现一个 EvenEmitter</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-21 05:52:02
+        </span>
+        <span>
+          3 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/KgIUl6sd4/" class="post-tag">
+            # javascript
+          </a>
+        
+      </div>
+      
+      <div class="post-abstract">
+        
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind/">
+        <h2 class="post-title">手动实现 call、apply、bind</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-21 05:47:34
+        </span>
+        <span>
+          2 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/KgIUl6sd4/" class="post-tag">
+            # javascript
+          </a>
+        
+      </div>
+      
+      <div class="post-abstract">
+        
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu/">
+        <h2 class="post-title">函数的防抖与节流</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-21 05:45:29
+        </span>
+        <span>
+          2 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/KgIUl6sd4/" class="post-tag">
+            # javascript
+          </a>
+        
+      </div>
+      
+      <div class="post-abstract">
+        
+      </di>
+    </article>
+  
+    <article class="post">
+      <a href="https://zxpsuper.github.io/post/event-loop/">
+        <h2 class="post-title">浏览器 Event Loop 机制</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2019-08-09 11:44:21
+        </span>
+        <span>
+          4 min read
+        </span>
+        
+          <a href="https://zxpsuper.github.io/tag/KgIUl6sd4/" class="post-tag">
+            # javascript
+          </a>
+        
+          <a href="https://zxpsuper.github.io/tag/btc2dZ7uSS/" class="post-tag">
+            # event loop
+          </a>
+        
+      </div>
+      
+        <a href="https://zxpsuper.github.io/post/event-loop/" class="post-feature-image" style="background-image: url('https://zxpsuper.github.io/post-images/event-loop.jpg')">
+        </a>
+      
+      <div class="post-abstract">
+        <p>Event Loop是什么?</p>
+<p>event loop是一个执行模型，在不同的地方有不同的实现。浏览器和NodeJS基于不同的技术实现了各自的Event Loop。</p>
+
+      </di>
+    </article>
+  
+</div>
+
+    
+        <div class="pagination-container">
+  
+  
+</div>
+
+    
+        <div class="site-footer">
+  Powered by <a href="https://github.com/zxpsuper" target="_blank">suporka</a> | 
+  <a class="rss" href="https://zxpsuper.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
+
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      console.log('section.offsetHeight', section.offsetHeight);
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
 
 </script>
 
-
-
-
+      </div>
+    </div>
   </body>
 </html>

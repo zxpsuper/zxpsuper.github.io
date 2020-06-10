@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zxpsuper.github.io</id>
     <title>小皮咖</title>
-    <updated>2020-06-10T15:15:15.873Z</updated>
+    <updated>2020-06-10T15:43:39.137Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zxpsuper.github.io"/>
     <link rel="self" href="https://zxpsuper.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, 小皮咖</rights>
     <entry>
         <title type="html"><![CDATA[记一次微信前端面试🤓🤓]]></title>
-        <id>https://zxpsuper.github.io/post/ji-yi-ci-wei-xin-qian-duan-mian-shi</id>
-        <link href="https://zxpsuper.github.io/post/ji-yi-ci-wei-xin-qian-duan-mian-shi">
+        <id>https://zxpsuper.github.io/post/ji-yi-ci-wei-xin-qian-duan-mian-shi/</id>
+        <link href="https://zxpsuper.github.io/post/ji-yi-ci-wei-xin-qian-duan-mian-shi/">
         </link>
         <updated>2019-11-01T02:59:08.000Z</updated>
         <summary type="html"><![CDATA[<p>抱着尝试一下的心态投了微信的前端简历，没想到还收到了面试邀请，仅以此文记录一下面试过程中遇到的问题</p>
@@ -73,8 +73,8 @@ console.log(add('1045747', '10')); // 1045757
     </entry>
     <entry>
         <title type="html"><![CDATA[斐波纳契数列]]></title>
-        <id>https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie</id>
-        <link href="https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie">
+        <id>https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie/</id>
+        <link href="https://zxpsuper.github.io/post/fei-bo-na-qi-shu-lie/">
         </link>
         <updated>2019-08-21T10:06:58.000Z</updated>
         <summary type="html"><![CDATA[<p>在数学上，斐波纳契数列以如下被以递推的方法定义：<code>F(1)=1，F(2)=1, F(n)=F(n-1)+F(n-2)（n&gt;=3，n∈N*）</code></p>
@@ -133,8 +133,8 @@ console.log(add('1045747', '10')); // 1045757
     </entry>
     <entry>
         <title type="html"><![CDATA[手动实现 promise]]></title>
-        <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-promise</id>
-        <link href="https://zxpsuper.github.io/post/shou-dong-shi-xian-promise">
+        <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-promise/</id>
+        <link href="https://zxpsuper.github.io/post/shou-dong-shi-xian-promise/">
         </link>
         <updated>2019-08-21T09:56:33.000Z</updated>
         <summary type="html"><![CDATA[<p><code>promise</code>  提供了异步操作的解决方案，本文带你一步步实现一个 <code>promise</code>.</p>
@@ -309,8 +309,8 @@ MyPromise.prototype.then = function(onFulfilled, onRejected) {
     </entry>
     <entry>
         <title type="html"><![CDATA[继承的几种方式]]></title>
-        <id>https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi</id>
-        <link href="https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi">
+        <id>https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi/</id>
+        <link href="https://zxpsuper.github.io/post/ji-cheng-de-ji-chong-fang-shi/">
         </link>
         <updated>2019-08-21T09:55:18.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>继承优先寻找本身，没有找到的话再从原型链 (__proto__属性) 一层层往上找</strong></p>
@@ -458,8 +458,8 @@ Instance.say();
     </entry>
     <entry>
         <title type="html"><![CDATA[This 的几种使用场景]]></title>
-        <id>https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing</id>
-        <link href="https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing">
+        <id>https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing/</id>
+        <link href="https://zxpsuper.github.io/post/this-de-ji-chong-shi-yong-chang-jing/">
         </link>
         <updated>2019-08-21T09:54:35.000Z</updated>
         <summary type="html"><![CDATA[<p><code>JavaScript</code> 中的 <code>this</code> 含义要丰富得多，它可以是全局对象、当前对象或者任意对象，这完全取决于函数的调用方式。<code>JavaScript</code> 中函数的调用有以下几种方式：</p>
@@ -540,8 +540,8 @@ obj.foo();
     </entry>
     <entry>
         <title type="html"><![CDATA[数组的去重与扁平化]]></title>
-        <id>https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua</id>
-        <link href="https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua">
+        <id>https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua/</id>
+        <link href="https://zxpsuper.github.io/post/shu-zu-de-qu-chong-yu-bian-ping-hua/">
         </link>
         <updated>2019-08-21T09:52:56.000Z</updated>
         <summary type="html"><![CDATA[<p>顾名思义,就是去掉数组中重复的元素，针对基本类型数据的数组, 有以下几种方法：</p>
@@ -655,11 +655,12 @@ console.log(arr2); // ['a', 'c', 'b', 'd']
     </entry>
     <entry>
         <title type="html"><![CDATA[手动实现一个 EvenEmitter]]></title>
-        <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter</id>
-        <link href="https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter">
+        <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter/</id>
+        <link href="https://zxpsuper.github.io/post/shou-dong-shi-xian-yi-ge-evenemitter/">
         </link>
         <updated>2019-08-21T09:52:02.000Z</updated>
-        <summary type="html"><![CDATA[<p>原理:</p>
+        <content type="html"><![CDATA[<!-- more -->
+<p>原理:</p>
 <p><code>EvenEmitter</code> 的原理便是发布订阅者模式。</p>
 <ul>
 <li>
@@ -669,18 +670,6 @@ console.log(arr2); // ['a', 'c', 'b', 'd']
 <p>一旦用户发布事件及参数，<code>EvenEmitter</code>便会找到该类型事件的数组，并逐一执行数组内的函数</p>
 </li>
 </ul>
-]]></summary>
-        <content type="html"><![CDATA[<p>原理:</p>
-<p><code>EvenEmitter</code> 的原理便是发布订阅者模式。</p>
-<ul>
-<li>
-<p>用户订阅一个事件并将执行函数交给 <code>EvenEmiter</code>, <code>EvenEmitter</code>注册此事件类型，并将执行函数存入该类型事件的数组中。</p>
-</li>
-<li>
-<p>一旦用户发布事件及参数，<code>EvenEmitter</code>便会找到该类型事件的数组，并逐一执行数组内的函数</p>
-</li>
-</ul>
-<!-- more -->
 <p>接下来我们来实现一个简单版和一个高级版。</p>
 <h2 id="简单版本">简单版本</h2>
 <pre><code class="language-js">// 发布订阅者模式
@@ -794,14 +783,12 @@ emitter.emit('click');
     </entry>
     <entry>
         <title type="html"><![CDATA[手动实现 call、apply、bind]]></title>
-        <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind</id>
-        <link href="https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind">
+        <id>https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind/</id>
+        <link href="https://zxpsuper.github.io/post/shou-dong-shi-xian-callapplybind/">
         </link>
         <updated>2019-08-21T09:47:34.000Z</updated>
-        <summary type="html"><![CDATA[<p>改变 <code>this</code> 的指向，就是将函数<code>fn</code>放入传入的<code>context</code>中，然后执行<code>context[fn]()</code>,此时的<code>fn</code>中的<code>this</code>就变成了<code>context</code>，在函数执行完毕之后，需删除<code>context</code>中的<code>fn</code></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>改变 <code>this</code> 的指向，就是将函数<code>fn</code>放入传入的<code>context</code>中，然后执行<code>context[fn]()</code>,此时的<code>fn</code>中的<code>this</code>就变成了<code>context</code>，在函数执行完毕之后，需删除<code>context</code>中的<code>fn</code></p>
-<!-- more -->
+        <content type="html"><![CDATA[<!-- more -->
+<p>改变 <code>this</code> 的指向，就是将函数<code>fn</code>放入传入的<code>context</code>中，然后执行<code>context[fn]()</code>,此时的<code>fn</code>中的<code>this</code>就变成了<code>context</code>，在函数执行完毕之后，需删除<code>context</code>中的<code>fn</code></p>
 <h2 id="call">call</h2>
 <ol>
 <li>判断当前 <code>this</code> 是否为函数，防止 <code>Function.prototype.myCall()</code> 直接调用</li>
@@ -860,11 +847,12 @@ emitter.emit('click');
     </entry>
     <entry>
         <title type="html"><![CDATA[函数的防抖与节流]]></title>
-        <id>https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu</id>
-        <link href="https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu">
+        <id>https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu/</id>
+        <link href="https://zxpsuper.github.io/post/han-shu-de-fang-dou-yu-jie-liu/">
         </link>
         <updated>2019-08-21T09:45:29.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>有个人总结出：</strong></p>
+        <content type="html"><![CDATA[<!-- more -->
+<p><strong>有个人总结出：</strong></p>
 <ul>
 <li>
 <p>防抖如同下班，在你准备收拾东西走人的这段时间里有新工作出现你就下不了班。</p>
@@ -873,17 +861,6 @@ emitter.emit('click');
 <p>节流如同怀孕，在分娩之前来的都怀不上。</p>
 </li>
 </ul>
-]]></summary>
-        <content type="html"><![CDATA[<p><strong>有个人总结出：</strong></p>
-<ul>
-<li>
-<p>防抖如同下班，在你准备收拾东西走人的这段时间里有新工作出现你就下不了班。</p>
-</li>
-<li>
-<p>节流如同怀孕，在分娩之前来的都怀不上。</p>
-</li>
-</ul>
-<!-- more -->
 <h2 id="防抖">防抖</h2>
 <p>所谓防抖，就是指触发事件后在 <code>n</code> 秒内函数只能执行一次，如果在 <code>n</code> 秒内又触发了事件，则会重新计算函数执行时间。（防误触）</p>
 <pre><code class="language-js">// 延缓执行
@@ -957,8 +934,8 @@ function throttle(func, wait) {
     </entry>
     <entry>
         <title type="html"><![CDATA[浏览器 Event Loop 机制]]></title>
-        <id>https://zxpsuper.github.io/post/event-loop</id>
-        <link href="https://zxpsuper.github.io/post/event-loop">
+        <id>https://zxpsuper.github.io/post/event-loop/</id>
+        <link href="https://zxpsuper.github.io/post/event-loop/">
         </link>
         <updated>2019-08-09T03:44:21.000Z</updated>
         <summary type="html"><![CDATA[<p>Event Loop是什么?</p>
