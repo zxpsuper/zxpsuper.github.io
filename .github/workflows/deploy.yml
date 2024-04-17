@@ -29,5 +29,5 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.BLOB_DEPLOY_PRI }}
         BRANCH: gh-pages  # 部署到gh-pages分支
-        FOLDER: build  # 指定构建目录，根据您的构建工具可能不同，如'build'或'dist'
+        FOLDER: docs/.vuepress/dist  # 指定构建目录，根据您的构建工具可能不同，如'build'或'dist'
         CLEAN: true  # 清理旧文件
