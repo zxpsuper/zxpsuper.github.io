@@ -1,48 +1,33 @@
-name: CI
-
+name: Build and Deploy to GitHub Pages
+ 
 on:
   push:
     branches:
-      - master
-
-env:
-  GIT_USER: suporka
-  GIT_EMAIL: zxpsuper@163.com
-
+      - master  # 指定触发部署的分支，通常是main或master
+ 
 jobs:
-  build:
-    name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node_version: [14.x]
-
+  build-and-deploy:
+    runs-on: ubuntu-latest  # 使用最新的Ubuntu虚拟环境
+ 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node_version }}
-
-      - name: Configuration environment
-        env:
-          HEXO_DEPLOY_PRI: ${{secrets.BLOB_DEPLOY_PRI}}
-        run: |
-          sudo timedatectl set-timezone "Asia/Shanghai"
-          mkdir -p ~/.ssh/
-          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name $GIT_USER
-          git config --global user.email $GIT_EMAIL
-
-      - name: Install dependencies
-        run: |
-          npm install
-
-      - name: Deploy hexo
-        run: |
-          npm run deploy
+    - name: Checkout Code
+      uses: actions/checkout@v2
+ 
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14'  # 指定Node.js的版本，根据您的项目需求调整
+ 
+    - name: Install Dependencies
+      run: npm install
+ 
+    - name: Build
+      run: npm run build
+ 
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        GITHUB_TOKEN: ${{ secrets.BLOB_DEPLOY_PRI }}
+        BRANCH: gh-pages  # 部署到gh-pages分支
+        FOLDER: build  # 指定构建目录，根据您的构建工具可能不同，如'build'或'dist'
+        CLEAN: true  # 清理旧文件
