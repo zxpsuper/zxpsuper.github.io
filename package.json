@@ -6,7 +6,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "npm docs:build && node publish.js"
+    "deploy": "npm run docs:build && node publish.js"
   },
   "devDependencies": {
     "@vuepress/theme-blog": "^2.3.3",
