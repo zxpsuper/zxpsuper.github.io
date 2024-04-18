@@ -46,5 +46,8 @@ module.exports = {
         },
       ],
     },
+    feed: {
+      canonical_base: 'https://zxpsuper.github.io/',
+    },
   }
 }
