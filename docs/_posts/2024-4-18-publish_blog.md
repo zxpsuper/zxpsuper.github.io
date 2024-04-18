@@ -17,6 +17,8 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 
 <!-- more -->
 
+<tongji/>
+
 **那么如何利用 Github Action 构建并发布博客呢？**
 
 1. 本地创建公钥密钥并保存到仓库设置中

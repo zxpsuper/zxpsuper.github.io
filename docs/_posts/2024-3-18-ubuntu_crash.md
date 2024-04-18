@@ -21,6 +21,8 @@ location: 广州
 
 <!-- more -->
 
+<tongji/>
+
 **则代理后的链接为 ：**
 
 `https://ghproxy.com/https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.30/Clash.for.Windows-0.20.30-x64-linux.tar.gz`
