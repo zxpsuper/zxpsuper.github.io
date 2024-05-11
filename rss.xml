@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>This is a blog example built by VuePress</description>
-        <lastBuildDate>Wed, 24 Apr 2024 07:18:55 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 11 May 2024 06:41:06 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -21,16 +21,6 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
-            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
-            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
-            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
-**那么 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/giscus-01.png">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
             <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
             <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
@@ -40,13 +30,13 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
-            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
-            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
-            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
+            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
+            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
+            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
+            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
+**那么 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/giscus-01.png">
             </enclosure>
         </item>
         <item>
@@ -58,6 +48,29 @@ sudo ...]]></description>
 GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
 但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[typescript 配置文件 tsconfig.json 详解]]></title>
+            <link>https://zxpsuper.github.io/2024/04/16/tsconfig/</link>
+            <guid>https://zxpsuper.github.io/2024/04/16/tsconfig/</guid>
+            <pubDate>Tue, 16 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[tsconfig.json 是用来配置 TypeScript 编译选项的，通常位于项目的根目录位置。
+我们可以用 ts 提供的 tsc 命令行工具生成配置文件，执行 tsc --init。
+它会生成一堆默认设置如下：
+`
+Created a new tsconfig.json with:
+  target: es2016
+  module: commonjs ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
+            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
+            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
             </enclosure>
         </item>
         <item>
