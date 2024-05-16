@@ -58,9 +58,7 @@ var a = new Promise(function () {})
     [
       "@babel/preset-env",
       {
-        "useBuiltIns": false
-        // 默认false, 不添加polyfill，'entry' 为全量引入，'usage' 为按需引入
-        // corejs: 3 // 可以指定 corejs 版本
+        "useBuiltIns": "entry"
       }
     ]
   ]
@@ -94,7 +92,18 @@ new Promise(function () {})
 2. 按需引入
 
 修改配置参数 useBuiltIns 为 usage 按需引入，此时不需要在顶部导入 @babel/polyfill 了
-
+```json
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage"
+      }
+    ]
+  ]
+}
+```
 ```js
 'use strict'
 
