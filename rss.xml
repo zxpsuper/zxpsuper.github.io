@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>This is a blog example built by VuePress</description>
-        <lastBuildDate>Sat, 11 May 2024 06:41:06 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 May 2024 09:11:25 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -30,14 +30,17 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
-            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
-            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
-            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
-**那么 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/giscus-01.png">
-            </enclosure>
+            <title><![CDATA[typescript 配置文件 tsconfig.json 详解]]></title>
+            <link>https://zxpsuper.github.io/2024/04/16/tsconfig/</link>
+            <guid>https://zxpsuper.github.io/2024/04/16/tsconfig/</guid>
+            <pubDate>Tue, 16 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[tsconfig.json 是用来配置 TypeScript 编译选项的，通常位于项目的根目录位置。
+我们可以用 ts 提供的 tsc 命令行工具生成配置文件，执行 tsc --init。
+它会生成一堆默认设置如下：
+`
+Created a new tsconfig.json with:
+  target: es2016
+  module: commonjs ...]]></description>
         </item>
         <item>
             <title><![CDATA[使用 Github Action 发布博客]]></title>
@@ -51,17 +54,14 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[typescript 配置文件 tsconfig.json 详解]]></title>
-            <link>https://zxpsuper.github.io/2024/04/16/tsconfig/</link>
-            <guid>https://zxpsuper.github.io/2024/04/16/tsconfig/</guid>
-            <pubDate>Tue, 16 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[tsconfig.json 是用来配置 TypeScript 编译选项的，通常位于项目的根目录位置。
-我们可以用 ts 提供的 tsc 命令行工具生成配置文件，执行 tsc --init。
-它会生成一堆默认设置如下：
-`
-Created a new tsconfig.json with:
-  target: es2016
-  module: commonjs ...]]></description>
+            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
+            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
+            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
+            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
+**那么 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/giscus-01.png">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
@@ -83,6 +83,27 @@ Created a new tsconfig.json with:
 本文简单实现下 Vue 模板编译原理的第一步： AST 语法树的生成过程！
 ]]></description>
             <enclosure url="https://zxpsuper.github.io/images/vue-template-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[关于 babel polyfill 那些事]]></title>
+            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
+            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
+            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
+babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
+            <link>https://zxpsuper.github.io/writings/2024/03/17/ubuntu-removesnap/</link>
+            <guid>https://zxpsuper.github.io/writings/2024/03/17/ubuntu-removesnap/</guid>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
+打开终端，输入 snap list 查看已安装的软件。
+停止 snapd 服务
+`shell
+sudo ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
             </enclosure>
         </item>
     </channel>
