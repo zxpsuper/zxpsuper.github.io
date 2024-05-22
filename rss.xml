@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>This is a blog example built by VuePress</description>
-        <lastBuildDate>Thu, 16 May 2024 09:50:07 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 22 May 2024 06:45:46 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -43,6 +43,16 @@ Created a new tsconfig.json with:
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
+            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
+            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
+            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
+**那么 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/giscus-01.png">
+            </enclosure>
+        </item>
+        <item>
             <title><![CDATA[使用 Github Action 发布博客]]></title>
             <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
             <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
@@ -54,14 +64,22 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
-            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
-            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
-            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
-**那么 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/giscus-01.png">
+            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
+            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
+            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[关于 babel polyfill 那些事]]></title>
+            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill-copy/</link>
+            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill-copy/</guid>
+            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
+babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
             <title><![CDATA[Vue 模板编译原理（一）]]></title>
@@ -76,35 +94,24 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[关于 babel polyfill 那些事]]></title>
-            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
-            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
-            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
-babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
-            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
-            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
-            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
+            <title><![CDATA[Git merge 与 rebase 的区别]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
+git merge 会产生一个多余的 commit, 并且这个 commit　在文件的　commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
+后来在一篇知乎问答「 [Git commits历史是如何做到如此清爽的？](https://www.zhihu.com/question/61 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/commit-01.png">
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
-            <link>https://zxpsuper.github.io/writings/2024/03/17/ubuntu-removesnap/</link>
-            <guid>https://zxpsuper.github.io/writings/2024/03/17/ubuntu-removesnap/</guid>
-            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
-打开终端，输入 snap list 查看已安装的软件。
-停止 snapd 服务
-`shell
-sudo ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
-            </enclosure>
+            <title><![CDATA[让你的 git commit 更漂亮]]></title>
+            <link>https://zxpsuper.github.io/writings/2024/05/22/beautiful-commit/</link>
+            <guid>https://zxpsuper.github.io/writings/2024/05/22/beautiful-commit/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
+也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
+好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。 ...]]></description>
         </item>
     </channel>
 </rss>
