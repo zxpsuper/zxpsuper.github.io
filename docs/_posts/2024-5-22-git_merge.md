@@ -10,11 +10,11 @@ location: 广州
 
 之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
 
-git merge 会产生一个多余的 commit, 并且这个 commit　在文件的　commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
+git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
 
 后来在一篇知乎问答「 [Git commits历史是如何做到如此清爽的？](https://www.zhihu.com/question/61283395)」下面看到尤雨溪的回答：**多用 rebase!**
 
-那么 merge 和 rebase 究竟有什么区别呢 ？rebase能解决什么问题？
+那么 merge 和 rebase 究竟有什么区别呢 ？rebase 能解决什么问题？
 
 <!-- more -->
 
