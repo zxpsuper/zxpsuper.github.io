@@ -1,5 +1,5 @@
 ---
-title: Git merge 与 rebase 的区别
+title: 多用 Git rebase ?
 date: 2024-5-22
 tags:
   - git
