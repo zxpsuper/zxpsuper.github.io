@@ -4,20 +4,16 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>This is a blog example built by VuePress</description>
-        <lastBuildDate>Wed, 29 May 2024 09:59:08 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 31 May 2024 08:33:29 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
-            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
-            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
-            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
-            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
-打开终端，输入 snap list 查看已安装的软件。
-停止 snapd 服务
-`shell
-sudo ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击👉这里, [👉还有这里 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
             </enclosure>
         </item>
         <item>
@@ -32,15 +28,6 @@ sudo ...]]></description>
 Created a new tsconfig.json with:
   target: es2016
   module: commonjs ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[首先下载 Clash For Windows，备份地址点击👉这里, [👉还有这里 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
-            </enclosure>
         </item>
         <item>
             <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
@@ -64,16 +51,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
-            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
-            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
-            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[Vue 模板编译原理（一）]]></title>
             <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
             <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
@@ -94,17 +71,7 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[若是月亮还没来]]></title>
-            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
-            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
-            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
-年轻人接近理想好难，想要放弃却又心存不甘。
-如果人生最难得到圆满，不如选择坦然！
-]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Git merge 与 rebase 的区别]]></title>
+            <title><![CDATA[多用 Git rebase ?]]></title>
             <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
             <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
             <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
@@ -115,6 +82,36 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
+            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
+            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[若是月亮还没来]]></title>
+            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
+            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
+            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
+年轻人接近理想好难，想要放弃却又心存不甘。
+如果人生最难得到圆满，不如选择坦然！
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Sass 升级之旅]]></title>
+            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
+            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
+            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
+而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
+后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
+而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
+        </item>
+        <item>
             <title><![CDATA[让你的 git commit 更漂亮]]></title>
             <link>https://zxpsuper.github.io/writings/2024/05/22/beautiful-commit/</link>
             <guid>https://zxpsuper.github.io/writings/2024/05/22/beautiful-commit/</guid>
@@ -122,6 +119,19 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
 也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
 好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
+            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
+            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
+打开终端，输入 snap list 查看已安装的软件。
+停止 snapd 服务
+`shell
+sudo ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            </enclosure>
         </item>
     </channel>
 </rss>
