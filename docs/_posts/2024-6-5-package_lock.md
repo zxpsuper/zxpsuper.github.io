@@ -12,9 +12,9 @@ location: 广州
 
 因为 `package-lock.json` 被开发者删除后重新安装依赖生成新的 `package-lock.json`，某些模块被自动升级了。
 
-我们都知道 `package.json` 除了配置快捷的 node script 脚本, 最主要的作用还是: ***用于记录下当前项目所应用到的依赖包.***
+我们都知道 `package.json` 除了配置快捷的 node script 脚本, 最主要的作用还是: ***用于记录当前项目所应用到的依赖包.***
 
-但是既然都已经有了 package.json 文件了, 那么为什么项目中还需要一个 package-lock.json 呢? 本文就来为您详细分析✍✍!
+但是既然都已经有了 `package.json` 文件了, 那么为什么项目中还需要一个 `package-lock.json` 呢? 本文就来为您详细分析✍✍!
 
 <!-- more -->
 
