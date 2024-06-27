@@ -135,13 +135,13 @@ HSL 在面板上的具体体现为：
 
 ```js
 function hsvToRgb(hue, saturation, value) {
-  saturation = (saturation * 255) | 0
-  value = (value * 255) | 0
+  saturation = Math.round(saturation * 255)
+  value = Math.round(value * 255)
   if (saturation === 0) {
     return [value, value, value]
   } else {
-    const satVal = (((255 - saturation) * value) / 255) | 0
-    const ligVal = (((value - satVal) * (hue % 60)) / 60) | 0
+    const satVal = Math.round(((255 - saturation) * value) / 255)
+    const ligVal = Math.round(((value - satVal) * (hue % 60)) / 60)
     if (hue === 360) {
       return [value, 0, 0]
     } else if (hue < 60) {
