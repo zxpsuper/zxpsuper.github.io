@@ -9,7 +9,6 @@
       data-category-id="DIC_kwDOBa6r5c4CevP1"
       data-mapping="pathname"
       data-strict="0"
-      data-loading="lazy"
       data-reactions-enabled="1"
       data-emit-metadata="0"
       data-input-position="bottom"

@@ -61,6 +61,20 @@ module.exports = {
         },
       ],
     },
+    nav: [
+      {
+        text: 'Blog',
+        link: '/',
+      },
+      {
+        text: 'Tags',
+        link: '/tag/',
+      },
+      {
+        text: 'Archives',
+        link: '/archives',
+      },
+    ],
     feed: {
       canonical_base: 'https://zxpsuper.github.io/',
     },
