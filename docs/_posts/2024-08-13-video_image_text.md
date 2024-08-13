@@ -48,8 +48,12 @@ location: 广州
   class="mb-16"
   v-model="textarea">
 </el-input>
-<el-button size="mini" @click="uploadFile">上传图片</el-button>
-<el-button size="mini" type="primary" @click="downloadFile">下载图片</el-button>
+<button class="button" @click="downloadFile">
+<span class="button-content">下载图片</span>
+</button>
+<button size="mini" @click="uploadFile" class="upload">
+上传图片
+</button>
 </el-col>
 <el-col :span="16">
 <canvas style="width: 420px" id="canvas"></canvas>
@@ -148,3 +152,65 @@ location: 广州
     }
   }
 </script>
+<style scoped>
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+.upload,
+.upload:focus {
+  margin-top: 16px;
+  font-size: 17px;
+  padding: 10px 25px;
+  border-radius: 0.7rem;
+  background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
+  border: 2px solid rgb(50, 50, 50);
+  border-bottom: 5px solid rgb(50, 50, 50);
+  box-shadow: 0px 1px 6px 0px rgb(158, 129, 254);
+  transform: translate(0, -3px);
+  cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+}
+
+.upload:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid rgb(50, 50, 50);
+}
+</style>
