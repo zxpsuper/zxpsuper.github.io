@@ -20,8 +20,13 @@ export default ({
         })()
     }
     import('./components/element-ui').then(elementUi => {
-      console.log(elementUi)
       Vue.use(elementUi)
+      setTimeout(() => {
+        if (router.app._vnode) {
+          router.app._vnode.key = 'updated'
+          router.app.$forceUpdate()
+        }
+      }, 0)
     })
   }
 }
