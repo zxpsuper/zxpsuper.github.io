@@ -80,7 +80,6 @@ location: 广州
         lineHeight: 80,
         textarea: '',
         options: [
-          {value: 'https://zxpsuper.github.io/qrcode-with-logos/assets/avatar.C4sG52Um.jpg', label: '小皮咖'},
           {value: '/images/郭德纲.jpg', label: '郭德纲'}, 
           {value: '/images/罗永浩.jpg', label: '罗永浩'}, 
           {value: '/images/罗翔.webp', label: '罗翔'}, 
