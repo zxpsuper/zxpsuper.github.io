@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>This is a blog example built by VuePress</description>
-        <lastBuildDate>Mon, 26 Aug 2024 07:05:02 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 26 Aug 2024 07:23:21 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -17,15 +17,13 @@
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[清远英德行]]></title>
-            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
-            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
-            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
-英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
-            </enclosure>
+            <title><![CDATA[字幕截图生成器]]></title>
+            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
+            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
+            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
+其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
+感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
         </item>
         <item>
             <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
@@ -41,21 +39,24 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[字幕截图生成器]]></title>
-            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
-            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
-            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
-其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
-感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
-        </item>
-        <item>
             <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
             <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
             <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
             <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
             </enclosure>
         </item>
         <item>
@@ -70,16 +71,6 @@ sudo ...]]></description>
 Created a new tsconfig.json with:
   target: es2016
   module: commonjs ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
-            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
-            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
-            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
-**那么 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
-            </enclosure>
         </item>
         <item>
             <title><![CDATA[使用 Github Action 发布博客]]></title>
@@ -103,6 +94,16 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
+            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
+            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
+            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
+**那么 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
+            </enclosure>
+        </item>
+        <item>
             <title><![CDATA[Vue 模板编译原理（一）]]></title>
             <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
             <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
@@ -115,6 +116,14 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[关于 babel polyfill 那些事]]></title>
+            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
+            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
+            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
+babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
+        </item>
+        <item>
             <title><![CDATA[让你的 git commit 更漂亮]]></title>
             <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
             <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
@@ -125,14 +134,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 Commit 结构
 一个规范详细的 commit 结构如下：
 ` ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[关于 babel polyfill 那些事]]></title>
-            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
-            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
-            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
-babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
             <title><![CDATA[多用 Git rebase ?]]></title>
@@ -166,16 +167,6 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 ]]></description>
         </item>
         <item>
-            <title><![CDATA[颜色选择器原理]]></title>
-            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
-            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
-            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
-其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
-所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
-]]></description>
-        </item>
-        <item>
             <title><![CDATA[“山寨版”《草料二维码》]]></title>
             <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
             <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
@@ -194,6 +185,16 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
 因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
 我们都知道 package.json 除了 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[颜色选择器原理]]></title>
+            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
+            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
+            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
+其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
+所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
+]]></description>
         </item>
         <item>
             <title><![CDATA[中医五脏与情感的关系]]></title>
