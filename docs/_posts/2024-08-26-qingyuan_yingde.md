@@ -12,7 +12,7 @@ location: 广州
 
 英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
 
-<img src="https://sns-webpic-qc.xhscdn.com/202408261008/4c4592c6cea459997ea311072ae57b23/1040g0083151es1r0gs2g5o787ugg91kejlntn1o!nd_dft_wgth_webp_3" width="676px" style="max-width: 100%">
+<img src="/images/yingde.webp" width="676px" style="max-width: 100%">
 
 广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
 
