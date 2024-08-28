@@ -3,25 +3,17 @@
     <channel>
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
-        <description>This is a blog example built by VuePress</description>
-        <lastBuildDate>Wed, 28 Aug 2024 02:04:49 GMT</lastBuildDate>
+        <description>小皮咖博客</description>
+        <lastBuildDate>Wed, 28 Aug 2024 02:26:31 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
-            <title><![CDATA[字幕截图生成器]]></title>
-            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
-            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
-            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
-其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
-感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄！]]></description>
-        </item>
-        <item>
-            <title><![CDATA[自学蛙泳]]></title>
-            <link>https://zxpsuper.github.io/2024/08/05/swimming/</link>
-            <guid>https://zxpsuper.github.io/2024/08/05/swimming/</guid>
-            <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
-            <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
             </enclosure>
         </item>
         <item>
@@ -30,23 +22,11 @@
             <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
             <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
-
 打开终端，输入 snap list 查看已安装的软件。
-]]></description>
+停止 snapd 服务
+`shell
+sudo ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[下载与安装
-首先下载 Clash For Windows，备份地址点击 👉 这里, 👉 还有这里
-在其中找到需要的版本，然后下载即可，如果国内下载较慢的话，可以使用大佬提供的代理，使用方式是在下载链接的前面加上 https://ghproxy.com/ 即可，例如一个下载链接为 :
-(以当前最新版本为例子：0.20.30)
-https://github.com/Fndroid/clashforwindows_pkg/releases/download/0.20.30/Clash.for.Windows-0.20.30-x64-linux.tar.gz]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
             </enclosure>
         </item>
         <item>
@@ -57,46 +37,18 @@ https://github.com/Fndroid/clashforwindows_pkg/releases/download/0.20.30/Clash.f
             <description><![CDATA[tsconfig.json 是用来配置 TypeScript 编译选项的，通常位于项目的根目录位置。
 我们可以用 ts 提供的 tsc 命令行工具生成配置文件，执行 tsc --init。
 它会生成一堆默认设置如下：
+`
 Created a new tsconfig.json with:
   target: es2016
-  module: commonjs
-  strict: true
-  esModuleInterop: true
-  skipLibCheck: true
-  forceConsistentCasingInFileNames: true
-
-You can learn more at https://aka.ms/tsconfig
-]]></description>
-        </item>
-        <item>
-            <title><![CDATA[清远英德行]]></title>
-            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
-            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
-            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
-英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
-
-广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[使用 Github Action 发布博客]]></title>
-            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
-            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
-            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
-GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
-但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可自动开启服务。甚至你不需要购买服务器 —— GitHub Actions 自带云环境运行，包括私有仓库也可以享用，而且云环境性能也十分强劲。]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
-            </enclosure>
+  module: commonjs ...]]></description>
         </item>
         <item>
             <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
             <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
             <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
             <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。]]></description>
+            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
+**那么 ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
             </enclosure>
         </item>
@@ -105,8 +57,8 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
             <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
             <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[背景
-现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!]]></description>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+]]></description>
             <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
             </enclosure>
         </item>
@@ -116,9 +68,29 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
             <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[计划写一系列关于 Vue 原理的文章，学习理解后分享印象更深！
-众所周知 ，Vue 文件中写的 &lt;template&gt;&lt;/template&gt; 标签都会被 vue-loader 转化成 AST 语法树，而后再根据 AST 语法树生成 render 渲染函数，最后渲染并挂载在页面上。
-本文简单实现下 Vue 模板编译原理的第一步： AST 语法树的生成过程！]]></description>
+众所周知 ，Vue 文件中写的 `` 标签都会被 vue-loader 转化成 AST 语法树，而后再根据 AST 语法树生成 render 渲染函数，最后渲染并挂载在页面上。
+本文简单实现下 Vue 模板编译原理的第一步： AST 语法树的生成过程！
+]]></description>
             <enclosure url="https://zxpsuper.github.io/images/vue-template-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[关于 babel polyfill 那些事]]></title>
+            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
+            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
+            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
+babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[使用 Github Action 发布博客]]></title>
+            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
+            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
+            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
+GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
+但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
             </enclosure>
         </item>
         <item>
@@ -128,63 +100,10 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
 也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
-好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[关于 babel polyfill 那些事]]></title>
-            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
-            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
-            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
-
-babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题。
-babel-polyfill 提供了一些常见的 polyfills，如 Promise、Object.assign、Array.from 等，这些 polyfills 可以让开发者在使用新特性的同时，不用担心浏览器兼容性问题。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[若是月亮还没来]]></title>
-            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
-            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
-            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
-年轻人接近理想好难，想要放弃却又心存不甘。
-如果人生最难得到圆满，不如选择坦然！]]></description>
-        </item>
-        <item>
-            <title><![CDATA[颜色选择器原理]]></title>
-            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
-            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
-            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
-其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
-所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Sass 升级之旅]]></title>
-            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
-            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
-            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[初代 Sass
-Sass 最早是 2006 年由 ruby 开发的
-而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
-后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
-而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 node-sass。
-直到 2019 年 3 月，ruby sass 宣布不再维护，sass 最早的编译器退出历史舞台。]]></description>
-        </item>
-        <item>
-            <title><![CDATA[“山寨版”《草料二维码》]]></title>
-            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
-            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
-            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[背景
-之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
-碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
-而且在 github 的 issues 里有外国友人 👨‍🦱 问我能否实现不同样式的二维码，刚好以此作为新需求，模仿草料二维码的样式和功能，开发了 qrcode-with-logos 的 v1.1.0 版本。
-
-有了 qrcode-with-logos 这款 npm 插件，你也可以在你的网站实现不同风格组合的 qrcode 了！
-]]></description>
-            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
-            </enclosure>
+好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
+Commit 结构
+一个规范详细的 commit 结构如下：
+` ...]]></description>
         </item>
         <item>
             <title><![CDATA[多用 Git rebase ?]]></title>
@@ -193,10 +112,39 @@ Sass 最早是 2006 年由 ruby 开发的
             <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
 git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
-后来在一篇知乎问答「 Git commits 历史是如何做到如此清爽的？」下面看到尤雨溪的回答：多用 rebase!
-那么 merge 和 rebase 究竟有什么区别呢 ？rebase 能解决什么问题？]]></description>
+后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[若是月亮还没来]]></title>
+            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
+            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
+            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
+年轻人接近理想好难，想要放弃却又心存不甘。
+如果人生最难得到圆满，不如选择坦然！
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Sass 升级之旅]]></title>
+            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
+            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
+            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
+而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
+后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
+而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[颜色选择器原理]]></title>
+            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
+            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
+            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
+其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
+所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
+]]></description>
         </item>
         <item>
             <title><![CDATA[何为 package-lock.json ?]]></title>
@@ -205,8 +153,48 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
 因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
-我们都知道 package.json 除了配置快捷的 node script 脚本, 最主要的作用还是: 用于记录当前项目所应用到的依赖包.
-但是既然都已经有了 package.json 文件了, 那么为什么项目中还需要一个 package-lock.json 呢? 本文就来为您详细分析✍✍!]]></description>
+我们都知道 package.json 除了 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[“山寨版”《草料二维码》]]></title>
+            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
+            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
+            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
+碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
+而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
+            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[自学蛙泳]]></title>
+            <link>https://zxpsuper.github.io/2024/08/05/swimming/</link>
+            <guid>https://zxpsuper.github.io/2024/08/05/swimming/</guid>
+            <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[今年暑假办了张游泳卡，计划十次内学会蛙泳。从一开始纯憋气10米，到最后50米游全程，总耗时十次（约600分钟，每次游一小时左右！），虽然游得不是很标准，但也算是差强人意，省去了一千大洋的游泳培训费用！]]></description>
+            <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[字幕截图生成器]]></title>
+            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
+            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
+            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
+其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
+感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[为什么年轻人不买房了？]]></title>
@@ -215,14 +203,26 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             <pubDate>Tue, 27 Aug 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[想当年，买房能挣钱，你对我户口限，把资验，半夜开盘不想让我看见。
 全款的优先，贷款的靠边，公积金的带着共享单车滚去外面。
-抢房卖出去赚差价，是年轻人一辈子挣不到的神话，老登击鼓传花游戏玩到赢麻。]]></description>
+抢房卖出去赚差价，是年轻人一辈子挣不到的神话，老登击鼓传花游戏玩到赢麻。
+现在政策放开，给年轻人桌子上菜，指责年轻人不肯买房变得无赖。
+你突然给我机会，让我杠杆加倍。
+就像打工多年的村花小美，突然回来要和我双宿双飞 ...]]></description>
         </item>
         <item>
             <title><![CDATA[中医五脏与情感的关系]]></title>
             <link>https://zxpsuper.github.io/2024/07/30/health/</link>
             <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
             <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」]]></description>
+            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
+它们之间的关系可以用一个表格表示：
+| 五脏 | 七情 |
+| :--: | :--: |
+|  心  |  喜  |
+|  肝  |  怒  |
+|  脾  | 忧思 |
+|  肺  |  悲  |
+|  肾  | 恐惊 |
+喜伤心 失眠健忘心不 ...]]></description>
         </item>
     </channel>
 </rss>
