@@ -77,6 +77,13 @@ module.exports = {
     ],
     feed: {
       canonical_base: 'https://zxpsuper.github.io/',
+      description_sources: [
+        /<p(?:.*?)>(.*?)<\/p>/i,
+      ],
+      image_sources: [
+        /!\[.*?\]\((.*?)\)/i,         // markdown image regex
+        /<img.*?src=['"](.*?)['"]/i,  // html image regex
+      ],
     },
   }
 }
