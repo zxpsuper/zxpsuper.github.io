@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@vuepress/theme-blog": "^2.3.3",
-    "gh-pages": "^6.1.1",
     "vuepress": "^1.9.10"
   }
 }
