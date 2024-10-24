@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Thu, 24 Oct 2024 06:27:02 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 24 Oct 2024 10:04:49 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -24,15 +24,6 @@
 [波段策 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
             <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
             <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
@@ -43,6 +34,15 @@
 `shell
 sudo ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
             </enclosure>
         </item>
         <item>
@@ -59,6 +59,16 @@ Created a new tsconfig.json with:
   module: commonjs ...]]></description>
         </item>
         <item>
+            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
+            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
+            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
+            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
+**那么 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
+            </enclosure>
+        </item>
+        <item>
             <title><![CDATA[使用 Github Action 发布博客]]></title>
             <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
             <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
@@ -67,6 +77,16 @@ Created a new tsconfig.json with:
 GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
 但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
+            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
+            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
             </enclosure>
         </item>
         <item>
@@ -90,26 +110,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
-            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
-            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
-            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
-            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
-            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
-            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
-**那么 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[让你的 git commit 更漂亮]]></title>
             <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
             <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
@@ -120,16 +120,6 @@ babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新�
 Commit 结构
 一个规范详细的 commit 结构如下：
 ` ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Sass 升级之旅]]></title>
-            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
-            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
-            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
-而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
-后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
-而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
         </item>
         <item>
             <title><![CDATA[多用 Git rebase ?]]></title>
@@ -153,14 +143,14 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 ]]></description>
         </item>
         <item>
-            <title><![CDATA[颜色选择器原理]]></title>
-            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
-            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
-            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
-其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
-所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
-]]></description>
+            <title><![CDATA[Sass 升级之旅]]></title>
+            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
+            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
+            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
+而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
+后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
+而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
         </item>
         <item>
             <title><![CDATA[“山寨版”《草料二维码》]]></title>
@@ -183,13 +173,30 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 我们都知道 package.json 除了 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[字幕截图生成器]]></title>
-            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
-            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
-            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
-其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
-感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
+            <title><![CDATA[中医五脏与情感的关系]]></title>
+            <link>https://zxpsuper.github.io/2024/07/30/health/</link>
+            <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
+            <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
+它们之间的关系可以用一个表格表示：
+| 五脏 | 七情 |
+| :--: | :--: |
+|  心  |  喜  |
+|  肝  |  怒  |
+|  脾  | 忧思 |
+|  肺  |  悲  |
+|  肾  | 恐惊 |
+喜伤心 失眠健忘心不 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[颜色选择器原理]]></title>
+            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
+            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
+            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
+其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
+所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
+]]></description>
         </item>
         <item>
             <title><![CDATA[自学蛙泳]]></title>
@@ -199,6 +206,15 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             <description><![CDATA[今年暑假办了张游泳卡，计划十次内学会蛙泳。从一开始纯憋气10米，到最后50米游全程，总耗时十次（约600分钟，每次游一小时左右！），虽然游得不是很标准，但也算是差强人意，省去了一千大洋的游泳培训费用！]]></description>
             <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[字幕截图生成器]]></title>
+            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
+            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
+            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
+其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
+感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
         </item>
         <item>
             <title><![CDATA[清远英德行]]></title>
@@ -211,18 +227,6 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 ]]></description>
             <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
             </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[为什么年轻人不买房了？]]></title>
-            <link>https://zxpsuper.github.io/2024/08/27/buy-house/</link>
-            <guid>https://zxpsuper.github.io/2024/08/27/buy-house/</guid>
-            <pubDate>Tue, 27 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[想当年，买房能挣钱，你对我户口限，把资验，半夜开盘不想让我看见。
-全款的优先，贷款的靠边，公积金的带着共享单车滚去外面。
-抢房卖出去赚差价，是年轻人一辈子挣不到的神话，老登击鼓传花游戏玩到赢麻。
-现在政策放开，给年轻人桌子上菜，指责年轻人不肯买房变得无赖。
-你突然给我机会，让我杠杆加倍。
-就像打工多年的村花小美，突然回来要和我双宿双飞 ...]]></description>
         </item>
     </channel>
 </rss>
