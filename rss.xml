@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Thu, 24 Oct 2024 04:30:03 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 24 Oct 2024 05:08:42 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -34,6 +34,15 @@
 `shell
 sudo ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
             </enclosure>
         </item>
         <item>
@@ -71,15 +80,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
             <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
             <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
@@ -110,17 +110,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[多用 Git rebase ?]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
-git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
-后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[让你的 git commit 更漂亮]]></title>
             <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
             <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
@@ -133,14 +122,15 @@ Commit 结构
 ` ...]]></description>
         </item>
         <item>
-            <title><![CDATA[若是月亮还没来]]></title>
-            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
-            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
-            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
-年轻人接近理想好难，想要放弃却又心存不甘。
-如果人生最难得到圆满，不如选择坦然！
-]]></description>
+            <title><![CDATA[多用 Git rebase ?]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
+git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
+后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[Sass 升级之旅]]></title>
@@ -151,6 +141,16 @@ Commit 结构
 而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
 后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
 而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[若是月亮还没来]]></title>
+            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
+            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
+            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
+年轻人接近理想好难，想要放弃却又心存不甘。
+如果人生最难得到圆满，不如选择坦然！
+]]></description>
         </item>
         <item>
             <title><![CDATA[颜色选择器原理]]></title>
@@ -174,6 +174,15 @@ Commit 结构
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[何为 package-lock.json ?]]></title>
+            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
+            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
+            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
+因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
+我们都知道 package.json 除了 ...]]></description>
+        </item>
+        <item>
             <title><![CDATA[中医五脏与情感的关系]]></title>
             <link>https://zxpsuper.github.io/2024/07/30/health/</link>
             <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
@@ -188,15 +197,6 @@ Commit 结构
 |  肺  |  悲  |
 |  肾  | 恐惊 |
 喜伤心 失眠健忘心不 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[何为 package-lock.json ?]]></title>
-            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
-            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
-            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
-因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
-我们都知道 package.json 除了 ...]]></description>
         </item>
         <item>
             <title><![CDATA[自学蛙泳]]></title>
@@ -217,16 +217,16 @@ Commit 结构
 感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[为什么年轻人不买房了？]]></title>
-            <link>https://zxpsuper.github.io/2024/08/27/buy-house/</link>
-            <guid>https://zxpsuper.github.io/2024/08/27/buy-house/</guid>
-            <pubDate>Tue, 27 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[想当年，买房能挣钱，你对我户口限，把资验，半夜开盘不想让我看见。
-全款的优先，贷款的靠边，公积金的带着共享单车滚去外面。
-抢房卖出去赚差价，是年轻人一辈子挣不到的神话，老登击鼓传花游戏玩到赢麻。
-现在政策放开，给年轻人桌子上菜，指责年轻人不肯买房变得无赖。
-你突然给我机会，让我杠杆加倍。
-就像打工多年的村花小美，突然回来要和我双宿双飞 ...]]></description>
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
+            </enclosure>
         </item>
     </channel>
 </rss>
