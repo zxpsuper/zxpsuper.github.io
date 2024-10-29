@@ -38,7 +38,7 @@ module.exports = {
       },
     ],
     globalPagination: {
-      lengthPerPage: 5,
+      lengthPerPage: 10,
     },
     footer: {
       contact: [
