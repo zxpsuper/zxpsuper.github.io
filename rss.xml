@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Tue, 29 Oct 2024 10:04:40 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 11 Dec 2024 06:56:29 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -41,16 +41,12 @@
 干支纪年法是根据十天干 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
-            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
-            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
-            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
-打开终端，输入 snap list 查看已安装的软件。
-停止 snapd 服务
-`shell
-sudo ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
             </enclosure>
         </item>
         <item>
@@ -67,12 +63,16 @@ Created a new tsconfig.json with:
   module: commonjs ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
+            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
+            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
+            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
+打开终端，输入 snap list 查看已安装的软件。
+停止 snapd 服务
+`shell
+sudo ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
             </enclosure>
         </item>
         <item>
@@ -107,6 +107,14 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 ]]></description>
             <enclosure url="https://zxpsuper.github.io/images/vue-template-01.png">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[关于 babel polyfill 那些事]]></title>
+            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
+            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
+            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
+babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
             <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
@@ -162,14 +170,6 @@ Commit 结构
 而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
         </item>
         <item>
-            <title><![CDATA[关于 babel polyfill 那些事]]></title>
-            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
-            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
-            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
-babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
-        </item>
-        <item>
             <title><![CDATA[颜色选择器原理]]></title>
             <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
             <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
@@ -191,6 +191,22 @@ babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新�
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[中医五脏与情感的关系]]></title>
+            <link>https://zxpsuper.github.io/2024/07/30/health/</link>
+            <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
+            <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
+它们之间的关系可以用一个表格表示：
+| 五脏 | 七情 |
+| :--: | :--: |
+|  心  |  喜  |
+|  肝  |  怒  |
+|  脾  | 忧思 |
+|  肺  |  悲  |
+|  肾  | 恐惊 |
+喜伤心 失眠健忘心不 ...]]></description>
+        </item>
+        <item>
             <title><![CDATA[何为 package-lock.json ?]]></title>
             <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
             <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
@@ -209,32 +225,13 @@ babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新�
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[中医五脏与情感的关系]]></title>
-            <link>https://zxpsuper.github.io/2024/07/30/health/</link>
-            <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
-            <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
-它们之间的关系可以用一个表格表示：
-| 五脏 | 七情 |
-| :--: | :--: |
-|  心  |  喜  |
-|  肝  |  怒  |
-|  脾  | 忧思 |
-|  肺  |  悲  |
-|  肾  | 恐惊 |
-喜伤心 失眠健忘心不 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[清远英德行]]></title>
-            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
-            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
-            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
-英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
-广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
-            </enclosure>
+            <title><![CDATA[字幕截图生成器]]></title>
+            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
+            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
+            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
+其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
+感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
         </item>
     </channel>
 </rss>
