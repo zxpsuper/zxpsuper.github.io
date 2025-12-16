@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="giscus"></div>
+    <div class="giscus" style="margin-top: 16px;"></div>
     <script
       src="https://giscus.app/client.js"
       data-repo="zxpsuper/zxpsuper.github.io"

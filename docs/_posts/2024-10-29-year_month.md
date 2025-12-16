@@ -1,6 +1,6 @@
 ---
 title: 计算年月日的天干地支
-date: 2024-10-29
+date: 2025-12-16
 tags:
   - 杂文
   - 前端
@@ -22,185 +22,118 @@ location: 广州
 
 干支纪年法是根据十天干和十二地支的组合来纪年的。10 和 12 的最小公倍数是 60，所以干支纪年就会出现“六十一甲子”的现象了。
 
+那么如何计算年份的天干地支呢？
+
+以公元4年甲子年为基准，那么公元5年为乙丑年，公元6年为丙寅年，以此类推。天干每十年轮回一次，地支每十二年轮回一次，那么计算公式如下：
+
+```js
+// 天干地支定义
+const TIANGAN = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];
+const DIZHI = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"];
+
+function getYearPillar(year) {
+    // 公元4年是甲子年，作为基准
+    const baseYear = 4;
+    const diff = year - baseYear;
+
+    // +10 和 +12 为处理负数情况
+    const ganIndex = ((diff % 10) + 10) % 10;
+    const zhiIndex = ((diff % 12) + 12) % 12;
+
+    return TIANGAN[ganIndex] + DIZHI[zhiIndex];
+}
+
+console.log(getYearPillar(2024)); // 输出：甲辰，2024年是甲辰年
+```
+
+## 月份的天干地支
+
+月份的天干地支比较复杂，需要结合年份的天干和五虎遁进行计算
+
+正月固定为寅月，十二月份对应十二地支
+
+```js
+// 月支定义（正月为寅，二月为卯，以此类推）
+const MONTH_DIZHI = ["寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥", "子", "丑"];
+
+function getMonthPillar(year, month) {
+    
+    // 五虎遁法
+    const WU_HU_DUN = {
+        '甲': '丙', '己': '丙',  // 甲己之年丙作首
+        '乙': '戊', '庚': '戊',  // 乙庚之岁戊为头
+        '丙': '庚', '辛': '庚',  // 丙辛之年寻庚起
+        '丁': '壬', '壬': '壬',  // 丁壬壬寅顺行流
+        '戊': '甲', '癸': '甲'   // 若问戊癸何方发，甲寅之上好追求
+    };
+
+    const yearGanZhi = getYearPillar(year); // 年干支
+
+    const yearGan = yearGanZhi[0]; // 年干
+    
+    // 根据五虎遁诀确定正月（寅月）的天干
+    const firstMonthGan = WU_HU_DUN[yearGan];
+    const firstMonthGanIndex = TIANGAN.indexOf(firstMonthGan);
+    
+    // 计算当前月的天干索引
+    const monthGanIndex = (firstMonthGanIndex + month - 1) % 10;
+    const monthGan = TIANGAN[monthGanIndex];
+    
+    // 月支固定
+    const monthZhi = MONTH_DIZHI[month - 1];
+    
+    return monthGan + monthZhi;
+}
+```
+
 请选择时间：
-<el-date-picker v-model="date" type="datetime" value-format="yyyy-MM-dd HH:mm:ss" placeholder="选择日期时间" v-on:change="changeDate"></el-date-picker>
+<el-date-picker v-model="date" :pickerOptions="pickerOptions" type="datetime" value-format="yyyy-MM-dd HH:mm:ss" placeholder="选择日期时间" v-on:change="changeDate"></el-date-picker>
+
+<div v-if="lunarObj.cY">
+    <p>公历：{{date}}</p>
+    <div>年月日时柱为：{{lunarObj.cY}}年{{lunarObj.cM}}月{{lunarObj.cD}}日{{lunarObj.cH}}时</div>
+</div>
 
 <tongji/>
 
 <comment/>
 
 <script>
-
+import { getCalendarData } from '../.vuepress/utils/lunar'
 const 天干 = '甲乙丙丁戊己庚辛壬癸'   
 const 地支 = '子丑寅卯辰巳午未申酉戌亥'
 const 生肖 = '鼠牛虎兔龙蛇马羊猴鸡狗猪'
 
-/**
- * 获取某个日期的农历
- * @parmas {newDate} 日期 年-月-日
- */
- function getLunar(newDate){
- 
-    var nyear;
-    var nmonth;
-    var nday = -1;
-    var nwday;
-    var nhrs;
-    var nmin;
-    var nsec;
-    var newDate = newDate;
- 
-    var lmonth, lday, lleap; //农历参数
-    
-    function Draw() {
-        NewTick();
- 
-        //显示时间
-        var s = nyear + '年' + nmonth + '月' + nday + '日 ' + '星期' + cweekday(nwday) + ' ' + shapetime(nhrs, nmin, nsec);
-        s += " 农历" + lmonth + "月" + lday; //农历
-        var lunar_month_day=lmonth + "月" + lday;
-        return lunar_month_day;
-    }
-    
-    
-    function NewTick() {
-        var noww = newDate ? new Date(newDate) : new Date();
-        if (noww.getDate() != nday) {
-            nyear = noww.getFullYear();
-            nmonth = noww.getMonth() + 1;
-            nwday = noww.getDay();
-            nday = noww.getDate();
- 
-            getlunar(); //获取农历
-        }
-        nhrs = noww.getHours();
-        nmin = noww.getMinutes();
-        nsec = noww.getSeconds();
-    }
- 
- 
-    //辅助函数
-    var hzWeek = new Array("日", "一", "二", "三", "四", "五", "六", "日");
-    function cweekday(wday) {
-        return hzWeek[wday];
-    }
-    function shapetime(vhrs, vmin, vsec) {
-        if (vsec <= 9) vsec = "0" + vsec;
-        if (vmin <= 9) vmin = "0" + vmin;
-        if (vhrs <= 9) vhrs = "0" + vhrs;
-        return vhrs + ":" + vmin + ":" + vsec
-    }
- 
-    //农历函数开始
-    var lunarInfo = new Array(0x04bd8, 0x04ae0, 0x0a570, 0x054d5, 0x0d260, 0x0d950, 0x16554, 0x056a0, 0x09ad0, 0x055d2, 0x04ae0, 0x0a5b6, 0x0a4d0, 0x0d250, 0x1d255, 0x0b540, 0x0d6a0, 0x0ada2, 0x095b0, 0x14977, 0x04970, 0x0a4b0, 0x0b4b5, 0x06a50, 0x06d40, 0x1ab54, 0x02b60, 0x09570, 0x052f2, 0x04970, 0x06566, 0x0d4a0, 0x0ea50, 0x06e95, 0x05ad0, 0x02b60, 0x186e3, 0x092e0, 0x1c8d7, 0x0c950, 0x0d4a0, 0x1d8a6, 0x0b550, 0x056a0, 0x1a5b4, 0x025d0, 0x092d0, 0x0d2b2, 0x0a950, 0x0b557, 0x06ca0, 0x0b550, 0x15355, 0x04da0, 0x0a5b0, 0x14573, 0x052b0, 0x0a9a8, 0x0e950, 0x06aa0, 0x0aea6, 0x0ab50, 0x04b60, 0x0aae4, 0x0a570, 0x05260, 0x0f263, 0x0d950, 0x05b57, 0x056a0, 0x096d0, 0x04dd5, 0x04ad0, 0x0a4d0, 0x0d4d4, 0x0d250, 0x0d558, 0x0b540, 0x0b6a0, 0x195a6, 0x095b0, 0x049b0, 0x0a974, 0x0a4b0, 0x0b27a, 0x06a50, 0x06d40, 0x0af46, 0x0ab60, 0x09570, 0x04af5, 0x04970, 0x064b0, 0x074a3, 0x0ea50, 0x06b58, 0x05ac0, 0x0ab60, 0x096d5, 0x092e0, //1990
-    0x0c960, 0x0d954, 0x0d4a0, 0x0da50, 0x07552, 0x056a0, 0x0abb7, 0x025d0, 0x092d0, 0x0cab5, 0x0a950, 0x0b4a0, 0x0baa4, 0x0ad50, 0x055d9, 0x04ba0, 0x0a5b0, 0x15176, 0x052b0, 0x0a930, 0x07954, 0x06aa0, 0x0ad50, 0x05b52, 0x04b60, 0x0a6e6, 0x0a4e0, 0x0d260, 0x0ea65, 0x0d530, 0x05aa0, 0x076a3, 0x096d0, 0x04bd7, 0x04ad0, 0x0a4d0, 0x1d0b6, 0x0d250, 0x0d520, 0x0dd45, 0x0b5a0, 0x056d0, 0x055b2, 0x049b0, 0x0a577, 0x0a4b0, 0x0aa50, 0x1b255, 0x06d20, 0x0ada0, 0x14b63);
-    function lYearDays(y) {
-        var i, sum = 348;
-        for (i = 0x8000; i > 0x8; i >>= 1) sum += (lunarInfo[y - 1900] & i) ? 1 : 0;
-        return (sum + leapDays(y));
-    }
-    function leapDays(y) {
-        if (leapMonth(y)) return ((lunarInfo[y - 1900] & 0x10000) ? 30 : 29);
-        else return (0);
-    }
-    function leapMonth(y) {
-        return (lunarInfo[y - 1900] & 0xf);
-    }
-    function monthDays(y, m) {
-        return ((lunarInfo[y - 1900] & (0x10000 >> m)) ? 30 : 29);
-    }
-    function Lunar(y, m, d) {
-        var i, leap = 0,
-        temp = 0;
-        var offset = (Date.UTC(y, m, d) - Date.UTC(1900, 0, 31)) / 86400000;
-        for (i = 1900; i < 2050 && offset > 0; i++) {
-            temp = lYearDays(i);
-            offset -= temp;
-        }
-        if (offset < 0) {
-            offset += temp;
-            i--;
-        }
-        this.year = i;
-        leap = leapMonth(i);
-        this.isLeap = false;
-        for (i = 1; i < 13 && offset > 0; i++) {
-            if (leap > 0 && i == (leap + 1) && this.isLeap == false) {--i;
-                this.isLeap = true;
-                temp = leapDays(this.year);
-            } else {
-                temp = monthDays(this.year, i);
-            }
-            if (this.isLeap == true && i == (leap + 1)) this.isLeap = false;
-            offset -= temp;
-        }
-        if (offset == 0 && leap > 0 && i == leap + 1) if (this.isLeap) {
-            this.isLeap = false;
-        } else {
-            this.isLeap = true; --i;
-        }
-        if (offset < 0) {
-            offset += temp; --i;
-        }
-        this.month = i;
-        this.day = offset + 1;
-    }
-    var nStr1 = new Array('', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二');
-    var nStr2 = new Array('初', '十', '廿', '卅', '□');
-    function GetcDay(d) {
-        var s;
-        switch (d) {
-        case 10:
-            s = '初十';
-            break;
-        case 20:
-            s = '二十';
-            break;
-        case 30:
-            s = '三十';
-            break;
-        default:
-            s = nStr2[Math.floor(d / 10)];
-            s += nStr1[d % 10];
-            break;
-        }
-        return (s);
-    }
-    function GetcMon(m) {
-        if (m == 1) return '正';
-        else return nStr1[m];
-    }
-    function getlunar() {
-        var lObj = new Lunar(nyear, nmonth - 1, nday);
-        console.log(lObj)
-        lmonth = GetcMon(lObj.month);
-        lday = GetcDay(lObj.day);
-        lleap = lObj.isLeap;
-        if (lleap == 1) {
-            lmonth = "闰" + lmonth;
-        }
-    }
-    //农历函数结束
-    return Draw();
-}
- 
- 
-getLunar('2023-11-03'); // 九月初二十
-
 export default {
     data() {
         return {
+            天干,
+            地支,
+            生肖,
+            pickerOptions: {
+                disabledDate(time) {
+                    return time.getTime() < new Date(1900, 0, 31).getTime();
+                },
+            },
             date: '',
-            target: ''
+            target: '',
+            yearTarget: '',
+            dateTarget: '',
+            hourTarget: '',
+            lunarObj: {
+                cD: '',
+                cM: '',
+                cY: '',
+                cH: ''
+            }
         }
     },
     methods: {
         changeDate() {
-            
             const array = this.date.split('-')
             const year = array[0]
-            const yearTarget = 天干.charAt((+year + 6) % 10) +  地支.charAt((+year + 8) % 12) + 生肖.charAt((+year + 8) % 12) + '年'
-            console.log(yearTarget, getLunar(this.date))
+            this.yearTarget = 天干.charAt((+year + 6) % 10) +  地支.charAt((+year + 8) % 12) + 生肖.charAt((+year + 8) % 12) + '年'
+            this.lunarObj = getCalendarData(new Date(this.date))
         }
     }
 }
