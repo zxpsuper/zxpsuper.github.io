@@ -4,30 +4,14 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Wed, 11 Dec 2024 06:56:29 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 16 Dec 2025 10:19:38 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
-            <title><![CDATA[ETF拯救世界]]></title>
-            <link>https://zxpsuper.github.io/2024/10/23/etf/</link>
-            <guid>https://zxpsuper.github.io/2024/10/23/etf/</guid>
-            <pubDate>Wed, 23 Oct 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[投资，每个人都应该有一套完整的观察和投资体系。
-
-不是说这个时刻我觉得可以买，这个时刻我觉得可以卖。
-
-如果是这样随意买卖，那么胜率会很低，短线频繁操作盈亏更加的影响心情。
-
-今天看了 E 大的几篇文章，深有体会，这里分享给大家。
-
-波段策略.网格之一：写在前面、体系以及策略
-[波段策 ...]]></description>
-        </item>
-        <item>
             <title><![CDATA[计算年月日的天干地支]]></title>
-            <link>https://zxpsuper.github.io/2024/10/29/year-month/</link>
-            <guid>https://zxpsuper.github.io/2024/10/29/year-month/</guid>
-            <pubDate>Tue, 29 Oct 2024 00:00:00 GMT</pubDate>
+            <link>https://zxpsuper.github.io/2025/12/16/year-month/</link>
+            <guid>https://zxpsuper.github.io/2025/12/16/year-month/</guid>
+            <pubDate>Tue, 16 Dec 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[想研究下五行取名，逃不开年月日的天干地支计算。
 
 本文以简单易懂的方式带你一步步实现该功能！
@@ -39,6 +23,19 @@
 十二地支：子、丑、寅（yín）、卯（mǎo）、辰、巳（sì）、午、未、申、酉（yǒu）、戌（xū）、亥（hài）。
 
 干支纪年法是根据十天干 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
+            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
+            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
+打开终端，输入 snap list 查看已安装的软件。
+停止 snapd 服务
+`shell
+sudo ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
@@ -63,27 +60,20 @@ Created a new tsconfig.json with:
   module: commonjs ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
-            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
-            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
-            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
-打开终端，输入 snap list 查看已安装的软件。
-停止 snapd 服务
-`shell
-sudo ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
-            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
-            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
-            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
-**那么 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
-            </enclosure>
+            <title><![CDATA[ETF拯救世界]]></title>
+            <link>https://zxpsuper.github.io/2024/10/23/etf/</link>
+            <guid>https://zxpsuper.github.io/2024/10/23/etf/</guid>
+            <pubDate>Wed, 23 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[投资，每个人都应该有一套完整的观察和投资体系。
+
+不是说这个时刻我觉得可以买，这个时刻我觉得可以卖。
+
+如果是这样随意买卖，那么胜率会很低，短线频繁操作盈亏更加的影响心情。
+
+今天看了 E 大的几篇文章，深有体会，这里分享给大家。
+
+波段策略.网格之一：写在前面、体系以及策略
+[波段策 ...]]></description>
         </item>
         <item>
             <title><![CDATA[使用 Github Action 发布博客]]></title>
@@ -97,24 +87,14 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Vue 模板编译原理（一）]]></title>
-            <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
-            <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
-            <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[计划写一系列关于 Vue 原理的文章，学习理解后分享印象更深！
-众所周知 ，Vue 文件中写的 `` 标签都会被 vue-loader 转化成 AST 语法树，而后再根据 AST 语法树生成 render 渲染函数，最后渲染并挂载在页面上。
-本文简单实现下 Vue 模板编译原理的第一步： AST 语法树的生成过程！
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/vue-template-01.png">
+            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
+            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
+            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
+            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
+**那么 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
             </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[关于 babel polyfill 那些事]]></title>
-            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
-            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
-            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
-babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
             <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
@@ -127,15 +107,12 @@ babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新�
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[多用 Git rebase ?]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
-git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
-后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
-            </enclosure>
+            <title><![CDATA[关于 babel polyfill 那些事]]></title>
+            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
+            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
+            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
+babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
             <title><![CDATA[让你的 git commit 更漂亮]]></title>
@@ -150,14 +127,27 @@ Commit 结构
 ` ...]]></description>
         </item>
         <item>
-            <title><![CDATA[若是月亮还没来]]></title>
-            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
-            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
-            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
-年轻人接近理想好难，想要放弃却又心存不甘。
-如果人生最难得到圆满，不如选择坦然！
+            <title><![CDATA[Vue 模板编译原理（一）]]></title>
+            <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
+            <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
+            <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[计划写一系列关于 Vue 原理的文章，学习理解后分享印象更深！
+众所周知 ，Vue 文件中写的 `` 标签都会被 vue-loader 转化成 AST 语法树，而后再根据 AST 语法树生成 render 渲染函数，最后渲染并挂载在页面上。
+本文简单实现下 Vue 模板编译原理的第一步： AST 语法树的生成过程！
 ]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/vue-template-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[多用 Git rebase ?]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
+git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
+后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[Sass 升级之旅]]></title>
@@ -170,13 +160,13 @@ Commit 结构
 而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
         </item>
         <item>
-            <title><![CDATA[颜色选择器原理]]></title>
-            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
-            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
-            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
-其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
-所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
+            <title><![CDATA[若是月亮还没来]]></title>
+            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
+            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
+            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
+年轻人接近理想好难，想要放弃却又心存不甘。
+如果人生最难得到圆满，不如选择坦然！
 ]]></description>
         </item>
         <item>
@@ -191,20 +181,14 @@ Commit 结构
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[中医五脏与情感的关系]]></title>
-            <link>https://zxpsuper.github.io/2024/07/30/health/</link>
-            <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
-            <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
-它们之间的关系可以用一个表格表示：
-| 五脏 | 七情 |
-| :--: | :--: |
-|  心  |  喜  |
-|  肝  |  怒  |
-|  脾  | 忧思 |
-|  肺  |  悲  |
-|  肾  | 恐惊 |
-喜伤心 失眠健忘心不 ...]]></description>
+            <title><![CDATA[颜色选择器原理]]></title>
+            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
+            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
+            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
+其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
+所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
+]]></description>
         </item>
         <item>
             <title><![CDATA[何为 package-lock.json ?]]></title>
@@ -225,13 +209,32 @@ Commit 结构
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[字幕截图生成器]]></title>
-            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
-            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
-            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
-其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
-感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
+            <title><![CDATA[中医五脏与情感的关系]]></title>
+            <link>https://zxpsuper.github.io/2024/07/30/health/</link>
+            <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
+            <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
+它们之间的关系可以用一个表格表示：
+| 五脏 | 七情 |
+| :--: | :--: |
+|  心  |  喜  |
+|  肝  |  怒  |
+|  脾  | 忧思 |
+|  肺  |  悲  |
+|  肾  | 恐惊 |
+喜伤心 失眠健忘心不 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
+            </enclosure>
         </item>
     </channel>
 </rss>
