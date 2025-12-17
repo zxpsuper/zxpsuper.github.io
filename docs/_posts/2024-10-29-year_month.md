@@ -43,9 +43,10 @@ function getYearPillar(year) {
     return TIANGAN[ganIndex] + DIZHI[zhiIndex];
 }
 
-console.log(getYearPillar(2025)); // 输出：甲辰，2025年是乙巳年
+console.log(getYearPillar(2025)); // 输出：乙巳，2025年是乙巳年
 ```
-从上面可以看到，2025年是甲辰年。但是，2025真的是乙巳年年吗？其实不完全是的，在2025年2月3日之前，还算是甲辰年！
+从上面可以看到，2025年是乙巳年。但是，2025真的是乙巳年年吗？其实不完全是的，在2025年2月3日之前，还算是甲辰年！
+
 ![](https://s3.cn-north-1.jdcloud-oss.com/design-tool-data/data23/c96529ab92df036ca0e1669737e2a6d9.png)
 
 年柱的更新是以立春作为分界点的，而月柱和二十四节气息息相关，因此我们不能简单以公元年月日简单计算天干地支。
