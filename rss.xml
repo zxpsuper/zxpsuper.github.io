@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Wed, 17 Dec 2025 09:24:33 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 17 Dec 2025 09:27:28 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -22,28 +22,6 @@
 
 波段策略.网格之一：写在前面、体系以及策略
 [波段策 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
-            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
-            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
-            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
-打开终端，输入 snap list 查看已安装的软件。
-停止 snapd 服务
-`shell
-sudo ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
-            </enclosure>
         </item>
         <item>
             <title><![CDATA[计算年月日的天干地支]]></title>
@@ -65,6 +43,15 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
+            </enclosure>
+        </item>
+        <item>
             <title><![CDATA[typescript 配置文件 tsconfig.json 详解]]></title>
             <link>https://zxpsuper.github.io/2024/04/16/tsconfig/</link>
             <guid>https://zxpsuper.github.io/2024/04/16/tsconfig/</guid>
@@ -76,6 +63,19 @@ sudo ...]]></description>
 Created a new tsconfig.json with:
   target: es2016
   module: commonjs ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
+            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
+            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
+打开终端，输入 snap list 查看已安装的软件。
+停止 snapd 服务
+`shell
+sudo ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
@@ -107,18 +107,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 ]]></description>
             <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
             </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[让你的 git commit 更漂亮]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
-也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
-好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
-Commit 结构
-一个规范详细的 commit 结构如下：
-` ...]]></description>
         </item>
         <item>
             <title><![CDATA[Vue 模板编译原理（一）]]></title>
@@ -172,15 +160,16 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 ]]></description>
         </item>
         <item>
-            <title><![CDATA[“山寨版”《草料二维码》]]></title>
-            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
-            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
-            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
-碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
-而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
-            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
-            </enclosure>
+            <title><![CDATA[让你的 git commit 更漂亮]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
+也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
+好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
+Commit 结构
+一个规范详细的 commit 结构如下：
+` ...]]></description>
         </item>
         <item>
             <title><![CDATA[颜色选择器原理]]></title>
@@ -191,6 +180,17 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
 所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
 ]]></description>
+        </item>
+        <item>
+            <title><![CDATA[“山寨版”《草料二维码》]]></title>
+            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
+            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
+            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
+碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
+而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
+            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[何为 package-lock.json ?]]></title>
@@ -218,15 +218,6 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 喜伤心 失眠健忘心不 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[自学蛙泳]]></title>
-            <link>https://zxpsuper.github.io/2024/08/05/swimming/</link>
-            <guid>https://zxpsuper.github.io/2024/08/05/swimming/</guid>
-            <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[今年暑假办了张游泳卡，计划十次内学会蛙泳。从一开始纯憋气10米，到最后50米游全程，总耗时十次（约600分钟，每次游一小时左右！），虽然游得不是很标准，但也算是差强人意，省去了一千大洋的游泳培训费用！]]></description>
-            <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[字幕截图生成器]]></title>
             <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
             <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
@@ -234,6 +225,18 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
 其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
 感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
+            </enclosure>
         </item>
     </channel>
 </rss>
