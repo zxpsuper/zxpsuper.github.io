@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Wed, 17 Dec 2025 09:18:46 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 17 Dec 2025 09:24:33 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -37,19 +37,6 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[typescript 配置文件 tsconfig.json 详解]]></title>
-            <link>https://zxpsuper.github.io/2024/04/16/tsconfig/</link>
-            <guid>https://zxpsuper.github.io/2024/04/16/tsconfig/</guid>
-            <pubDate>Tue, 16 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[tsconfig.json 是用来配置 TypeScript 编译选项的，通常位于项目的根目录位置。
-我们可以用 ts 提供的 tsc 命令行工具生成配置文件，执行 tsc --init。
-它会生成一堆默认设置如下：
-`
-Created a new tsconfig.json with:
-  target: es2016
-  module: commonjs ...]]></description>
-        </item>
-        <item>
             <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
             <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
             <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
@@ -76,6 +63,19 @@ Created a new tsconfig.json with:
 干支纪年法是根据十天干 ...]]></description>
             <enclosure url="https://s3.cn-north-1.jdcloud-oss.com/design-tool-data/data23/c96529ab92df036ca0e1669737e2a6d9.png">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[typescript 配置文件 tsconfig.json 详解]]></title>
+            <link>https://zxpsuper.github.io/2024/04/16/tsconfig/</link>
+            <guid>https://zxpsuper.github.io/2024/04/16/tsconfig/</guid>
+            <pubDate>Tue, 16 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[tsconfig.json 是用来配置 TypeScript 编译选项的，通常位于项目的根目录位置。
+我们可以用 ts 提供的 tsc 命令行工具生成配置文件，执行 tsc --init。
+它会生成一堆默认设置如下：
+`
+Created a new tsconfig.json with:
+  target: es2016
+  module: commonjs ...]]></description>
         </item>
         <item>
             <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
@@ -109,6 +109,18 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[让你的 git commit 更漂亮]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
+也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
+好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
+Commit 结构
+一个规范详细的 commit 结构如下：
+` ...]]></description>
+        </item>
+        <item>
             <title><![CDATA[Vue 模板编译原理（一）]]></title>
             <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
             <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
@@ -127,28 +139,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
 babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[让你的 git commit 更漂亮]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
-也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
-好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
-Commit 结构
-一个规范详细的 commit 结构如下：
-` ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[若是月亮还没来]]></title>
-            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
-            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
-            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
-年轻人接近理想好难，想要放弃却又心存不甘。
-如果人生最难得到圆满，不如选择坦然！
-]]></description>
         </item>
         <item>
             <title><![CDATA[多用 Git rebase ?]]></title>
@@ -172,13 +162,13 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
         </item>
         <item>
-            <title><![CDATA[颜色选择器原理]]></title>
-            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
-            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
-            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
-其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
-所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
+            <title><![CDATA[若是月亮还没来]]></title>
+            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
+            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
+            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
+年轻人接近理想好难，想要放弃却又心存不甘。
+如果人生最难得到圆满，不如选择坦然！
 ]]></description>
         </item>
         <item>
@@ -191,6 +181,16 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
             <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[颜色选择器原理]]></title>
+            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
+            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
+            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
+其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
+所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
+]]></description>
         </item>
         <item>
             <title><![CDATA[何为 package-lock.json ?]]></title>
@@ -218,6 +218,15 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 喜伤心 失眠健忘心不 ...]]></description>
         </item>
         <item>
+            <title><![CDATA[自学蛙泳]]></title>
+            <link>https://zxpsuper.github.io/2024/08/05/swimming/</link>
+            <guid>https://zxpsuper.github.io/2024/08/05/swimming/</guid>
+            <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[今年暑假办了张游泳卡，计划十次内学会蛙泳。从一开始纯憋气10米，到最后50米游全程，总耗时十次（约600分钟，每次游一小时左右！），虽然游得不是很标准，但也算是差强人意，省去了一千大洋的游泳培训费用！]]></description>
+            <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
+            </enclosure>
+        </item>
+        <item>
             <title><![CDATA[字幕截图生成器]]></title>
             <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
             <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
@@ -225,18 +234,6 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
 其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
 感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[清远英德行]]></title>
-            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
-            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
-            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
-英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
-广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
-            </enclosure>
         </item>
     </channel>
 </rss>
