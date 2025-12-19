@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Wed, 17 Dec 2025 09:27:28 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 19 Dec 2025 06:37:51 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -24,7 +24,29 @@
 [波段策 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[计算年月日的天干地支]]></title>
+            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
+            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
+            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
+打开终端，输入 snap list 查看已安装的软件。
+停止 snapd 服务
+`shell
+sudo ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[如何计算你的五行属性]]></title>
             <link>https://zxpsuper.github.io/2025/12/16/year-month/</link>
             <guid>https://zxpsuper.github.io/2025/12/16/year-month/</guid>
             <pubDate>Tue, 16 Dec 2025 00:00:00 GMT</pubDate>
@@ -43,15 +65,6 @@
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[typescript 配置文件 tsconfig.json 详解]]></title>
             <link>https://zxpsuper.github.io/2024/04/16/tsconfig/</link>
             <guid>https://zxpsuper.github.io/2024/04/16/tsconfig/</guid>
@@ -65,19 +78,6 @@ Created a new tsconfig.json with:
   module: commonjs ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
-            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
-            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
-            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
-打开终端，输入 snap list 查看已安装的软件。
-停止 snapd 服务
-`shell
-sudo ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
             <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
             <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
@@ -85,6 +85,16 @@ sudo ...]]></description>
             <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
 **那么 ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
+            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
+            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
             </enclosure>
         </item>
         <item>
@@ -96,16 +106,6 @@ sudo ...]]></description>
 GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
 但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
-            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
-            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
-            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
             </enclosure>
         </item>
         <item>
@@ -129,25 +129,16 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[多用 Git rebase ?]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
+            <title><![CDATA[让你的 git commit 更漂亮]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
             <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
-git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
-后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Sass 升级之旅]]></title>
-            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
-            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
-            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
-而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
-后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
-而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
+            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
+也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
+好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
+Commit 结构
+一个规范详细的 commit 结构如下：
+` ...]]></description>
         </item>
         <item>
             <title><![CDATA[若是月亮还没来]]></title>
@@ -160,16 +151,15 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 ]]></description>
         </item>
         <item>
-            <title><![CDATA[让你的 git commit 更漂亮]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
+            <title><![CDATA[多用 Git rebase ?]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
             <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
-也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
-好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
-Commit 结构
-一个规范详细的 commit 结构如下：
-` ...]]></description>
+            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
+git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
+后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[颜色选择器原理]]></title>
@@ -193,15 +183,6 @@ Commit 结构
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[何为 package-lock.json ?]]></title>
-            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
-            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
-            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
-因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
-我们都知道 package.json 除了 ...]]></description>
-        </item>
-        <item>
             <title><![CDATA[中医五脏与情感的关系]]></title>
             <link>https://zxpsuper.github.io/2024/07/30/health/</link>
             <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
@@ -218,13 +199,32 @@ Commit 结构
 喜伤心 失眠健忘心不 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[字幕截图生成器]]></title>
-            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
-            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
-            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
-其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
-感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
+            <title><![CDATA[Sass 升级之旅]]></title>
+            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
+            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
+            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
+而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
+后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
+而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[何为 package-lock.json ?]]></title>
+            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
+            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
+            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
+因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
+我们都知道 package.json 除了 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[自学蛙泳]]></title>
+            <link>https://zxpsuper.github.io/2024/08/05/swimming/</link>
+            <guid>https://zxpsuper.github.io/2024/08/05/swimming/</guid>
+            <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[今年暑假办了张游泳卡，计划十次内学会蛙泳。从一开始纯憋气10米，到最后50米游全程，总耗时十次（约600分钟，每次游一小时左右！），虽然游得不是很标准，但也算是差强人意，省去了一千大洋的游泳培训费用！]]></description>
+            <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[清远英德行]]></title>
