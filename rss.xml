@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Fri, 19 Dec 2025 06:37:51 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 05 Mar 2026 08:19:54 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -46,22 +46,14 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[如何计算你的五行属性]]></title>
-            <link>https://zxpsuper.github.io/2025/12/16/year-month/</link>
-            <guid>https://zxpsuper.github.io/2025/12/16/year-month/</guid>
-            <pubDate>Tue, 16 Dec 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[想研究下五行取名，逃不开年月日的天干地支计算。
-
-本文以简单易懂的方式带你一步步实现该功能！
-
-年份的天干地支
-
-十大天干：甲、乙、丙、丁、戊（wù）、己、庚（gēng）、辛、壬（rēn）、癸（guǐ）。
-
-十二地支：子、丑、寅（yín）、卯（mǎo）、辰、巳（sì）、午、未、申、酉（yǒu）、戌（xū）、亥（hài）。
-
-干支纪年法是根据十天干 ...]]></description>
-            <enclosure url="https://s3.cn-north-1.jdcloud-oss.com/design-tool-data/data23/c96529ab92df036ca0e1669737e2a6d9.png">
+            <title><![CDATA[使用 Github Action 发布博客]]></title>
+            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
+            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
+            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
+GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
+但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
             </enclosure>
         </item>
         <item>
@@ -88,27 +80,6 @@ Created a new tsconfig.json with:
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
-            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
-            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
-            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[使用 Github Action 发布博客]]></title>
-            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
-            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
-            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
-GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
-但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[Vue 模板编译原理（一）]]></title>
             <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
             <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
@@ -127,6 +98,16 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
 babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
+            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
+            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[让你的 git commit 更漂亮]]></title>
@@ -149,6 +130,16 @@ Commit 结构
 年轻人接近理想好难，想要放弃却又心存不甘。
 如果人生最难得到圆满，不如选择坦然！
 ]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Sass 升级之旅]]></title>
+            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
+            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
+            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
+而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
+后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
+而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
         </item>
         <item>
             <title><![CDATA[多用 Git rebase ?]]></title>
@@ -183,6 +174,15 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[何为 package-lock.json ?]]></title>
+            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
+            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
+            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
+因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
+我们都知道 package.json 除了 ...]]></description>
+        </item>
+        <item>
             <title><![CDATA[中医五脏与情感的关系]]></title>
             <link>https://zxpsuper.github.io/2024/07/30/health/</link>
             <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
@@ -197,25 +197,6 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 |  肺  |  悲  |
 |  肾  | 恐惊 |
 喜伤心 失眠健忘心不 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Sass 升级之旅]]></title>
-            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
-            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
-            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
-而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
-后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
-而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[何为 package-lock.json ?]]></title>
-            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
-            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
-            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
-因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
-我们都知道 package.json 除了 ...]]></description>
         </item>
         <item>
             <title><![CDATA[自学蛙泳]]></title>
@@ -237,6 +218,15 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 ]]></description>
             <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[字幕截图生成器]]></title>
+            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
+            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
+            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
+其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
+感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
         </item>
     </channel>
 </rss>
