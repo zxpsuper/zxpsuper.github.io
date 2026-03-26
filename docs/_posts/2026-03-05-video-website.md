@@ -12,8 +12,24 @@ location: 广州
 
 <!-- more -->
 
+##  视频网址
+
 <ol>
 <li class="video-list" v-for="item in website" :key="item.name" style="margin-bottom: 16px">
+    <div class="video-item">
+        <div class="video-name">{{ item.name }}</div>
+        <div class="video-description">{{ item.description }}</div>
+        <a :href="item.url" target="_blank">
+            {{ item.url }}
+        </a>
+    </div>
+</li>
+</ol>
+
+##  动漫网址
+
+<ol>
+<li class="video-list" v-for="item in dongman" :key="item.name" style="margin-bottom: 16px">
     <div class="video-item">
         <div class="video-name">{{ item.name }}</div>
         <div class="video-description">{{ item.description }}</div>
@@ -29,14 +45,197 @@ location: 广州
 <comment/>
 
 <script>
-import { getCalendarData } from '../.vuepress/utils/lunar'
-const 天干 = '甲乙丙丁戊己庚辛壬癸'   
-const 地支 = '子丑寅卯辰巳午未申酉戌亥'
-const 生肖 = '鼠牛虎兔龙蛇马羊猴鸡狗猪'
 
 export default {
     data() {
         return {
+            dongman: [
+                        {
+                            "name": "次元方舟",
+                            "url": "https://www.cyfz.vip/",
+                            "description": "无广告，视频清晰",
+                            "created_at": "",
+                            "updated_at": "2023/9/1",
+                            "active": true
+                        },
+                        {
+                            "name": "打驴动漫",
+                            "url": "https://www.dalvdm.cc/",
+                            "description": "无广告，视频清晰",
+                            "created_at": "",
+                            "updated_at": "2025/7/1",
+                            "active": true
+                        },
+                        {
+                            "name": "Animoe动漫",
+                            "url": "https://animoe.org/",
+                            "description": "无广告，视频清晰",
+                            "created_at": "",
+                            "updated_at": "2023/11/3",
+                            "active": true
+                        },
+                        {
+                            "name": "ANIME7",
+                            "url": "https://anime7.top/",
+                            "description": "无广告",
+                            "created_at": "",
+                            "updated_at": "2025/5/18",
+                            "active": true
+                        },
+                        {
+                            "name": "囧次元",
+                            "url": "https://www.jcydmz.com/",
+                            "description": "原漫次元，无广告，视频清晰",
+                            "created_at": "",
+                            "updated_at": "2025/9/18",
+                            "active": true
+                        },
+                        {
+                            "name": "风铃动漫",
+                            "url": "https://www.aafun.cc/",
+                            "description": "无广告，但有些资源需要注册登录",
+                            "created_at": "",
+                            "updated_at": "2024/11/20",
+                            "active": true
+                        },
+                        {
+                            "name": "次元城动画",
+                            "url": "https://www.cycani.org/",
+                            "description": "轻微广告，视频清晰",
+                            "created_at": "",
+                            "updated_at": "2026/2/17",
+                            "active": true
+                        },
+                        {
+                            "name": "番薯动漫",
+                            "url": "https://www.fsdm02.com/",
+                            "description": "轻微广告，视频清晰",
+                            "created_at": "",
+                            "updated_at": "2024/6/29",
+                            "active": true
+                        },
+                        {
+                            "name": "喵物次元",
+                            "url": "https://www.mwcy.net/",
+                            "description": "有广告",
+                            "created_at": "",
+                            "updated_at": "2024/11/8",
+                            "active": true
+                        },
+                        {
+                            "name": "稀饭动漫",
+                            "url": "https://dm.xifanacg.com/",
+                            "description": "有广告，视频清晰",
+                            "created_at": "",
+                            "updated_at": "2025/8/9",
+                            "active": true
+                        },
+                        {
+                            "name": "动漫巴士",
+                            "url": "https://dmbus.cc/",
+                            "description": "有广告，视频高清",
+                            "created_at": "",
+                            "updated_at": "2025/11/23",
+                            "active": true
+                        },
+                        {
+                            "name": "girigiri爱动漫",
+                            "url": "https://bgm.girigirilove.com/",
+                            "description": "少量广告，视频清晰",
+                            "noReferrer": true,
+                            "created_at": "",
+                            "updated_at": "2023/4/20",
+                            "active": true
+                        },
+                        {
+                            "name": "咕咕番",
+                            "url": "https://www.gugu3.com/",
+                            "description": "有广告，视频清晰",
+                            "created_at": "",
+                            "updated_at": "2024/9/14",
+                            "active": true
+                        },
+                        {
+                            "name": "嘶哩嘶哩",
+                            "url": "https://www.silisilifun.com/",
+                            "description": "注意，在网站内的搜索框中输入“silisilinb”等待页面跳转，有广告，视频清晰，提供下载源，PC模式访问有弹幕",
+                            "created_at": "",
+                            "updated_at": "2025/8/2",
+                            "active": true
+                        },
+                        {
+                            "name": "橘子动漫",
+                            "url": "https://www.jzacg.com/",
+                            "description": "有广告，视频高清，但需要邮箱注册登录下才能看，不过你可以使用一次性的[匿名邮箱](https://temp-mail.org/zh/) 。",
+                            "created_at": "",
+                            "updated_at": "2025/3/16",
+                            "active": true
+                        },
+                        {
+                            "name": "去看吧动漫",
+                            "url": "https://11kt.net/",
+                            "description": "有广告，画质清晰",
+                            "created_at": "",
+                            "updated_at": "2025/5/23",
+                            "active": true
+                        },
+                        {
+                            "name": "西瓜卡通",
+                            "url": "https://cn.xgcartoon.com/",
+                            "description": "有广告，需要手动在播放器中设置1080P画质，有视频缩略图，部分地区存在被拦截无法正常访问现象",
+                            "created_at": "",
+                            "updated_at": "2024/8/11",
+                            "active": true
+                        },
+                        {
+                            "name": "XDM动漫",
+                            "url": "https://www.xuandm.com/",
+                            "description": "有广告，如遇异常，尝试切换资源",
+                            "created_at": "",
+                            "updated_at": "2023/12/21",
+                            "active": true
+                        },
+                        {
+                            "name": "路漫漫动漫",
+                            "url": "https://www.lmm85.com/",
+                            "description": "视频高清，移动端有广告，视频中间部分可能存在博彩广告",
+                            "created_at": "",
+                            "updated_at": "2026/2/14",
+                            "active": true
+                        },
+                        {
+                            "name": "五弹幕动漫",
+                            "url": "https://www.5dm.link/",
+                            "description": "有广告，视频清晰，部分动漫可能无法观看，请勿登录，因为注册可能要收费，视频加载稍慢，请等待。",
+                            "created_at": "",
+                            "updated_at": "2023/12/13",
+                            "active": true
+                        },
+                        {
+                            "name": "AGE动漫",
+                            "url": "https://www.agedm.io/",
+                            "description": "经典动漫站点，有广告",
+                            "created_at": "",
+                            "updated_at": "2025/9/18",
+                            "active": true
+                        },
+                        {
+                            "name": "樱花动漫",
+                            "url": "https://www.xdm6.com/",
+                            "description": "有广告",
+                            "created_at": "",
+                            "updated_at": "2024/12/9",
+                            "active": true
+                        },
+                        {
+                            "name": "Anime1动漫",
+                            "url": "https://anime1.me/",
+                            "description": "有广告，画质中等",
+                            "created_at": "",
+                            "updated_at": "2022/3/17",
+                            "active": true
+                        }
+                        ],
             website: [
                         {
                             "name": "注视影视",
