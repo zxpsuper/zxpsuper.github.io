@@ -12,7 +12,7 @@ location: 广州
 
 <!-- more -->
 
-##  视频网址
+## 视频网址
 
 <div style="margin-top: 16px; " class="video-wrapper">
 <div class="video-list" v-for="item in website" :key="item.name" style="margin-bottom: 16px" @click="openWebsite(item.url)">
@@ -26,7 +26,7 @@ location: 广州
 </div>
 </div>
 
-##  动漫网址
+## 动漫网址
 
 <div style="margin-top: 16px; " class="video-wrapper">
 <div class="video-list" v-for="item in dongman" :key="item.name" style="margin-bottom: 16px" @click="openWebsite(item.url)">
@@ -449,16 +449,16 @@ export default {
 
     .video-description {
         font-size: 12px;
-    height: 34px;
-    line-height: 17px;
-    color: rgb(102, 102, 102);
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    margin-bottom: 9px;
+        height: 34px;
+        line-height: 17px;
+        color: rgb(102, 102, 102);
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        margin-bottom: 9px;
     }
     .video-item {
         align-self: center;
