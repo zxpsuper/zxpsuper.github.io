@@ -469,7 +469,7 @@ export default {
         -webkit-box-align: center;
         align-items: center;
         width: 165px;
-        height: 215px;
+        height: 180px;
         cursor: pointer;
         padding: 20px 12px 0px;
         box-sizing: border-box;
