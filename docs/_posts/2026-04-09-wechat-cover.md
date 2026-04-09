@@ -1,5 +1,5 @@
 ---
-title: 微信公众号封面图片资源
+title: 微信公众号封面图片生成器
 date: 2026-04-09
 tags:
   - 工具
@@ -8,122 +8,35 @@ author: 小皮咖
 location: 广州
 ---
 
-以下是一些适合微信公众号封面的无水印通用图片资源，可直接使用。
+实现一个微信公众号封面图片生成工具，方便大家使用。
 
 <!-- more -->
 
-## 通用风景类
-
-### 1. 渐变背景（蓝色系）
-```
-https://picsum.photos/900/383?random=1
-```
-
-### 2. 渐变背景（绿色系）
-```
-https://picsum.photos/900/383?random=2
-```
-
-### 3. 渐变背景（紫色系）
-```
-https://picsum.photos/900/383?random=3
-```
-
-## 科技感类
-
-### 4. 抽象科技背景
-```
-https://picsum.photos/900/383?random=4
-```
-
-### 5. 代码/编程主题
-```
-https://picsum.photos/900/383?random=5
-```
-
-### 6. 数据/图表主题
-```
-https://picsum.photos/900/383?random=6
-```
-
-## 自然风景类
-
-### 7. 山脉风景
-```
-https://picsum.photos/900/383?random=7
-```
-
-### 8. 海洋/海滩
-```
-https://picsum.photos/900/383?random=8
-```
-
-### 9. 森林/树木
-```
-https://picsum.photos/900/383?random=9
-```
-
-## 城市建筑类
-
-### 10. 城市夜景
-```
-https://picsum.photos/900/383?random=10
-```
-
-### 11. 现代建筑
-```
-https://picsum.photos/900/383?random=11
-```
-
-### 12. 街道风景
-```
-https://picsum.photos/900/383?random=12
-```
-
-## 纯色渐变背景（Base64 格式）
-
-### 13. 蓝色渐变
-```
-data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='383'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea'/%3E%3Cstop offset='100%25' style='stop-color:%23764ba2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='900' height='383'/%3E%3C/svg%3E
-```
-
-### 14. 绿色渐变
-```
-data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='383'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2311998e'/%3E%3Cstop offset='100%25' style='stop-color:%2338ef7d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='900' height='383'/%3E%3C/svg%3E
-```
-
-### 15. 橙色渐变
-```
-data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='383'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23f093fb'/%3E%3Cstop offset='100%25' style='stop-color:%23f5576c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='900' height='383'/%3E%3C/svg%3E
-```
-
-### 16. 青色渐变
-```
-data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='383'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234facfe'/%3E%3Cstop offset='100%25' style='stop-color:%2300f2fe'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='900' height='383'/%3E%3C/svg%3E
-```
-
-### 17. 粉色渐变
-```
-data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='383'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23fa709a'/%3E%3Cstop offset='100%25' style='stop-color:%23fee140'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='900' height='383'/%3E%3C/svg%3E
-```
-
-### 18. 灰色渐变
-```
-data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='383'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23a8a8a8'/%3E%3Cstop offset='100%25' style='stop-color:%23868f96'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='900' height='383'/%3E%3C/svg%3E
-```
 
 ## 使用说明
 
-1. **随机图片链接**：修改链接末尾的 `random=数字` 可以获取不同的随机图片
-2. **渐变背景**：Base64 格式的 SVG 渐变背景，加载速度快，适合作为文字背景
-3. **尺寸调整**：如需调整尺寸，修改链接中的 `900/383` 为所需宽高
-4. **推荐尺寸**：微信公众号一级封面 900x383，二级封面 200x200
+1. **上传图片**：点击左侧区域上传大图，点击右侧区域上传小图
+2. **调整图片**：拖动图片调整位置，拖动图片边缘调整大小
+3. **添加文字**：点击左侧区域添加文字，点击右侧区域添加文字
+4. **调整文字**：拖动文字调整位置，拖动文字边缘调整大小，也可以设置图片颜色
+5. **下载图片**：点击下载按钮下载合成后的图片
 
 ## 封面合成工具
 
 使用下方的工具可以合成微信公众号封面图，左侧为大图区域（900x383），右侧为小图区域（383x383）。
 
 <div id="cover-composer"></div>
+
+
+这个工具合成出来是 1283 * 383 的图片，左边是单图文消息封面，右边是多图文消息封面。
+
+我们用这个工具合成一张图片
+
+![](/images/wechat-cover.png)
+
+然后在文章编辑界面设置封面，左边刚好给消息列表做封面，右边刚好给卡片做小图，完美哈哈😁
+
+![](/images/wechat-cover2.png)
 
 <script>
 export default {
@@ -140,24 +53,112 @@ export default {
             isDraggingBig: false,
             isDraggingSmall: false,
             lastX: 0,
-            lastY: 0
+            lastY: 0,
+            bigTexts: [],
+            smallTexts: [],
+            selectedTextId: null,
+            textIdCounter: 1,
+            isDraggingText: false,
+            isResizingText: false,
+            resizeHandle: null,
+            textDragStartX: 0,
+            textDragStartY: 0,
+            currentTextColor: '#ffffff',
+            presetImages: [
+                { name: '📷 选择图片...', url: '' },
+                { name: '🌄 随机风景1', url: 'https://picsum.photos/900/383?random=1' },
+                { name: '🌄 随机风景2', url: 'https://picsum.photos/900/383?random=2' },
+                { name: '🌄 随机风景3', url: 'https://picsum.photos/900/383?random=3' },
+                { name: '💻 科技背景1', url: 'https://picsum.photos/900/383?random=4' },
+                { name: '💻 科技背景2', url: 'https://picsum.photos/900/383?random=5' },
+                { name: '💻 科技背景3', url: 'https://picsum.photos/900/383?random=6' }
+            ]
         }
     },
     mounted() {
+        this.generateGradientImages();
         this.initCanvas();
     },
     methods: {
+        generateGradientImages() {
+            const gradients = [
+                { name: '🟦 蓝色渐变', start: '#667eea', end: '#764ba2' },
+                { name: '🟩 绿色渐变', start: '#11998e', end: '#38ef7d' },
+                { name: '🟧 橙色渐变', start: '#f093fb', end: '#f5576c' },
+                { name: '🟨 青色渐变', start: '#4facfe', end: '#00f2fe' },
+                { name: '🟪 粉色渐变', start: '#fa709a', end: '#fee140' },
+                { name: '⬜ 灰色渐变', start: '#a8a8a8', end: '#868f96' }
+            ];
+            
+            gradients.forEach(grad => {
+                const canvas = document.createElement('canvas');
+                canvas.width = 900;
+                canvas.height = 383;
+                const ctx = canvas.getContext('2d');
+                
+                const gradient = ctx.createLinearGradient(0, 0, 900, 383);
+                gradient.addColorStop(0, grad.start);
+                gradient.addColorStop(1, grad.end);
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 900, 383);
+                
+                const dataUrl = canvas.toDataURL('image/png');
+                this.presetImages.splice(1, 0, { name: grad.name, url: dataUrl });
+            });
+        },
         initCanvas() {
             const container = document.getElementById('cover-composer');
             if (!container) return;
             
+            const presetOptions = this.presetImages.map(img => 
+                `<option value="${img.url}">${img.name}</option>`
+            ).join('');
+            
             container.innerHTML = `
                 <div class="cover-composer-wrapper">
+                    <div class="tools-bar">
+                        <div class="tool-group">
+                            <span class="tool-label">文本：</span>
+                            <button id="addTextBig" class="btn btn-text">➕ 大图加文字</button>
+                            <button id="addTextSmall" class="btn btn-text">➕ 小图加文字</button>
+                        </div>
+                        <div class="tool-group">
+                            <span class="tool-label">颜色：</span>
+                            <input type="color" id="textColorPicker" class="color-picker" value="#ffffff">
+                            <span class="color-label" id="colorLabel">#ffffff</span>
+                        </div>
+                        <div class="tool-group">
+                            <button id="deleteSelectedText" class="btn btn-delete">🗑️ 删除</button>
+                        </div>
+                        <div class="tool-group">
+                            <span class="tool-label">字号：</span>
+                            <button id="textBigger" class="btn">🔤 增大</button>
+                            <button id="textSmaller" class="btn">🔤 减小</button>
+                        </div>
+                    </div>
                     <div class="cover-composer-grid">
                         <div class="panel panel-big">
                             <h3 class="panel-title">大图区域 (900x383)</h3>
-                            <div class="file-input-wrapper">
-                                <input type="file" accept="image/*" id="bigFileInput" class="file-input">
+                            <div class="image-source-section">
+                                <div class="source-tabs">
+                                    <button class="source-tab active" data-type="big" data-source="upload">📁 本地上传</button>
+                                    <button class="source-tab" data-type="big" data-source="preset">🎨 选择预置</button>
+                                    <button class="source-tab" data-type="big" data-source="url">🔗 图片链接</button>
+                                </div>
+                                <div class="source-content active" data-type="big" data-source="upload">
+                                    <input type="file" accept="image/*" id="bigFileInput" class="file-input">
+                                </div>
+                                <div class="source-content" data-type="big" data-source="preset">
+                                    <select id="bigPresetSelect" class="select-input">
+                                        ${presetOptions}
+                                    </select>
+                                </div>
+                                <div class="source-content" data-type="big" data-source="url">
+                                    <div class="url-input-group">
+                                        <input type="text" id="bigUrlInput" class="url-input" placeholder="请输入图片链接...">
+                                        <button id="bigLoadUrlBtn" class="btn-small">加载</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="button-group">
                                 <button id="bigZoomIn" class="btn">🔍 放大</button>
@@ -168,13 +169,32 @@ export default {
                                 <div id="bigCanvasContainer" class="canvas-container">
                                     <div id="bigPlaceholder" class="placeholder">📷 请上传大图</div>
                                     <img id="bigImg" style="display: none; position: absolute; transform-origin: center center; user-select: none; pointer-events: none;">
+                                    <div id="bigTextLayer" class="text-layer"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-small">
                             <h3 class="panel-title">小图区域 (383x383)</h3>
-                            <div class="file-input-wrapper">
-                                <input type="file" accept="image/*" id="smallFileInput" class="file-input">
+                            <div class="image-source-section">
+                                <div class="source-tabs">
+                                    <button class="source-tab active" data-type="small" data-source="upload">📁 本地上传</button>
+                                    <button class="source-tab" data-type="small" data-source="preset">🎨 选择预置</button>
+                                    <button class="source-tab" data-type="small" data-source="url">🔗 图片链接</button>
+                                </div>
+                                <div class="source-content active" data-type="small" data-source="upload">
+                                    <input type="file" accept="image/*" id="smallFileInput" class="file-input">
+                                </div>
+                                <div class="source-content" data-type="small" data-source="preset">
+                                    <select id="smallPresetSelect" class="select-input">
+                                        ${presetOptions}
+                                    </select>
+                                </div>
+                                <div class="source-content" data-type="small" data-source="url">
+                                    <div class="url-input-group">
+                                        <input type="text" id="smallUrlInput" class="url-input" placeholder="请输入图片链接...">
+                                        <button id="smallLoadUrlBtn" class="btn-small">加载</button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="button-group">
                                 <button id="smallZoomIn" class="btn">🔍 放大</button>
@@ -185,6 +205,7 @@ export default {
                                 <div id="smallCanvasContainer" class="canvas-container">
                                     <div id="smallPlaceholder" class="placeholder">📷 请上传小图</div>
                                     <img id="smallImg" style="display: none; position: absolute; transform-origin: center center; user-select: none; pointer-events: none;">
+                                    <div id="smallTextLayer" class="text-layer"></div>
                                 </div>
                             </div>
                         </div>
@@ -200,6 +221,22 @@ export default {
         bindEvents() {
             const self = this;
             
+            // 标签切换
+            document.querySelectorAll('.source-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const type = this.dataset.type;
+                    const source = this.dataset.source;
+                    
+                    // 更新标签状态
+                    document.querySelectorAll(`.source-tab[data-type="${type}"]`).forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 显示对应内容
+                    document.querySelectorAll(`.source-content[data-type="${type}"]`).forEach(c => c.classList.remove('active'));
+                    document.querySelector(`.source-content[data-type="${type}"][data-source="${source}"]`).classList.add('active');
+                });
+            });
+            
             // 大图上传
             document.getElementById('bigFileInput').addEventListener('change', function(e) {
                 self.handleFileUpload(e, 'big');
@@ -208,6 +245,78 @@ export default {
             // 小图上传
             document.getElementById('smallFileInput').addEventListener('change', function(e) {
                 self.handleFileUpload(e, 'small');
+            });
+            
+            // 大图预置选择
+            document.getElementById('bigPresetSelect').addEventListener('change', function(e) {
+                if (e.target.value) {
+                    self.loadImageFromUrl(e.target.value, 'big');
+                }
+            });
+            
+            // 小图预置选择
+            document.getElementById('smallPresetSelect').addEventListener('change', function(e) {
+                if (e.target.value) {
+                    self.loadImageFromUrl(e.target.value, 'small');
+                }
+            });
+            
+            // 大图URL加载
+            document.getElementById('bigLoadUrlBtn').addEventListener('click', function() {
+                const url = document.getElementById('bigUrlInput').value.trim();
+                if (url) {
+                    self.loadImageFromUrl(url, 'big');
+                }
+            });
+            
+            // 小图URL加载
+            document.getElementById('smallLoadUrlBtn').addEventListener('click', function() {
+                const url = document.getElementById('smallUrlInput').value.trim();
+                if (url) {
+                    self.loadImageFromUrl(url, 'small');
+                }
+            });
+            
+            // 回车加载URL
+            document.getElementById('bigUrlInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('bigLoadUrlBtn').click();
+                }
+            });
+            document.getElementById('smallUrlInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.getElementById('smallLoadUrlBtn').click();
+                }
+            });
+            
+            // 添加文本按钮
+            document.getElementById('addTextBig').addEventListener('click', function() {
+                self.addText('big');
+            });
+            document.getElementById('addTextSmall').addEventListener('click', function() {
+                self.addText('small');
+            });
+            
+            // 颜色选择器
+            const colorPicker = document.getElementById('textColorPicker');
+            const colorLabel = document.getElementById('colorLabel');
+            colorPicker.addEventListener('input', function() {
+                self.currentTextColor = this.value;
+                colorLabel.textContent = this.value;
+                self.updateSelectedTextColor();
+            });
+            
+            // 删除选中文字
+            document.getElementById('deleteSelectedText').addEventListener('click', function() {
+                self.deleteSelectedText();
+            });
+            
+            // 文本大小调整
+            document.getElementById('textBigger').addEventListener('click', function() {
+                self.adjustTextSize(4);
+            });
+            document.getElementById('textSmaller').addEventListener('click', function() {
+                self.adjustTextSize(-4);
             });
             
             // 大图缩放
@@ -277,12 +386,32 @@ export default {
                     self.lastY = e.clientY;
                     self.updateImagePosition('small');
                 }
+                if (self.isDraggingText && self.selectedTextId) {
+                    const dx = e.clientX - self.textDragStartX;
+                    const dy = e.clientY - self.textDragStartY;
+                    self.textDragStartX = e.clientX;
+                    self.textDragStartY = e.clientY;
+                    
+                    const textElement = document.getElementById(self.selectedTextId);
+                    let textData = self.bigTexts.find(t => t.id === self.selectedTextId);
+                    if (!textData) {
+                        textData = self.smallTexts.find(t => t.id === self.selectedTextId);
+                    }
+                    
+                    if (textData && textElement) {
+                        textData.x += dx;
+                        textData.y += dy;
+                        textElement.style.left = textData.x + 'px';
+                        textElement.style.top = textData.y + 'px';
+                    }
+                }
             });
             
             // 全局鼠标释放
             document.addEventListener('mouseup', function() {
                 self.isDraggingBig = false;
                 self.isDraggingSmall = false;
+                self.isDraggingText = false;
             });
             
             // 大图滚轮缩放
@@ -302,6 +431,47 @@ export default {
                     self.zoomImage('small', delta);
                 }
             });
+        },
+        loadImageFromUrl(url, type) {
+            const self = this;
+            const img = new Image();
+            // Base64 图片不需要 crossOrigin
+            if (!url.startsWith('data:')) {
+                img.crossOrigin = 'anonymous';
+            }
+            img.onload = function() {
+                // 将图片转换为本地 DataURL
+                const canvas = document.createElement('canvas');
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+                const dataUrl = canvas.toDataURL('image/png');
+                
+                // 使用 DataURL 创建新的图片对象
+                const localImg = new Image();
+                localImg.onload = function() {
+                    if (type === 'big') {
+                        self.bigImage = localImg;
+                        self.bigScale = 1;
+                        self.bigOffsetX = 0;
+                        self.bigOffsetY = 0;
+                        self.fitImage('big');
+                    } else {
+                        self.smallImage = localImg;
+                        self.smallScale = 1;
+                        self.smallOffsetX = 0;
+                        self.smallOffsetY = 0;
+                        self.fitImage('small');
+                    }
+                };
+                localImg.src = dataUrl;
+            };
+            img.onerror = function(err) {
+                console.error('图片加载失败', err);
+                alert('图片加载失败，请检查链接是否正确');
+            };
+            img.src = url;
         },
         handleFileUpload(e, type) {
             const file = e.target.files[0];
@@ -495,11 +665,151 @@ export default {
                 ctx.restore();
             }
             
+            // 绘制大图区域的文本
+            if (this.bigTexts.length > 0 && bigContainer) {
+                const bigScaleX = 900 / bigContainer.offsetWidth;
+                const bigScaleY = 383 / bigContainer.offsetHeight;
+                const textScale = Math.max(bigScaleX, bigScaleY);
+                
+                ctx.save();
+                this.bigTexts.forEach(textData => {
+                    ctx.fillStyle = textData.color;
+                    ctx.font = `${textData.fontSize * textScale}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif`;
+                    ctx.fillText(textData.content, textData.x * bigScaleX, textData.y * bigScaleY + textData.fontSize * textScale);
+                });
+                ctx.restore();
+            }
+            
+            // 绘制小图区域的文本
+            if (this.smallTexts.length > 0 && smallContainer) {
+                const smallScaleX = 383 / smallContainer.offsetWidth;
+                const smallScaleY = 383 / smallContainer.offsetHeight;
+                const textScale = Math.max(smallScaleX, smallScaleY);
+                
+                ctx.save();
+                this.smallTexts.forEach(textData => {
+                    ctx.fillStyle = textData.color;
+                    ctx.font = `${textData.fontSize * textScale}px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif`;
+                    ctx.fillText(textData.content, 900 + textData.x * smallScaleX, textData.y * smallScaleY + textData.fontSize * textScale);
+                });
+                ctx.restore();
+            }
+            
             // 下载图片
             const link = document.createElement('a');
             link.download = 'wechat-cover-' + Date.now() + '.png';
             link.href = canvas.toDataURL('image/png');
             link.click();
+        },
+        addText(type) {
+            const text = prompt('请输入文本内容：', '示例文字');
+            if (!text) return;
+            
+            const container = document.getElementById(type === 'big' ? 'bigCanvasContainer' : 'smallCanvasContainer');
+            const textLayer = document.getElementById(type === 'big' ? 'bigTextLayer' : 'smallTextLayer');
+            
+            const textData = {
+                id: 'text-' + this.textIdCounter++,
+                content: text,
+                x: 20,
+                y: 20,
+                fontSize: 24,
+                color: this.currentTextColor
+            };
+            
+            if (type === 'big') {
+                this.bigTexts.push(textData);
+            } else {
+                this.smallTexts.push(textData);
+            }
+            
+            this.renderText(textData, textLayer);
+        },
+        renderText(textData, textLayer) {
+            const textElement = document.createElement('div');
+            textElement.className = 'text-item';
+            textElement.id = textData.id;
+            textElement.textContent = textData.content;
+            textElement.style.left = textData.x + 'px';
+            textElement.style.top = textData.y + 'px';
+            textElement.style.fontSize = textData.fontSize + 'px';
+            textElement.style.color = textData.color;
+            
+            textElement.addEventListener('mousedown', (e) => this.startTextDrag(e, textData));
+            textElement.addEventListener('dblclick', (e) => this.editTextContent(e, textData));
+            
+            textLayer.appendChild(textElement);
+        },
+        startTextDrag(e, textData) {
+            e.preventDefault();
+            e.stopPropagation();
+            this.selectedTextId = textData.id;
+            this.isDraggingText = true;
+            this.textDragStartX = e.clientX;
+            this.textDragStartY = e.clientY;
+            
+            const textElements = document.querySelectorAll('.text-item');
+            textElements.forEach(el => el.classList.remove('selected'));
+            document.getElementById(textData.id).classList.add('selected');
+        },
+        editTextContent(e, textData) {
+            const newContent = prompt('请输入新的文本内容：', textData.content);
+            if (newContent !== null) {
+                textData.content = newContent;
+                document.getElementById(textData.id).textContent = newContent;
+            }
+        },
+        updateSelectedTextColor() {
+            if (!this.selectedTextId) return;
+            
+            const textElement = document.getElementById(this.selectedTextId);
+            if (!textElement) return;
+            
+            let textData = this.bigTexts.find(t => t.id === this.selectedTextId);
+            if (!textData) {
+                textData = this.smallTexts.find(t => t.id === this.selectedTextId);
+            }
+            
+            if (textData) {
+                textData.color = this.currentTextColor;
+                textElement.style.color = this.currentTextColor;
+            }
+        },
+        deleteSelectedText() {
+            if (!this.selectedTextId) return;
+            
+            const indexBig = this.bigTexts.findIndex(t => t.id === this.selectedTextId);
+            if (indexBig !== -1) {
+                this.bigTexts.splice(indexBig, 1);
+            } else {
+                const indexSmall = this.smallTexts.findIndex(t => t.id === this.selectedTextId);
+                if (indexSmall !== -1) {
+                    this.smallTexts.splice(indexSmall, 1);
+                }
+            }
+            
+            const textElement = document.getElementById(this.selectedTextId);
+            if (textElement) {
+                textElement.remove();
+            }
+            
+            this.selectedTextId = null;
+        },
+        adjustTextSize(delta) {
+            if (!this.selectedTextId) return;
+            
+            const textElement = document.getElementById(this.selectedTextId);
+            if (!textElement) return;
+            
+            let textData = this.bigTexts.find(t => t.id === this.selectedTextId);
+            if (!textData) {
+                textData = this.smallTexts.find(t => t.id === this.selectedTextId);
+            }
+            
+            if (textData) {
+                textData.fontSize = Math.max(12, Math.min(100, textData.fontSize + delta));
+                textElement.style.fontSize = textData.fontSize + 'px';
+            }
         }
     }
 }
@@ -519,6 +829,61 @@ export default {
     max-width: 1200px;
     margin: 30px auto;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.tools-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.tool-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.tool-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+}
+.btn-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+.btn-text:hover {
+    background: linear-gradient(135deg, #5a6fd6 0%, #6a4190 100%);
+    color: white;
+}
+.btn-delete {
+    background: #ff6b6b;
+    color: white;
+}
+.btn-delete:hover {
+    background: #ee5a5a;
+    color: white;
+}
+.color-picker {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 2px solid #e8e8e8;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.color-picker:hover {
+    border-color: #4096ff;
+    transform: scale(1.05);
+}
+.color-label {
+    font-size: 13px;
+    color: #666;
+    font-family: monospace;
+    min-width: 60px;
 }
 .cover-composer-grid {
     display: flex;
@@ -565,6 +930,43 @@ export default {
     padding-bottom: 12px;
     border-bottom: 2px solid #f0f0f0;
 }
+.image-source-section {
+    margin-bottom: 16px;
+}
+.source-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 12px;
+    background: #f5f5f5;
+    padding: 4px;
+    border-radius: 8px;
+}
+.source-tab {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.2s ease;
+}
+.source-tab:hover {
+    color: #333;
+}
+.source-tab.active {
+    background: white;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.source-content {
+    display: none;
+}
+.source-content.active {
+    display: block;
+}
 .file-input-wrapper {
     margin-bottom: 16px;
 }
@@ -581,6 +983,46 @@ export default {
 .file-input:hover {
     border-color: #4096ff;
     background: #f0f7ff;
+}
+.select-input, .url-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e8e8e8;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.select-input:hover, .url-input:hover {
+    border-color: #4096ff;
+}
+.select-input:focus, .url-input:focus {
+    outline: none;
+    border-color: #4096ff;
+    box-shadow: 0 0 0 3px rgba(64, 150, 255, 0.1);
+}
+.url-input-group {
+    display: flex;
+    gap: 8px;
+}
+.url-input-group .url-input {
+    flex: 1;
+}
+.btn-small {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    white-space: nowrap;
+}
+.btn-small:hover {
+    background: linear-gradient(135deg, #5a6fd6 0%, #6a4190 100%);
+    transform: translateY(-1px);
 }
 .button-group {
     display: flex;
@@ -663,5 +1105,34 @@ export default {
 .download-section {
     text-align: center;
     padding: 20px 0;
+}
+.text-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.text-item {
+    position: absolute;
+    cursor: move;
+    user-select: none;
+    pointer-events: auto;
+    white-space: nowrap;
+    font-weight: 600;
+    padding: 4px 8px;
+    border: 2px dashed transparent;
+    border-radius: 4px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.text-item:hover {
+    border-color: rgba(64, 150, 255, 0.3);
+    background-color: rgba(64, 150, 255, 0.1);
+}
+.text-item.selected {
+    border-color: #4096ff;
+    background-color: rgba(64, 150, 255, 0.15);
+    box-shadow: 0 0 0 2px rgba(64, 150, 255, 0.3);
 }
 </style>
