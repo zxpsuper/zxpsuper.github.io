@@ -50,10 +50,6 @@ module.exports = {
           type: 'mail',
           link: 'mailto:zxpscau@163.com',
         },
-        {
-          type: 'juejin',
-          link: 'mailto:zxpscau@163.com',
-        }
       ],
       copyright: [
         {
