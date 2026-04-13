@@ -7,20 +7,33 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+node_modules/
+.DS_Store
 dist
 dist-ssr
+coverage
 *.local
+test.html
+.env
+.vitepress/dist
+.vitepress/cache
+.vitepress/components.d.ts
+.vitepress/auto-imports.d.ts
+themeConfig.mjs
+!.vitepress/theme/assets/themeConfig.mjs
+
+posts/*
+!posts/2024/1010.md
 
 # Editor directories and files
 .vscode/*
+.vscode
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-docs/.vuepress/dist
+.vercel
