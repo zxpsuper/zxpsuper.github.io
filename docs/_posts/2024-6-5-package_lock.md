@@ -3,7 +3,7 @@ title: 何为 package-lock.json ?
 date: 2024-6-5
 tags:
   - 前端
-  - 工程化
+  - IT技术
 author: 小皮咖
 location: 广州
 ---

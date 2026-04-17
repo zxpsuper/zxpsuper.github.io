@@ -3,7 +3,7 @@ title: 微信公众号封面图片生成器
 date: 2026-04-09
 tags:
   - 工具
-  - 资源
+  - 杂文
 author: 小皮咖
 location: 广州
 ---

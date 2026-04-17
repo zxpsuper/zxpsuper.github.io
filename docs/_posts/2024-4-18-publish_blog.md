@@ -3,7 +3,6 @@ title: 使用 Github Action 发布博客
 date: 2024-4-18
 tags: 
   - blog
-  - 前端
   - IT技术
 author: 小皮咖
 location: 广州  

@@ -2,7 +2,6 @@
 title: 关于 babel polyfill 那些事
 date: 2024-5-16
 tags:
-  - babel
   - IT技术
   - 前端
 author: 小皮咖

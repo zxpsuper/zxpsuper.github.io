@@ -3,7 +3,6 @@ title: 自学蛙泳
 date: 2024-8-5
 tags:
   - 杂文
-  - 运动
 author: 小皮咖
 location: 广州
 image: https://img1.baidu.com/it/u=2662158282,760696711&fm=253&fmt=auto&app=120&f=JPEG?w=750&h=375

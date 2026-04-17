@@ -2,7 +2,6 @@
 title: typescript 配置文件 tsconfig.json 详解
 date: 2024-4-16
 tags:
-  - typescript
   - 前端
   - IT技术
 author: 小皮咖
