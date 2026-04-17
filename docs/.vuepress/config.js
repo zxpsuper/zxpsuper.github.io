@@ -59,16 +59,20 @@ module.exports = {
     },
     nav: [
       {
-        text: 'Blog',
+        text: '首页',
         link: '/',
       },
       {
-        text: 'Tags',
+        text: '标签',
         link: '/tag/',
       },
       {
-        text: 'Archives',
+        text: '时间线',
         link: '/archives',
+      },
+      {
+        text: '资源库',
+        link: 'https://suporka-resource.netlify.app/',
       },
     ],
     feed: {

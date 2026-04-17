@@ -18,7 +18,6 @@ body
   
 #header
   box-shadow none
-  background transparent
 
 .header-wrapper .title a
   font-family 'LXGW WenKai Screen R'!important
@@ -64,3 +63,206 @@ body
 #app {
   background-color:#f7f9fe;
 }
+
+/* Tags Page Styles */
+.blog-tags
+  width 100%!important
+  background transparent
+  padding 0
+
+.blog-tags h2
+  font-size 28px
+  font-weight 700
+  color #1a1a1a
+  margin-bottom 32px
+  display flex
+  align-items center
+  gap 12px
+  padding-left 4px
+
+.blog-tags h2::before
+  content '🏷️'
+  font-size 32px
+
+.tag-wrapper
+  display flex
+  flex-wrap wrap
+  gap 16px
+  margin-bottom 32px
+
+.tag
+  display inline-flex
+  align-items center
+  gap 8px
+  padding 12px 24px
+  background linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+  border none
+  border-radius 12px
+  font-size 15px
+  font-weight 500
+  color #fff
+  text-decoration none
+  transition all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  position relative
+  overflow hidden
+  box-shadow 0 4px 15px rgba(102, 126, 234, 0.3)
+
+.tag:nth-child(2n)
+  background linear-gradient(135deg, #f093fb 0%, #f5576c 100%)
+  box-shadow 0 4px 15px rgba(245, 87, 108, 0.3)
+
+.tag:nth-child(3n)
+  background linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)
+  box-shadow 0 4px 15px rgba(79, 172, 254, 0.3)
+
+.tag:nth-child(4n)
+  background linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)
+  box-shadow 0 4px 15px rgba(67, 233, 123, 0.3)
+
+.tag:nth-child(5n)
+  background linear-gradient(135deg, #fa709a 0%, #fee140 100%)
+  box-shadow 0 4px 15px rgba(250, 112, 154, 0.3)
+
+.tag:hover
+  transform translateY(-4px) scale(1.05)
+  box-shadow 0 12px 30px rgba(0, 0, 0, 0.25)
+
+.tag::after
+  content ''
+  position absolute
+  top 0
+  left -100%
+  width 100%
+  height 100%
+  background linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)
+  transition left 0.6s ease
+
+.tag:hover::after
+  left 100%
+
+.blog-tag
+  width: fit-content!important;
+  color: #363636!important;
+  background: #fff!important;
+  border: 1px solid #e3e8f7!important;
+  box-shadow: 0 8px 16px -4px #2c2d300c!important;
+  backface-visibility: hidden!important;
+  transform-style: preserve-3d!important;
+  border-radius: 12px!important;
+  align-items: center!important;
+  gap: 6px!important;
+  margin: .7rem!important;
+  padding: .6rem .7rem!important;
+  font-size: 1.4rem!important;
+  transition: all .2s!important;
+.tag .tag-name
+  font-weight 600
+  letter-spacing 0.5px
+
+.tag .tag-count
+  display inline-flex
+  align-items center
+  justify-content center
+  min-width 24px
+  height 24px
+  background rgba(255, 255, 255, 0.25)
+  color #fff
+  font-size 13px
+  font-weight 700
+  border-radius 12px
+  padding 0 8px
+  backdrop-filter blur(4px)
+
+/* Tag details page styles */
+.theme-blog-tag
+  background transparent
+  padding 0
+
+.theme-blog-tag h2
+  font-size 28px
+  font-weight 700
+  color #1a1a1a
+  margin-bottom 32px
+  display flex
+  align-items center
+  gap 12px
+
+.theme-blog-tag h2::before
+  content '📁'
+  font-size 32px
+
+.theme-blog-tag .tag-item-list
+  list-style none
+  padding 0
+  margin 0
+
+.theme-blog-tag .tag-item
+  padding 0
+  margin-bottom 12px
+  border none
+
+.theme-blog-tag .tag-item a
+  display flex
+  justify-content space-between
+  align-items center
+  text-decoration none
+  color #333
+  font-size 16px
+  font-weight 500
+  transition all 0.3s ease
+  padding 16px 20px
+  border-radius 12px
+  background #fff
+  border 1px solid #e8e8e8
+  box-shadow 0 2px 8px rgba(0, 0, 0, 0.04)
+
+.theme-blog-tag .tag-item a:hover
+  background linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+  color #fff
+  transform translateX(8px)
+  border-color transparent
+  box-shadow 0 8px 25px rgba(102, 126, 234, 0.35)
+
+.theme-blog-tag .tag-item a .tag-item-title
+  flex 1
+  transition all 0.3s ease
+
+.theme-blog-tag .tag-item a:hover .tag-item-title
+  padding-left 8px
+
+.theme-blog-tag .tag-item a .tag-item-date
+  font-size 14px
+  color #999
+  font-weight 400
+  transition all 0.3s ease
+
+.theme-blog-tag .tag-item a:hover .tag-item-date
+  color rgba(255, 255, 255, 0.9)
+
+
+.content__default:not(.custom) a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 640px)
+  .blog-tags h2
+    font-size 24px
+
+  .tag-wrapper
+    gap 12px
+
+  .tag
+    padding 10px 18px
+    font-size 14px
+
+  .tag .tag-count
+    min-width 20px
+    height 20px
+    font-size 12px
+
+  .theme-blog-tag h2
+    font-size 24px
+
+  .theme-blog-tag .tag-item a
+    padding 14px 16px
+    font-size 15px
