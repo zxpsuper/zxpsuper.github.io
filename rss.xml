@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Fri, 17 Apr 2026 06:36:22 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 17 Apr 2026 08:54:19 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -24,15 +24,6 @@
 [波段策 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
             <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
             <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
@@ -43,6 +34,15 @@
 `shell
 sudo ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
             </enclosure>
         </item>
         <item>
@@ -70,15 +70,23 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Vue 模板编译原理（一）]]></title>
-            <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
-            <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
-            <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[计划写一系列关于 Vue 原理的文章，学习理解后分享印象更深！
-众所周知 ，Vue 文件中写的 `` 标签都会被 vue-loader 转化成 AST 语法树，而后再根据 AST 语法树生成 render 渲染函数，最后渲染并挂载在页面上。
-本文简单实现下 Vue 模板编译原理的第一步： AST 语法树的生成过程！
+            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
+            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
+            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
 ]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/vue-template-01.png">
+            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
+            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
+            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
+            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
+**那么 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
             </enclosure>
         </item>
         <item>
@@ -102,34 +110,16 @@ Commit 结构
 ` ...]]></description>
         </item>
         <item>
-            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
-            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
-            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
-            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
-**那么 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
-            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
-            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
-            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+            <title><![CDATA[Vue 模板编译原理（一）]]></title>
+            <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
+            <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
+            <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[计划写一系列关于 Vue 原理的文章，学习理解后分享印象更深！
+众所周知 ，Vue 文件中写的 `` 标签都会被 vue-loader 转化成 AST 语法树，而后再根据 AST 语法树生成 render 渲染函数，最后渲染并挂载在页面上。
+本文简单实现下 Vue 模板编译原理的第一步： AST 语法树的生成过程！
 ]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
+            <enclosure url="https://zxpsuper.github.io/images/vue-template-01.png">
             </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[若是月亮还没来]]></title>
-            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
-            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
-            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
-年轻人接近理想好难，想要放弃却又心存不甘。
-如果人生最难得到圆满，不如选择坦然！
-]]></description>
         </item>
         <item>
             <title><![CDATA[多用 Git rebase ?]]></title>
@@ -141,6 +131,16 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[若是月亮还没来]]></title>
+            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
+            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
+            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
+年轻人接近理想好难，想要放弃却又心存不甘。
+如果人生最难得到圆满，不如选择坦然！
+]]></description>
         </item>
         <item>
             <title><![CDATA[Sass 升级之旅]]></title>
@@ -172,15 +172,6 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
             <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
             </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[字幕截图生成器]]></title>
-            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
-            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
-            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
-其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
-感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
         </item>
         <item>
             <title><![CDATA[何为 package-lock.json ?]]></title>
@@ -217,16 +208,25 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[为什么年轻人不买房了？]]></title>
-            <link>https://zxpsuper.github.io/2024/08/27/buy-house/</link>
-            <guid>https://zxpsuper.github.io/2024/08/27/buy-house/</guid>
-            <pubDate>Tue, 27 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[想当年，买房能挣钱，你对我户口限，把资验，半夜开盘不想让我看见。
-全款的优先，贷款的靠边，公积金的带着共享单车滚去外面。
-抢房卖出去赚差价，是年轻人一辈子挣不到的神话，老登击鼓传花游戏玩到赢麻。
-现在政策放开，给年轻人桌子上菜，指责年轻人不肯买房变得无赖。
-你突然给我机会，让我杠杆加倍。
-就像打工多年的村花小美，突然回来要和我双宿双飞 ...]]></description>
+            <title><![CDATA[字幕截图生成器]]></title>
+            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
+            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
+            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
+其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
+感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
+            </enclosure>
         </item>
     </channel>
 </rss>
