@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/mine.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="avatar" src="https://suporka-resource.netlify.app/img/avatar.jpg" alt="头像">
+            <div class="nickname">尚白记录</div>
+        </div>
+        <div class="info-section card">
+            <div class="info-item">
+                <div class="info-label">个人简介</div>
+                <div class="info-value">热爱生活，热爱分享</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">创建时间</div>
+                <div class="info-value">2026年4月</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">记录数量</div>
+                <div id="activity-count" class="info-value">0 个</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-bar">
+        <div class="tab-item" data-page="index">
+            <span class="tab-icon">🏠</span>
+            <span class="tab-text">首页</span>
+        </div>
+        <div class="tab-item active" data-page="mine">
+            <span class="tab-icon">👤</span>
+            <span class="tab-text">我的</span>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/mine.js"></script>
+</body>
+</html>
