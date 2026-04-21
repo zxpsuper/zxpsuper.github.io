@@ -17,7 +17,7 @@
       crossorigin="anonymous"
       async
     ></script>
-    <script
+    <script v-if="showScript"
       src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
       defer
     ></script>
@@ -70,6 +70,16 @@
 <script>
 export default {
   name: "comment",
+  data() {
+    return {
+      showScript: false,
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.showScript = true
+    }, 300);
+  },
 };
 </script>
 <style scoped>
