@@ -74,7 +74,7 @@ function closePhoneModal() {
   document.getElementById('phone-modal').style.display = 'none'
 }
 
-async function confirmReservation() {
+function confirmReservation() {
   const nickname = document.getElementById('nickname-input').value.trim()
   const phone = document.getElementById('phone-input').value.trim()
 
@@ -83,57 +83,43 @@ async function confirmReservation() {
     return
   }
 
-  const webhookUrl = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=40c4694c-10b2-4016-9851-98f9bafe2665'
+  let content = '## 活动预约信息\n\n'
+  content += `### 活动信息：${currentActivity.title}\n`
+  content += `- 描述：${currentActivity.description}\n`
+  content += `- 点赞数：${currentActivity.likeCount}\n\n`
+  content += `### 预约用户：\n`
+  content += `- 昵称：${nickname || '未填写'}\n`
+  content += `- 手机：${phone || '未填写'}\n`
+  content += `- 时间：${new Date().toLocaleString()}`
+
+  const targetUrl = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=40c4694c-10b2-4016-9851-98f9bafe2665'
   
-  const message = {
-    msgtype: 'text',
-    text: {
-      content: `【活动预约通知】\n活动标题：${currentActivity.title}\n活动描述：${currentActivity.description}\n用户昵称：${nickname || '未填写'}\n手机号码：${phone || '未填写'}`
-    }
-  }
-
-  const proxies = [
-    (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
-    (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-    (url) => `https://cors.x2u.in/${encodeURIComponent(url)}`
-  ]
-
-  let lastError = null
-
-  for (const getProxyUrl of proxies) {
-    try {
-      const proxyUrl = getProxyUrl(webhookUrl)
-      console.log('尝试使用代理:', proxyUrl)
-      
-      const response = await fetch(proxyUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(message)
-      })
-      
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`)
+  fetch(`https://cors.eu.org/${targetUrl}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      msgtype: 'markdown',
+      markdown: {
+        content: content
       }
-      
-      const result = await response.json()
-      
-      if (result.errcode === 0) {
-        alert('预约成功！')
-        closePhoneModal()
-        return
-      } else {
-        throw new Error(result.errmsg || '未知错误')
-      }
-    } catch (error) {
-      console.warn('代理请求失败:', error)
-      lastError = error
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.errcode === 0) {
+      console.log('发送成功')
+      alert('预约成功！')
+      closePhoneModal()
+    } else {
+      throw new Error(data.errmsg || '未知错误')
     }
-  }
-
-  console.error('所有代理都失败了:', lastError)
-  alert('预约失败，请稍后重试')
+  })
+  .catch(error => {
+    console.error('发送失败:', error)
+    alert('预约失败，请稍后重试')
+  })
 }
 
 function initEventListeners() {
