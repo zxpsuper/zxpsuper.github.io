@@ -30,25 +30,25 @@
         <div class="example-item">
           <i class="fa-solid fa-eye example-img"></i>今日访问量<e
             class="example-count"
-            ><span id="busuanzi_today_pv">加载中...</span>次</e
+            ><span id="busuanzi_today_pv">加载中...</span></e
           >
         </div>
         <div class="example-item">
           <i class="fa-solid fa-user example-img"></i>今日访客数<e
             class="example-count"
-            ><span id="busuanzi_today_uv">加载中...</span>人</e
+            ><span id="busuanzi_today_uv">加载中...</span></e
           >
         </div>
         <div class="example-item">
           <i class="fa-solid fa-eye example-img"></i>本站访问量<e
             class="example-count"
-            ><span id="busuanzi_site_pv">加载中...</span>次</e
+            ><span id="busuanzi_site_pv">加载中...</span></e
           >
         </div>
         <div class="example-item">
           <i class="fa-solid fa-user example-img"></i>本站访客数<e
             class="example-count"
-            ><span id="busuanzi_site_uv">加载中...</span>人</e
+            ><span id="busuanzi_site_uv">加载中...</span></e
           >
         </div>
         <div class="example-item">
