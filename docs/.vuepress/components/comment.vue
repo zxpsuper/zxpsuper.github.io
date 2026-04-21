@@ -17,10 +17,6 @@
       crossorigin="anonymous"
       async
     ></script>
-    <script v-if="showScript"
-      src="//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
-      defer
-    ></script>
     <div class="card">
       <div class="card-header">
         <div class="card-icon"><i class="fas fa-chart-line"></i></div>
@@ -73,12 +69,24 @@ export default {
   data() {
     return {
       showScript: false,
-    }
+    };
   },
   mounted() {
-    setTimeout(() => {
-      this.showScript = true
-    }, 300);
+    fetch("https://" + "cdn.busuanzi.cc" + "/api.php", {
+      method: "POST",
+      body: JSON.stringify({
+        url: location.href,
+        referrer: document.referrer,
+      }),
+    })
+      .then((r) => r.json())
+      .then((r) => {
+        for (const k in r)
+          document
+            .querySelectorAll("#" + k)
+            .forEach((e) => (e.innerText = r[k]));
+      })
+      .catch((e) => console.error(e));
   },
 };
 </script>
