@@ -30,38 +30,37 @@
         <div class="example-item">
           <i class="fa-solid fa-eye example-img"></i>今日访问量<e
             class="example-count"
-            ><span id="busuanzi_today_pv">124</span>次</e
+            ><span id="busuanzi_today_pv">加载中...</span>次</e
           >
         </div>
         <div class="example-item">
           <i class="fa-solid fa-user example-img"></i>今日访客数<e
             class="example-count"
-            ><span id="busuanzi_today_uv">38</span>人</e
+            ><span id="busuanzi_today_uv">加载中...</span>人</e
           >
         </div>
         <div class="example-item">
           <i class="fa-solid fa-eye example-img"></i>本站访问量<e
             class="example-count"
-            ><span id="busuanzi_site_pv">318672</span>次</e
+            ><span id="busuanzi_site_pv">加载中...</span>次</e
           >
         </div>
         <div class="example-item">
           <i class="fa-solid fa-user example-img"></i>本站访客数<e
             class="example-count"
-            ><span id="busuanzi_site_uv">107086</span>人</e
+            ><span id="busuanzi_site_uv">加载中...</span>人</e
           >
         </div>
         <div class="example-item">
-          <i class="fa-solid fa-server example-img"></i>已接入站点<e
+          <i class="fa-solid fa-server example-img"></i>本页总阅读量<e
             class="example-count"
-            ><span id="hosts_count">2231个</span></e
+            ><span id="busuanzi_page_pv">加载中...</span></e
           >
         </div>
-        <!-- <div class="example-item"><i class="fa-solid fa-server example-img"></i>已接入站点<e class="example-count"><span>1231个</span></e></div> -->
         <div class="example-item">
-          <i class="fa-solid fa-calendar-days example-img"></i>本站已运营<e
+          <i class="fa-solid fa-calendar-days example-img"></i>本页总访客数<e
             class="example-count"
-            ><span id="runtime_count">351天</span></e
+            ><span id="busuanzi_page_uv">加载中...</span></e
           >
         </div>
       </div>
