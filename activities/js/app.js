@@ -2,7 +2,23 @@ let currentActivity = null
 let currentPage = 'index'
 let previousPage = 'index'
 
-function switchPage(page) {
+function updateUrl(page, id = null) {
+  let hash = page
+  if (page === 'detail' && id) {
+    hash = `detail/${id}`
+  }
+  window.location.hash = hash
+}
+
+function parseUrl() {
+  const hash = window.location.hash.slice(1) || 'index'
+  const parts = hash.split('/')
+  const page = parts[0]
+  const id = parts[1] || null
+  return { page, id }
+}
+
+function switchPage(page, id = null, updateHash = true) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'))
   document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'))
   
@@ -15,21 +31,43 @@ function switchPage(page) {
   
   currentPage = page
   
+  if (updateHash) {
+    updateUrl(page, id)
+  }
+  
   if (page === 'index') {
     loadActivities()
   } else if (page === 'mine') {
     loadActivityCount()
+  } else if (page === 'detail' && id) {
+    loadActivity(id)
   }
 }
 
 function goBack() {
-  switchPage(previousPage)
+  if (previousPage === 'detail') {
+    switchPage('index')
+  } else {
+    switchPage(previousPage)
+  }
 }
 
 function goToDetail(id) {
   previousPage = currentPage
-  loadActivity(id)
-  switchPage('detail')
+  switchPage('detail', id)
+}
+
+function handleHashChange() {
+  const { page, id } = parseUrl()
+  
+  if (page === 'detail' && id) {
+    previousPage = 'index'
+    switchPage('detail', id, false)
+  } else if (page === 'mine' || page === 'index') {
+    switchPage(page, null, false)
+  } else {
+    switchPage('index', null, false)
+  }
 }
 
 function loadActivities() {
@@ -281,7 +319,9 @@ function initEventListeners() {
 
 document.addEventListener('DOMContentLoaded', () => {
   loadRemoteActivities((activities) => {
-    switchPage('index')
+    handleHashChange()
   })
   initEventListeners()
+  
+  window.addEventListener('hashchange', handleHashChange)
 })
