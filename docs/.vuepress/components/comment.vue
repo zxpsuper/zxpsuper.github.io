@@ -17,6 +17,13 @@
       crossorigin="anonymous"
       async
     ></script>
+    <script defer src="//webviso.yestool.org/js/index.min.js"></script>
+    <p>
+      本页访问人次:<span id="page_pv"></span>
+    </p>
+    <p>
+      本页访问人数:<span id="page_uv"></span>
+    </p>
   </div>
 </template>
 <script>
