@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Mon, 27 Apr 2026 01:33:50 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 27 Apr 2026 01:36:26 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -56,16 +56,6 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
-            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
-            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
-            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[typescript 配置文件 tsconfig.json 详解]]></title>
             <link>https://zxpsuper.github.io/2024/04/16/tsconfig/</link>
             <guid>https://zxpsuper.github.io/2024/04/16/tsconfig/</guid>
@@ -77,6 +67,16 @@ sudo ...]]></description>
 Created a new tsconfig.json with:
   target: es2016
   module: commonjs ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
+            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
+            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[使用 Github Action 发布博客]]></title>
@@ -102,18 +102,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[让你的 git commit 更漂亮]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
-也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
-好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
-Commit 结构
-一个规范详细的 commit 结构如下：
-` ...]]></description>
-        </item>
-        <item>
             <title><![CDATA[关于 babel polyfill 那些事]]></title>
             <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
             <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
@@ -131,6 +119,18 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[让你的 git commit 更漂亮]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
+也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
+好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
+Commit 结构
+一个规范详细的 commit 结构如下：
+` ...]]></description>
         </item>
         <item>
             <title><![CDATA[若是月亮还没来]]></title>
@@ -163,15 +163,6 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 ]]></description>
         </item>
         <item>
-            <title><![CDATA[何为 package-lock.json ?]]></title>
-            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
-            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
-            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
-因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
-我们都知道 package.json 除了 ...]]></description>
-        </item>
-        <item>
             <title><![CDATA[“山寨版”《草料二维码》]]></title>
             <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
             <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
@@ -181,6 +172,15 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
             <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[何为 package-lock.json ?]]></title>
+            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
+            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
+            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
+因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
+我们都知道 package.json 除了 ...]]></description>
         </item>
         <item>
             <title><![CDATA[中医五脏与情感的关系]]></title>
@@ -199,15 +199,6 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 喜伤心 失眠健忘心不 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[自学蛙泳]]></title>
-            <link>https://zxpsuper.github.io/2024/08/05/swimming/</link>
-            <guid>https://zxpsuper.github.io/2024/08/05/swimming/</guid>
-            <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[今年暑假办了张游泳卡，计划十次内学会蛙泳。从一开始纯憋气10米，到最后50米游全程，总耗时十次（约600分钟，每次游一小时左右！），虽然游得不是很标准，但也算是差强人意，省去了一千大洋的游泳培训费用！]]></description>
-            <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[字幕截图生成器]]></title>
             <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
             <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
@@ -215,6 +206,18 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
 其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
 感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[为什么年轻人不买房了？]]></title>
