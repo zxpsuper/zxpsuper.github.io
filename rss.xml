@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Mon, 27 Apr 2026 01:36:26 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Apr 2026 05:58:53 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -56,6 +56,17 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
+            <title><![CDATA[使用 Github Action 发布博客]]></title>
+            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
+            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
+            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
+GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
+但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
+            </enclosure>
+        </item>
+        <item>
             <title><![CDATA[typescript 配置文件 tsconfig.json 详解]]></title>
             <link>https://zxpsuper.github.io/2024/04/16/tsconfig/</link>
             <guid>https://zxpsuper.github.io/2024/04/16/tsconfig/</guid>
@@ -79,17 +90,6 @@ Created a new tsconfig.json with:
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[使用 Github Action 发布博客]]></title>
-            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
-            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
-            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
-GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
-但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[Vue 模板编译原理（一）]]></title>
             <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
             <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
@@ -110,17 +110,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[多用 Git rebase ?]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
-git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
-后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[让你的 git commit 更漂亮]]></title>
             <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
             <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
@@ -131,6 +120,17 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
 Commit 结构
 一个规范详细的 commit 结构如下：
 ` ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[多用 Git rebase ?]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
+git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
+后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[若是月亮还没来]]></title>
@@ -183,20 +183,13 @@ Commit 结构
 我们都知道 package.json 除了 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[中医五脏与情感的关系]]></title>
-            <link>https://zxpsuper.github.io/2024/07/30/health/</link>
-            <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
-            <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
-它们之间的关系可以用一个表格表示：
-| 五脏 | 七情 |
-| :--: | :--: |
-|  心  |  喜  |
-|  肝  |  怒  |
-|  脾  | 忧思 |
-|  肺  |  悲  |
-|  肾  | 恐惊 |
-喜伤心 失眠健忘心不 ...]]></description>
+            <title><![CDATA[自学蛙泳]]></title>
+            <link>https://zxpsuper.github.io/2024/08/05/swimming/</link>
+            <guid>https://zxpsuper.github.io/2024/08/05/swimming/</guid>
+            <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[今年暑假办了张游泳卡，计划十次内学会蛙泳。从一开始纯憋气10米，到最后50米游全程，总耗时十次（约600分钟，每次游一小时左右！），虽然游得不是很标准，但也算是差强人意，省去了一千大洋的游泳培训费用！]]></description>
+            <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[字幕截图生成器]]></title>
@@ -220,16 +213,20 @@ Commit 结构
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[为什么年轻人不买房了？]]></title>
-            <link>https://zxpsuper.github.io/2024/08/27/buy-house/</link>
-            <guid>https://zxpsuper.github.io/2024/08/27/buy-house/</guid>
-            <pubDate>Tue, 27 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[想当年，买房能挣钱，你对我户口限，把资验，半夜开盘不想让我看见。
-全款的优先，贷款的靠边，公积金的带着共享单车滚去外面。
-抢房卖出去赚差价，是年轻人一辈子挣不到的神话，老登击鼓传花游戏玩到赢麻。
-现在政策放开，给年轻人桌子上菜，指责年轻人不肯买房变得无赖。
-你突然给我机会，让我杠杆加倍。
-就像打工多年的村花小美，突然回来要和我双宿双飞 ...]]></description>
+            <title><![CDATA[中医五脏与情感的关系]]></title>
+            <link>https://zxpsuper.github.io/2024/07/30/health/</link>
+            <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
+            <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
+它们之间的关系可以用一个表格表示：
+| 五脏 | 七情 |
+| :--: | :--: |
+|  心  |  喜  |
+|  肝  |  怒  |
+|  脾  | 忧思 |
+|  肺  |  悲  |
+|  肾  | 恐惊 |
+喜伤心 失眠健忘心不 ...]]></description>
         </item>
     </channel>
 </rss>
