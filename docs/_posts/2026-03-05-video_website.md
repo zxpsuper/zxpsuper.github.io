@@ -239,7 +239,7 @@ export default {
             website: [
                         {
                             "name": "注视影视🙄",
-                            "url": "https://gaze.run/",
+                            "url": "https://gaze.host/",
                             "description": "无广告，视频清晰",
                             "created_at": "",
                             "updated_at": "2023/4/14",
