@@ -78,5 +78,16 @@ module.exports = {
     feed: {
       canonical_base: 'https://zxpsuper.github.io/',
     },
-  }
+  },
+  plugins: [
+    [
+      'sitemap',
+      {
+        hostname: 'https://zxpsuper.github.io',
+        changefreq: 'daily',
+        priority: 0.5,
+        exclude: ['/404.html'],
+      }
+    ]
+  ]
 }
