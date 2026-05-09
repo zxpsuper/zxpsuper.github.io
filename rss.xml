@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Wed, 06 May 2026 08:03:41 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 09 May 2026 01:35:09 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -37,16 +37,6 @@ sudo ...]]></description>
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
-            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
-            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
-            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
-**那么 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
-            </enclosure>
-        </item>
-        <item>
             <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
             <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
             <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
@@ -67,6 +57,16 @@ sudo ...]]></description>
 Created a new tsconfig.json with:
   target: es2016
   module: commonjs ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[为 vuepress 博客添加 Giscus 评论]]></title>
+            <link>https://zxpsuper.github.io/2024/04/17/giscus/</link>
+            <guid>https://zxpsuper.github.io/2024/04/17/giscus/</guid>
+            <pubDate>Wed, 17 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Giscus 是一个轻量级的开源评论系统，可以轻松地添加到静态站点、博客、项目文档和许多其他类型的网站中。Giscus 使用 GitHub 帐户进行身份验证，并与 GitHub discussions API 进行集成。因此，你可以使用 GitHub discussions 管理你的评论，从而获得卓越的可维护性和可扩展性。
+**那么 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/giscus-01.webp">
+            </enclosure>
         </item>
         <item>
             <title><![CDATA[使用 Github Action 发布博客]]></title>
@@ -122,6 +122,17 @@ Commit 结构
 ` ...]]></description>
         </item>
         <item>
+            <title><![CDATA[多用 Git rebase ?]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
+git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
+后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
+            </enclosure>
+        </item>
+        <item>
             <title><![CDATA[若是月亮还没来]]></title>
             <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
             <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
@@ -150,28 +161,6 @@ Commit 结构
 其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
 所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
 ]]></description>
-        </item>
-        <item>
-            <title><![CDATA[多用 Git rebase ?]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
-git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
-后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[“山寨版”《草料二维码》]]></title>
-            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
-            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
-            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
-碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
-而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
-            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
-            </enclosure>
         </item>
         <item>
             <title><![CDATA[何为 package-lock.json ?]]></title>
@@ -208,26 +197,39 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[字幕截图生成器]]></title>
-            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
-            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
-            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
-其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
-感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
+            <title><![CDATA[“山寨版”《草料二维码》]]></title>
+            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
+            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
+            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
+碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
+而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
+            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
+            </enclosure>
         </item>
         <item>
-            <title><![CDATA[Window 系统激活教程]]></title>
-            <link>https://zxpsuper.github.io/2025/10/14/window-auth/</link>
-            <guid>https://zxpsuper.github.io/2025/10/14/window-auth/</guid>
-            <pubDate>Tue, 14 Oct 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[说说目前 Windows 系统比较常见的三种激活方法吧~
-
-在线 KMS 服务器激活
-
-KMS（密钥管理服务）是微软为企业提供的一种批量激活机制。在这种机制下，客户端电脑需要安装 GVLK（通用批量许可证密钥） 才能指向企业内部的 KMS 服务器进行授权。相比于一机一码的零售版，KMS 激活的系统在功能上完全一致，但属于“租借”模式：激活有效期最长为 180 天 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/window-auth-1.png">
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[为什么年轻人不买房了？]]></title>
+            <link>https://zxpsuper.github.io/2024/08/27/buy-house/</link>
+            <guid>https://zxpsuper.github.io/2024/08/27/buy-house/</guid>
+            <pubDate>Tue, 27 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[想当年，买房能挣钱，你对我户口限，把资验，半夜开盘不想让我看见。
+全款的优先，贷款的靠边，公积金的带着共享单车滚去外面。
+抢房卖出去赚差价，是年轻人一辈子挣不到的神话，老登击鼓传花游戏玩到赢麻。
+现在政策放开，给年轻人桌子上菜，指责年轻人不肯买房变得无赖。
+你突然给我机会，让我杠杆加倍。
+就像打工多年的村花小美，突然回来要和我双宿双飞 ...]]></description>
         </item>
     </channel>
 </rss>
