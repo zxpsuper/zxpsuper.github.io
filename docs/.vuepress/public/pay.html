@@ -16,13 +16,16 @@
   }
   .phone-wrap {
     width: 100%;
-    max-width: 390px;
+    max-width: 100%;
     min-height: 100vh;
     background: #fff;
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: visible;
+  }
+  .admin-panel .phone-wrap {
+    max-width: 390px;
   }
 
   /* 顶部导航栏 */
@@ -475,9 +478,14 @@
     min-height: 100vh;
   }
   .admin-panel {
-    width: 50%;
     min-height: 100vh;
     overflow-y: auto;
+  }
+  .admin-panel:first-child {
+    width: 35%;
+  }
+  .admin-panel:last-child {
+    width: 65%;
   }
   .admin-edit-panel {
     background: #f5f7fa;
@@ -576,7 +584,8 @@
   const defaultState = {
     name: "郑焕辉",
     company: "广东纽瑞芯",
-    image: "data:image/jpeg;base64,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"
+    image: "https://suporka-resource.netlify.app/img/avatar.jpg"
+  }
   };
 
   // 原始页面 HTML 模板
