@@ -10,6 +10,10 @@
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
     background: #f5f5f5;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  body.admin-mode {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -23,6 +27,8 @@
     flex-direction: column;
     position: relative;
     overflow: visible;
+    margin: 0;
+    padding: 0;
   }
   .admin-panel .phone-wrap {
     max-width: 390px;
@@ -929,6 +935,7 @@
       updateTime();
       setInterval(updateTime, 30000);
     } else {
+      document.body.classList.add("admin-mode");
       renderAdminMode();
     }
   }
