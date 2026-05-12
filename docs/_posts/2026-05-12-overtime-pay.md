@@ -8,7 +8,7 @@ author: 小皮咖
 location: 广州
 ---
 
-大家好，我是小皮咖。昨天晚上赶deadline到11点，肚子饿得咕咕叫，看着钉钉里那个"辛苦了"的表情包，突然想：能不能做个东西，让加班这件事...稍微有趣一点？
+昨天晚上赶敲代码到11点，肚子饿得咕咕叫，看着钉钉里那个"辛苦了"的表情包，突然想：能不能做个东西，让加班这件事...稍微有趣一点？
 
 于是就有了这个页面。
 
@@ -16,11 +16,16 @@ location: 广州
 
 ## 先看效果
 
+![overtime-pay](/images/pay/pay1.png)
+
 这个页面有两个模式：
 
 **管理模式**：当你直接打开页面时，会看到左右分栏。左边可以填名字、公司、头像，右边是实时预览。
 
+
 **预览模式**：点击"复制链接"，把链接发给那个让你加班的同事。他点开只会看到支付页面，完全不知道背后还有个管理端。
+
+![overtime-pay](/images/pay/pay3.png)
 
 ## 怎么玩
 
@@ -30,6 +35,8 @@ location: 广州
 4. **发链接**：把链接发给你的同事/老板，配上一句："老板，加班费结一下"。
 
 当同事点开链接，他看到的是：你的头像、亲切的问候、三个档位的套餐...嗯，你懂的。
+
+![overtime-pay](/images/pay/pay5.png)
 
 ## 技术实现
 
@@ -62,27 +69,10 @@ inputName.addEventListener("input", function(e) {
 
 `updatePreview()` 会重新渲染整个右侧预览面板，保证所见即所得。
 
-### 3. 图片上传
-
-图片上传用的是 Fetch API，直接 POST 到图床：
-
-```javascript
-async function handleImageUpload(e) {
-  const file = e.target.files[0];
-  const formData = new FormData();
-  formData.append("image", file);
-
-  const response = await fetch("https://img.scdn.io/api/v1.php", {
-    method: "POST",
-    body: formData
-  });
-  // ...处理响应
-}
-```
 
 上传期间会显示"上传中..."，失败会有提示，体验还不错。
 
-### 4. 动态时间计算
+### 3. 动态时间计算
 
 套餐里的结束时间是根据当前时间动态计算的：
 
@@ -103,7 +93,7 @@ function getEndTimes() {
 
 最后那个"工作到凌晨"套餐是固定为04:00的，嗯，你知道为什么。
 
-### 5. 链接参数生成
+### 4. 链接参数生成
 
 点击"复制链接"时，会自动把当前状态编码到URL里：
 
@@ -125,15 +115,15 @@ async function handleCopyLink() {
 
 点击下方链接可以直接打开体验：
 
-[加班费支付工具](/pay.html)
+<a href="https://suporka.site/pay.html" target="_blank">加班费支付工具</a>
 
 ## 结语
 
 这个页面其实是昨天晚上加班时写的，写的时候差点笑出声。当然，加班还是要注意身体，这只是个娱乐项目，大家别当真！
 
-如果觉得有意思，欢迎去我的博客逛逛：https://www.suporka.site/
+如果觉得有意思，欢迎去我的博客逛逛：[https://www.suporka.site/](https://www.suporka.site/)
 
-资源站也有很多好东西：https://resource.suporka.site/
+资源站也有很多好东西：[https://resource.suporka.site/](https://resource.suporka.site/)
 
 <tongji/>
 

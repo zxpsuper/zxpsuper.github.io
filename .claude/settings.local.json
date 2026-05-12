@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start *)",
+      "Bash(chmod +w docs/.vuepress/public/pay.html)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git ls-files *)",
+      "Bash(git show *)",
+      "Read(//tmp/**)",
+      "Bash(git checkout *)",
+      "Bash(git reset *)"
+    ]
+  }
+}
