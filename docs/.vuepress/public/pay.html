@@ -583,14 +583,36 @@
   // 默认值（原有内容）
   const defaultState = {
     name: "郑焕辉",
-    company: "广东纽瑞芯",
+    company: "广东小皮咖有限公司",
     image: "https://suporka-resource.netlify.app/img/avatar.jpg"
   }
-  };
+
+  // 计算结束时间
+  function getEndTimes() {
+    var now = new Date();
+    var h = now.getHours();
+    var m = now.getMinutes();
+
+    var time2h = new Date(now.getTime() + 2 * 60 * 60 * 1000);
+    var time4h = new Date(now.getTime() + 4 * 60 * 60 * 1000);
+
+    var formatTime = function(date) {
+      var hh = date.getHours().toString().padStart(2, "0");
+      var mm = date.getMinutes().toString().padStart(2, "0");
+      return hh + ":" + mm;
+    };
+
+    return {
+      time2h: formatTime(time2h),
+      time4h: formatTime(time4h),
+      timeDawn: "04:00"
+    };
+  }
 
   // 原始页面 HTML 模板
   function getPreviewHTML() {
-    return '<div class="phone-wrap"><div class="nav-bar"><div class="nav-back"><svg width="11" height="18" viewBox="0 0 11 18" fill="none"><path d="M9.5 1.5L2 9L9.5 16.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="nav-title">钉钉</div><div class="nav-more"><div class="nav-more-dots"><span></span><span></span><span></span></div></div></div><div class="company-card"><div class="company-logo"><svg viewBox="0 0 40 40" fill="none"><path d="M20 8C20 8 12 14 8 20C12 26 20 32 20 32C20 32 28 26 32 20C28 14 20 8 20 8Z" fill="white" opacity="0.9"></path><path d="M20 8L26 18L20 16L14 18L20 8Z" fill="white"></path><path d="M14 18L8 20L14 22L20 32L14 18Z" fill="rgba(255,255,255,0.6)"></path></svg></div><div class="company-info"><div class="company-name-row"><span class="company-name">' + getValue('company') + '</span><span class="company-badge">企业认证</span></div><div class="company-sub">我的工作台<span class="company-sub-arrow">›</span></div></div></div><div class="overtime-header"><div class="overtime-title-row"><div class="overtime-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"></circle><path d="M12 7v5l3 3" stroke="white" stroke-width="2" stroke-linecap="round"></path></svg></div><span class="overtime-title">加班管理</span></div><div class="overtime-record">查看记录<span>›</span></div></div><div class="main-content"><div class="time-notice"><span class="time-notice-icon">🌙</span><div class="time-notice-text">当前时间 <span class="time-highlight" id="currentTime">19:42</span><span class="separator">|</span><span class="overtime-badge-text">已超过下班时间</span></div></div><div class="avatar-section"><div class="avatar-wrap"><img src="' + getValue('image') + '" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="avatar-status">已到下班时间</div></div><div class="pay-title">支付加班费，让' + getValue('name') + '继续工作</div><div class="pay-desc">' + getValue('name') + '原定已下班。<br>请选择延长工时套餐，按需继续安排工作。</div><div class="plan-list" id="planList"><div class="plan-item" data-index="0"><div class="plan-radio"><div class="plan-radio-dot"></div></div><div class="plan-info"><div class="plan-name">继续工作 2 小时</div><div class="plan-end-time">预计结束时间：21:42</div></div><div class="plan-price-col"><div class="plan-price">¥199</div><div class="plan-desc-text">适合处理遗留事项</div></div></div><div class="plan-item" data-index="1"><div class="plan-radio"><div class="plan-radio-dot"></div></div><div class="plan-info"><div class="plan-name">继续工作 4 小时</div><div class="plan-end-time">预计结束时间：23:42</div></div><div class="plan-price-col"><div class="plan-price">¥499</div><div class="plan-desc-text">适合紧急汇报与临时需求</div></div></div><div class="plan-item selected" data-index="2"><div class="plan-radio"><div class="plan-radio-dot"></div></div><div class="plan-info"><div class="plan-name">工作到凌晨</div><div class="plan-end-time">预计结束时间：01:42</div></div><div class="plan-price-col"><div class="plan-price">¥1199</div><div class="plan-desc-text">帮助员工适应狼性文化</div></div><div class="recommend-badge">豪华推荐</div></div></div><button class="pay-btn" onclick="showPayModal()">立即支付并延长工时</button></div><div class="rating-section"><div class="rating-title">为本次协作打分</div><div id="stars"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div></div></div><div class="modal-overlay" id="payModal" onclick="hidePayModal(event)"><div class="modal-box"><div class="modal-title">确认支付</div><div class="modal-desc" id="modalDesc">您选择了“工作到凌晨”套餐，' + getValue('name') + '将持续工作至 01:42。</div><div class="modal-price" id="modalPrice">¥1199</div><div class="modal-btns"><button class="modal-btn-cancel" onclick="hidePayModal()">取消</button><button class="modal-btn-confirm" onclick="confirmPay()">确认支付</button></div></div></div><div class="modal-overlay" id="successModal" onclick="hideSuccessModal(event)"><div class="modal-box"><div class="success-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M5 14L11 20L23 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="modal-title">支付成功！</div><div class="modal-desc">' + getValue('name') + '已收到加班安排通知，请稍后。<br>感谢您对员工的"关爱"。</div><div class="modal-btns" style="justify-content:center;"><button class="modal-btn-confirm" style="flex:none;width:120px;" onclick="hideSuccessModal()">知道了</button></div></div></div>';
+    var times = getEndTimes();
+    return '<div class="phone-wrap"><div class="nav-bar"><div class="nav-back" style="cursor:pointer;" onclick="window.location.href=\'https://www.suporka.site/\'"><svg width="11" height="18" viewBox="0 0 11 18" fill="none"><path d="M9.5 1.5L2 9L9.5 16.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="nav-title">钉钉</div><div class="nav-more" style="cursor:pointer;" onclick="window.location.href=\'https://resource.suporka.site/\'"><div class="nav-more-dots"><span></span><span></span><span></span></div></div></div><div class="company-card"><div class="company-logo"><svg viewBox="0 0 40 40" fill="none"><path d="M20 8C20 8 12 14 8 20C12 26 20 32 20 32C20 32 28 26 32 20C28 14 20 8 20 8Z" fill="white" opacity="0.9"></path><path d="M20 8L26 18L20 16L14 18L20 8Z" fill="white"></path><path d="M14 18L8 20L14 22L20 32L14 18Z" fill="rgba(255,255,255,0.6)"></path></svg></div><div class="company-info"><div class="company-name-row"><span class="company-name">' + getValue('company') + '</span><span class="company-badge">企业认证</span></div><div class="company-sub">我的工作台<span class="company-sub-arrow">›</span></div></div></div><div class="overtime-header"><div class="overtime-title-row"><div class="overtime-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"></circle><path d="M12 7v5l3 3" stroke="white" stroke-width="2" stroke-linecap="round"></path></svg></div><span class="overtime-title">加班管理</span></div><div class="overtime-record">查看记录<span>›</span></div></div><div class="main-content"><div class="time-notice"><span class="time-notice-icon">🌙</span><div class="time-notice-text">当前时间 <span class="time-highlight" id="currentTime">19:42</span><span class="separator">|</span><span class="overtime-badge-text">已超过下班时间</span></div></div><div class="avatar-section"><div class="avatar-wrap"><img src="' + getValue('image') + '" style="width:100%;height:100%;object-fit:cover;display:block;"></div><div class="avatar-status">已到下班时间</div></div><div class="pay-title">支付加班费，让' + getValue('name') + '继续工作</div><div class="pay-desc">' + getValue('name') + '原定已下班。<br>请选择延长工时套餐，按需继续安排工作。</div><div class="plan-list" id="planList"><div class="plan-item" data-index="0"><div class="plan-radio"><div class="plan-radio-dot"></div></div><div class="plan-info"><div class="plan-name">继续工作 2 小时</div><div class="plan-end-time">预计结束时间：' + times.time2h + '</div></div><div class="plan-price-col"><div class="plan-price">¥199</div><div class="plan-desc-text">适合处理遗留事项</div></div></div><div class="plan-item" data-index="1"><div class="plan-radio"><div class="plan-radio-dot"></div></div><div class="plan-info"><div class="plan-name">继续工作 4 小时</div><div class="plan-end-time">预计结束时间：' + times.time4h + '</div></div><div class="plan-price-col"><div class="plan-price">¥499</div><div class="plan-desc-text">适合紧急汇报与临时需求</div></div></div><div class="plan-item selected" data-index="2"><div class="plan-radio"><div class="plan-radio-dot"></div></div><div class="plan-info"><div class="plan-name">工作到凌晨</div><div class="plan-end-time">预计结束时间：' + times.timeDawn + '</div></div><div class="plan-price-col"><div class="plan-price">¥1199</div><div class="plan-desc-text">帮助员工适应狼性文化</div></div><div class="recommend-badge">豪华推荐</div></div></div><button class="pay-btn" onclick="showPayModal()">立即支付并延长工时</button></div><div class="rating-section"><div class="rating-title">为本次协作打分</div><div id="stars"><span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span></div></div></div><div class="modal-overlay" id="payModal" onclick="hidePayModal(event)"><div class="modal-box"><div class="modal-title">确认支付</div><div class="modal-desc" id="modalDesc">您选择了“工作到凌晨”套餐，' + getValue('name') + '将持续工作至 ' + times.timeDawn + '。</div><div class="modal-price" id="modalPrice">¥1199</div><div class="modal-btns"><button class="modal-btn-cancel" onclick="hidePayModal()">取消</button><button class="modal-btn-confirm" onclick="confirmPay()">确认支付</button></div></div></div><div class="modal-overlay" id="successModal" onclick="hideSuccessModal(event)"><div class="modal-box"><div class="success-icon"><svg viewBox="0 0 28 28" fill="none"><path d="M5 14L11 20L23 8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div class="modal-title">支付成功！</div><div class="modal-desc">' + getValue('name') + '已收到加班安排通知，请稍后。<br>感谢您对员工的"关爱"。</div><div class="modal-btns" style="justify-content:center;"><button class="modal-btn-confirm" style="flex:none;width:120px;" onclick="hideSuccessModal()">知道了</button></div></div></div>';
   }
 
   // 从 URL 读取参数
@@ -807,15 +829,21 @@
     setInterval(updateTime, 30000);
   }
 
-  // 原有全局函数
-  var plans = [
-    { name: "继续工作 2 小时", endTime: "21:42", price: "¥199" },
-    { name: "继续工作 4 小时", endTime: "23:42", price: "¥499" },
-    { name: "工作到凌晨", endTime: "01:42", price: "¥1199" }
-  ];
+  // 获取当前计划（带动态时间）
+  function getPlans() {
+    var times = getEndTimes();
+    return [
+      { name: "继续工作 2 小时", endTime: times.time2h, price: "¥199" },
+      { name: "继续工作 4 小时", endTime: times.time4h, price: "¥499" },
+      { name: "工作到凌晨", endTime: times.timeDawn, price: "¥1199" }
+    ];
+  }
+
+  // 原有全局变量
   var selectedIndex = 2;
 
   function showPayModal() {
+    var plans = getPlans();
     var plan = plans[selectedIndex];
     var modalDesc = document.getElementById("modalDesc");
     if (modalDesc) {
