@@ -105,7 +105,7 @@ class GPULadderApp {
         });
     }
 
-    async loadData(url = 'data/gpu-data.json') {
+    async loadData(url = './data/gpu-data.json') {
         try {
             const response = await fetch(url);
             this.currentData = await response.json();
