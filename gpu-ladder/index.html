@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPU 天梯图 - 小皮咖</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">GPU 天梯图</span>
+                <span class="version-badge" id="versionBadge">2026-05</span>
+            </div>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索显卡型号...">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <select class="version-select" id="versionSelect">
+                    <option value="current">当前版本</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <div class="main-container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar" id="sidebar">
+            <button class="sidebar-close" id="sidebarClose">✕</button>
+
+            <div class="filter-section">
+                <h3 class="filter-title">品牌</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="NVIDIA" checked>
+                        <span>NVIDIA</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="AMD" checked>
+                        <span>AMD</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Intel" checked>
+                        <span>Intel</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3 class="filter-title">价格范围</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="0-1000">
+                        <span>¥0-1000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="1000-2000" checked>
+                        <span>¥1000-2000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="2000-4000" checked>
+                        <span>¥2000-4000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="4000-8000" checked>
+                        <span>¥4000-8000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="8000+" checked>
+                        <span>¥8000+</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3 class="filter-title">性能层级</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="flagship" checked>
+                        <span class="tier-badge tier-flagship">旗舰级</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="high-end" checked>
+                        <span class="tier-badge tier-high-end">高端级</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="mid-range" checked>
+                        <span class="tier-badge tier-mid-range">中等级</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="entry-level" checked>
+                        <span class="tier-badge tier-entry-level">入门级</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 移动端侧边栏开关 -->
+        <button class="sidebar-toggle" id="sidebarToggle">☰ 筛选</button>
+
+        <!-- 天梯图主区域 -->
+        <main class="ladder-container">
+            <div class="performance-scale">
+                <div class="scale-mark" style="top: 0%">100%</div>
+                <div class="scale-mark" style="top: 25%">75%</div>
+                <div class="scale-mark" style="top: 50%">50%</div>
+                <div class="scale-mark" style="top: 75%">25%</div>
+                <div class="scale-mark" style="top: 100%">0%</div>
+            </div>
+            <div class="ladder-content" id="ladderContent">
+                <!-- GPU 卡片将在这里动态生成 -->
+            </div>
+        </main>
+    </div>
+
+    <!-- 底部对比栏 -->
+    <div class="compare-bar" id="compareBar">
+        <div class="compare-bar-content">
+            <div class="compare-info">
+                <span class="compare-count">已选: <strong id="compareCount">0</strong></span>
+            </div>
+            <div class="compare-items" id="compareItems">
+                <!-- 已选显卡将在这里显示 -->
+            </div>
+            <div class="compare-actions">
+                <button class="btn btn-secondary" id="clearCompareBtn">清空</button>
+                <button class="btn btn-primary" id="compareBtn">📊 开始对比</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 对比弹窗 -->
+    <div class="modal-overlay" id="compareModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>显卡对比</h2>
+                <button class="modal-close" id="modalClose">✕</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 对比内容 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 显卡详情弹窗 -->
+    <div class="modal-overlay" id="detailModal">
+        <div class="modal modal-large">
+            <div class="modal-header">
+                <h2 id="detailTitle">显卡详情</h2>
+                <button class="modal-close" id="detailModalClose">✕</button>
+            </div>
+            <div class="modal-body" id="detailModalBody">
+                <!-- 详情内容 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
