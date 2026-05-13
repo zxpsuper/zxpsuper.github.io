@@ -1,93 +1,99 @@
+
 const path = require('path')
 // .vuepress/config.js
 console.log(path.resolve(__dirname, 'fonts'))
 module.exports = {
-  theme: '@vuepress/blog',
-  title: '小皮咖',
-  description: '小皮咖博客',
-  themeConfig: {
-    dateFormat: 'YYYY-MM-DD',
-    // 请参考文档来查看所有可用的选项。
-    directories: [
-      {
-        id: 'post',
-        dirname: '_posts',
-        path: '/',
-      },
-      // {
-      //   id: 'writing', // Unique id for current classifier
-      //   dirname: '_writings', // Matched directory name
-      //   path: '/writings/', // Entry page for current classifier
-      //   title: '隨筆', // Entry and pagination page titles for current classifier.
-      //   layout: 'IndexWriting', // Layout component name for entry page.
-      //   frontmatter:{ //Front matter for entry page.
-      //     tag: 'vuepress'
-      //   },
-      //   itemLayout: 'Writing', // Layout for matched pages.
-      //   itemPermalink: '/writings/:year/:month/:day/:slug', // Permalink for matched pages.
-      //   pagination: { // Pagination behavior
-      //     lengthPerPage: 2,
-      //   },
-      // }
-    ],
-    frontmatters: [
-      {
-        id: 'tag',
-        keys: ['tags'],
-        path: '/tag/',
-      },
-    ],
-    globalPagination: {
-      lengthPerPage: 10,
-    },
-    footer: {
-      contact: [
-        {
-          type: 'github',
-          link: 'https://github.com/zxpsuper',
+    theme: '@vuepress/blog',
+    title: '小皮咖',
+    description: '小皮咖博客',
+    themeConfig: {
+        dateFormat: 'YYYY-MM-DD',
+        // 请参考文档来查看所有可用的选项。
+        directories: [
+            {
+                id: 'post',
+                dirname: '_posts',
+                path: '/',
+            },
+            // {
+            //     id: 'writing', // Unique id for current classifier
+            //     dirname: '_writings', // Matched directory name
+            //     path: '/writings/', // Entry page for current classifier
+            //     title: '随笔', // Entry and pagination page titles for current classifier.
+            //     layout: 'IndexWriting', // Layout for entry page.
+            //     frontmatter: { // Frontmatter for entry page.
+            //         tag: 'vuepress'
+            //     },
+            //     itemLayout: 'Writing', // Layout for matched pages.
+            //     itemPermalink: '/writings/:year/:month/:day/:slug', // Permalink for matched pages.
+            //     pagination: { // Pagination behavior
+            //         lengthPerPage: 2,
+            //     },
+            // }
+        ],
+        frontmatters: [
+            {
+                id: 'tag',
+                keys: ['tags'],
+                path: '/tag/',
+            },
+        ],
+        globalPagination: {
+            lengthPerPage: 10,
         },
-        {
-          type: 'mail',
-          link: 'mailto:zxpscau@163.com',
+        footer: {
+            contact: [
+                {
+                    type: 'github',
+                    link: 'https://github.com/zxpsuper',
+                },
+                {
+                    type: 'mail',
+                    link: 'mailto:zxpscau@163.com',
+                },
+            ],
+            copyright: [
+                {
+                    text: 'MIT Licensed | Copyright © 2024 小皮咖',
+                },
+            ],
         },
-      ],
-      copyright: [
-        {
-          text: 'MIT Licensed | Copyright © 2024 小皮咖',
+        nav: [
+            {
+                text: '首页',
+                link: '/',
+            },
+            {
+                text: 'GPU 天梯图',
+                link: '/gpu-ladder/index.html',
+            },
+            {
+                text: '标签',
+                link: '/tag/',
+            },
+            {
+                text: '时间线',
+                link: '/archives',
+            },
+            {
+                text: '资源库',
+                link: 'https://suporka-resource.netlify.app/',
+            },
+        ],
+        feed: {
+            canonical_base: 'https://zxpsuper.github.io/',
         },
-      ],
     },
-    nav: [
-      {
-        text: '首页',
-        link: '/',
-      },
-      {
-        text: '标签',
-        link: '/tag/',
-      },
-      {
-        text: '时间线',
-        link: '/archives',
-      },
-      {
-        text: '资源库',
-        link: 'https://suporka-resource.netlify.app/',
-      },
-    ],
-    feed: {
-      canonical_base: 'https://zxpsuper.github.io/',
-    },
-  },
-  plugins: [
-    [
-      'sitemap',
-      {
-        hostname: 'https://zxpsuper.github.io',
-        changefreq: 'daily',
-        priority: 0.5,
-        exclude: ['/404.html'],
-      }
+    plugins: [
+        [
+            'sitemap',
+            {
+                hostname: 'https://zxpsuper.github.io',
+                changefreq: 'daily',
+                priority: 0.5,
+                exclude: ['/404.html'],
+            }
+        ]
     ]
-  ]
 }
+
