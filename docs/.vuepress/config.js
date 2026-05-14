@@ -64,10 +64,6 @@ module.exports = {
                 link: '/',
             },
             {
-                text: 'GPU 天梯图',
-                link: '/gpu-ladder/index.html',
-            },
-            {
                 text: '标签',
                 link: '/tag/',
             },
