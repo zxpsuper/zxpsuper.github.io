@@ -22,7 +22,14 @@
       "Bash(rm -f \"docs/_posts/2026-05-18-NVIDIA 免费 API 接入.md\")",
       "Bash(rm -f \"docs/.vuepress/public/images/wechat_\"*.webp)",
       "Bash(python3 .claude/skills/wechat-crawler/scripts/crawl_wechat_v2.py https://mp.weixin.qq.com/s/HJcMLsKvRS1YMGqGddXc2w)",
-      "Bash(rm -rf \".claude/docs\")"
+      "Bash(rm -rf \".claude/docs\")",
+      "Bash(python *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 *)",
+      "Bash(where python *)",
+      "Bash(py *)",
+      "Bash(rm -f \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入.md\" \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入-1.md\" \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入-2.md\")",
+      "Bash(mv \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入-3.md\" \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入.md\")"
     ]
   }
 }

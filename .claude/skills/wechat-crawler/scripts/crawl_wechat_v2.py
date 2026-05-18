@@ -79,6 +79,14 @@ class ContentOptimizer:
         print("  - 优化标点符号...")
         content = self.optimize_punctuation(content)
 
+        print("  - 处理特殊格式问题...")
+        # 处理文案后面紧跟着标题的情况（如 "保存好！## 标题"）
+        content = re.sub(r'([^！？。\n])(##+ )', r'\1\n\n\2', content)
+        content = re.sub(r'([！？。])(##+ )', r'\1\n\n\2', content)
+
+        # 处理文案后面紧跟着图片的情况（如 "格式！![图片]("）
+        content = re.sub(r'(\S)(!\[.*\]\(.*\))', r'\1\n\n\2', content)
+
         print("  - 最后清理空行...")
         content = self.clean_empty_lines(content)
 
@@ -172,15 +180,31 @@ class ContentOptimizer:
                 continue
 
             # 如果段落太短（小于15字），且不是标题，合并到上一段
-            if len(para) < 15 and not re.match(r'^#+', para):
-                if optimized and not re.match(r'^#+', optimized[-1]):
+            if len(para) < 15 and not re.match(r'^#+', para) and not re.match(r'!\[.*\]\(.*\)', para):
+                if optimized and not re.match(r'^#+', optimized[-1]) and not re.match(r'!\[.*\]\(.*\)', optimized[-1]):
                     optimized[-1] = optimized[-1] + ' ' + para
                 else:
                     optimized.append(para)
             else:
                 optimized.append(para)
 
-        return '\n\n'.join(optimized)
+        result = '\n\n'.join(optimized)
+
+        # 额外处理：确保 "###" 开头的标题前面一定有空行
+        result = re.sub(r'(\S)(\n###\s)', r'\1\n\n\2', result)
+        result = re.sub(r'(\S)(\n##\s)', r'\1\n\n\2', result)
+        result = re.sub(r'(\S)(\n#\s)', r'\1\n\n\2', result)
+
+        # 确保图片前后有空行
+        # 图片前面没有空行的情况
+        result = re.sub(r'(\S)(\n!\[.*\]\(.*\))', r'\1\n\n\2', result)
+        # 图片后面没有空行的情况
+        result = re.sub(r'(!\[.*\]\(.*\))(\n\S)', r'\1\n\n\2', result)
+
+        # 确保标题前面有空行（标题可能紧跟在图片或文案后面）
+        result = re.sub(r'([^\n])(\n#+ )', r'\1\n\n\2', result)
+
+        return result
 
     def optimize_punctuation(self, content):
         """优化标点符号"""
@@ -282,18 +306,18 @@ def html_to_markdown(html):
     html = re.sub(r'</?section[^>]*>', '', html)
     html = re.sub(r'</?span[^>]*>', '', html)
 
-    # 处理标题
+    # 处理标题 - 确保前后有空行
     for i in range(1, 7):
         pattern = r'<h{}[^>]*>(.*?)</h{}>'.format(i, i)
-        replacement = '\n{} \\1\n'.format('#' * i)
+        replacement = '\n\n{} \\1\n\n'.format('#' * i)
         html = re.sub(pattern, replacement, html, flags=re.DOTALL)
 
     # 处理段落
     html = re.sub(r'<p[^>]*>(.*?)</p>', '\n\\1\n', html, flags=re.DOTALL)
 
-    # 处理图片
-    html = re.sub(r'<img[^>]*src="([^"]+)"[^>]*alt="([^"]*)"[^>]*>', '![\\2](\\1)', html)
-    html = re.sub(r'<img[^>]*src="([^"]+)"[^>]*>', '![](\\1)', html)
+    # 处理图片 - 确保前后有空行
+    html = re.sub(r'<img[^>]*src="([^"]+)"[^>]*alt="([^"]*)"[^>]*>', '\n\n![\\2](\\1)\n\n', html)
+    html = re.sub(r'<img[^>]*src="([^"]+)"[^>]*>', '\n\n![](\\1)\n\n', html)
 
     # 处理加粗和斜体
     html = re.sub(r'<strong[^>]*>(.*?)</strong>', '**\\1**', html, flags=re.DOTALL)
