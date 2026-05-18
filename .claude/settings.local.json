@@ -10,7 +10,19 @@
       "Read(//tmp/**)",
       "Bash(git checkout *)",
       "Bash(git reset *)",
-      "WebFetch(domain:www.mydrivers.com)"
+      "WebFetch(domain:www.mydrivers.com)",
+      "Bash(python -m py_compile .claude/skills/wechat-crawler/scripts/crawl_wechat.py)",
+      "Bash(pip install *)",
+      "Bash(python .claude/skills/wechat-crawler/scripts/crawl_wechat.py https://mp.weixin.qq.com/s/HJcMLsKvRS1YMGqGddXc2w)",
+      "Bash(py --version)",
+      "Bash(python3 .claude/skills/wechat-crawler/scripts/crawl_wechat.py https://mp.weixin.qq.com/s/HJcMLsKvRS1YMGqGddXc2w)",
+      "Bash(move \".claude\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入.md\" \"docs\\\\_posts\\\\\" 2>&1 ; xcopy /Y /I \".claude\\\\docs\\\\.vuepress\\\\publish\\\\images\\\\*.webp\" \"docs\\\\.vuepress\\\\public\\\\images\\\\\")",
+      "Bash(mv \".claude/docs/_posts/2026-05-18-NVIDIA 免费 API 接入.md\" \"docs/_posts/\")",
+      "Bash(cp \".claude/docs/.vuepress/publish/images/\"*.webp \"docs/.vuepress/public/images/\")",
+      "Bash(rm -f \"docs/_posts/2026-05-18-NVIDIA 免费 API 接入.md\")",
+      "Bash(rm -f \"docs/.vuepress/public/images/wechat_\"*.webp)",
+      "Bash(python3 .claude/skills/wechat-crawler/scripts/crawl_wechat_v2.py https://mp.weixin.qq.com/s/HJcMLsKvRS1YMGqGddXc2w)",
+      "Bash(rm -rf \".claude/docs\")"
     ]
   }
 }
