@@ -9,5 +9,7 @@
         s.parentNode.insertBefore(hm, s)
       })()
     </script>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"3PzSZE57tRx5JUqt",ck:"3PzSZE57tRx5JUqt"})</script>
   </div>
 </template>

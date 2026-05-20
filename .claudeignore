@@ -1,0 +1,10 @@
+# .claudeignore 示例
+node_modules/
+dist/
+build/
+.git/
+legacy/         # 废弃的旧代码
+scripts/internal/
+*.min.js
+*.map
+package-lock.json
