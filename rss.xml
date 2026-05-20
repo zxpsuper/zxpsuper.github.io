@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io/</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Wed, 20 May 2026 01:50:44 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 20 May 2026 02:04:45 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -18,6 +18,31 @@
 `shell
 sudo ...]]></description>
             <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[ETF拯救世界]]></title>
+            <link>https://zxpsuper.github.io/2024/10/23/etf/</link>
+            <guid>https://zxpsuper.github.io/2024/10/23/etf/</guid>
+            <pubDate>Wed, 23 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[投资，每个人都应该有一套完整的观察和投资体系。
+
+不是说这个时刻我觉得可以买，这个时刻我觉得可以卖。
+
+如果是这样随意买卖，那么胜率会很低，短线频繁操作盈亏更加的影响心情。
+
+今天看了 E 大的几篇文章，深有体会，这里分享给大家。
+
+波段策略.网格之一：写在前面、体系以及策略
+[波段策 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
             </enclosure>
         </item>
         <item>
@@ -44,12 +69,14 @@ Created a new tsconfig.json with:
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
+            <title><![CDATA[使用 Github Action 发布博客]]></title>
+            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
+            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
+            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
+GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
+但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
             </enclosure>
         </item>
         <item>
@@ -61,22 +88,6 @@ Created a new tsconfig.json with:
 ]]></description>
             <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
             </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[ETF拯救世界]]></title>
-            <link>https://zxpsuper.github.io/2024/10/23/etf/</link>
-            <guid>https://zxpsuper.github.io/2024/10/23/etf/</guid>
-            <pubDate>Wed, 23 Oct 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[投资，每个人都应该有一套完整的观察和投资体系。
-
-不是说这个时刻我觉得可以买，这个时刻我觉得可以卖。
-
-如果是这样随意买卖，那么胜率会很低，短线频繁操作盈亏更加的影响心情。
-
-今天看了 E 大的几篇文章，深有体会，这里分享给大家。
-
-波段策略.网格之一：写在前面、体系以及策略
-[波段策 ...]]></description>
         </item>
         <item>
             <title><![CDATA[Vue 模板编译原理（一）]]></title>
@@ -111,6 +122,37 @@ Commit 结构
 ` ...]]></description>
         </item>
         <item>
+            <title><![CDATA[Sass 升级之旅]]></title>
+            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
+            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
+            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
+而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
+后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
+而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[若是月亮还没来]]></title>
+            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
+            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
+            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
+年轻人接近理想好难，想要放弃却又心存不甘。
+如果人生最难得到圆满，不如选择坦然！
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[“山寨版”《草料二维码》]]></title>
+            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
+            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
+            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
+碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
+而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
+            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
+            </enclosure>
+        </item>
+        <item>
             <title><![CDATA[多用 Git rebase ?]]></title>
             <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
             <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
@@ -122,27 +164,6 @@ git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 comm
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[使用 Github Action 发布博客]]></title>
-            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
-            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
-            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
-GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
-但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[Sass 升级之旅]]></title>
-            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
-            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
-            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
-而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
-后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
-而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
-        </item>
-        <item>
             <title><![CDATA[颜色选择器原理]]></title>
             <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
             <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
@@ -150,16 +171,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
 其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
 所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
-]]></description>
-        </item>
-        <item>
-            <title><![CDATA[若是月亮还没来]]></title>
-            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
-            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
-            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
-年轻人接近理想好难，想要放弃却又心存不甘。
-如果人生最难得到圆满，不如选择坦然！
 ]]></description>
         </item>
         <item>
@@ -197,14 +208,15 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
 喜伤心 失眠健忘心不 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[“山寨版”《草料二维码》]]></title>
-            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
-            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
-            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
-碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
-而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
-            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
             </enclosure>
         </item>
         <item>
@@ -215,19 +227,6 @@ GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD
             <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
 其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
 感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Window 系统激活教程]]></title>
-            <link>https://zxpsuper.github.io/2025/10/14/window-auth/</link>
-            <guid>https://zxpsuper.github.io/2025/10/14/window-auth/</guid>
-            <pubDate>Tue, 14 Oct 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[说说目前 Windows 系统比较常见的三种激活方法吧~
-
-在线 KMS 服务器激活
-
-KMS（密钥管理服务）是微软为企业提供的一种批量激活机制。在这种机制下，客户端电脑需要安装 GVLK（通用批量许可证密钥） 才能指向企业内部的 KMS 服务器进行授权。相比于一机一码的零售版，KMS 激活的系统在功能上完全一致，但属于“租借”模式：激活有效期最长为 180 天 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/window-auth-1.png">
-            </enclosure>
         </item>
     </channel>
 </rss>
