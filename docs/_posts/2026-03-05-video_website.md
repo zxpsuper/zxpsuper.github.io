@@ -239,7 +239,8 @@ export default {
             website: [
                         {
                             "name": "注视影视🙄",
-                            "url": "https://gaze.host/",
+                            "url": "https://gaze.top/",
+                            "beiyong": "https://gazes.store/;https://gaze.show/;https://gazes.site/",
                             "description": "无广告，视频清晰",
                             "created_at": "",
                             "updated_at": "2023/4/14",
