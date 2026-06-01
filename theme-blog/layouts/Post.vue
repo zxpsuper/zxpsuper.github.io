@@ -2,7 +2,11 @@
   <div class="bp-post-layout">
     <div class="bp-post-inner">
       <div class="bp-post-main">
-        <article class="bp-card bp-post-card" itemscope itemtype="https://schema.org/BlogPosting">
+        <article
+          class="bp-card bp-post-card"
+          itemscope
+          itemtype="https://schema.org/BlogPosting"
+        >
           <div class="bp-card-body">
             <header class="bp-post-header">
               <h1 class="bp-post-title" itemprop="name headline">
@@ -16,12 +20,38 @@
               />
               <div class="bp-page-stats">
                 <span class="bp-page-stat">
-                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  <span id="busuanzi_page_pv">-</span> 次阅读
+                  <svg
+                    width="13"
+                    height="13"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span id="busuanzi_page_pv">{{ busuanzi.busuanzi_page_pv }}</span> 次阅读
                 </span>
                 <span class="bp-page-stat">
-                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
-                  <span id="busuanzi_page_uv">-</span> 位访客
+                  <svg
+                    width="13"
+                    height="13"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
+                    />
+                  </svg>
+                  <span id="busuanzi_page_uv">{{ busuanzi.busuanzi_page_uv }}</span> 位访客
                 </span>
               </div>
             </header>
@@ -30,7 +60,11 @@
             </div>
             <footer class="bp-post-footer">
               <nav v-if="prevPost || nextPost" class="bp-post-nav">
-                <a v-if="prevPost" :href="prevPost.path" class="bp-nav-link bp-nav-prev">
+                <a
+                  v-if="prevPost"
+                  :href="prevPost.path"
+                  class="bp-nav-link bp-nav-prev"
+                >
                   <span class="bp-nav-arrow">←</span>
                   <span class="bp-nav-text">
                     <span class="bp-nav-label">上一篇</span>
@@ -38,7 +72,11 @@
                   </span>
                 </a>
                 <span v-else class="bp-nav-link bp-nav-disabled"></span>
-                <a v-if="nextPost" :href="nextPost.path" class="bp-nav-link bp-nav-next">
+                <a
+                  v-if="nextPost"
+                  :href="nextPost.path"
+                  class="bp-nav-link bp-nav-next"
+                >
                   <span class="bp-nav-text bp-nav-text-right">
                     <span class="bp-nav-label">下一篇</span>
                     <span class="bp-nav-title">{{ nextPost.title }}</span>
@@ -61,43 +99,69 @@
 </template>
 
 <script>
-import Toc from '@theme/components/Toc.vue'
-import PostMeta from '@theme/components/PostMeta.vue'
-import { Comment } from '@vuepress/plugin-blog/lib/client/components'
+import Toc from "@theme/components/Toc.vue";
+import PostMeta from "@theme/components/PostMeta.vue";
+import { Comment } from "@vuepress/plugin-blog/lib/client/components";
 
 export default {
   components: {
     Toc,
     PostMeta,
     Comment,
-    Newsletter: () => import('@theme/components/Newsletter.vue'),
+    Newsletter: () => import("@theme/components/Newsletter.vue"),
+  },
+  data() {
+    return {
+      busuanzi: {
+        busuanzi_today_pv: '-',
+        busuanzi_today_uv: '-',
+        busuanzi_site_pv: '-',
+        busuanzi_site_uv: '-',
+        busuanzi_page_pv: '-',
+        busuanzi_page_uv: '-',
+      },
+    };
   },
   computed: {
     sortedPosts() {
       return this.$site.pages
-        .filter(p => /^\d{4}\/\d{2}\/\d{2}\//.test(p.path.replace(/^\//, '')))
-        .sort((a, b) => new Date(b.frontmatter.date || 0) - new Date(a.frontmatter.date || 0))
+        .filter((p) => /^\d{4}\/\d{2}\/\d{2}\//.test(p.path.replace(/^\//, "")))
+        .sort(
+          (a, b) =>
+            new Date(b.frontmatter.date || 0) -
+            new Date(a.frontmatter.date || 0),
+        );
     },
     currentIndex() {
-      return this.sortedPosts.findIndex(p => p.path === this.$route.path)
+      return this.sortedPosts.findIndex((p) => p.path === this.$route.path);
     },
     prevPost() {
-      return this.currentIndex < this.sortedPosts.length - 1 ? this.sortedPosts[this.currentIndex + 1] : null
+      return this.currentIndex < this.sortedPosts.length - 1
+        ? this.sortedPosts[this.currentIndex + 1]
+        : null;
     },
     nextPost() {
-      return this.currentIndex > 0 ? this.sortedPosts[this.currentIndex - 1] : null
+      return this.currentIndex > 0
+        ? this.sortedPosts[this.currentIndex - 1]
+        : null;
     },
   },
   mounted() {
-    if (!window._busuanziLoaded) {
-      const s = document.createElement('script')
-      s.src = '//cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js'
-      s.defer = true
-      document.body.appendChild(s)
-      window._busuanziLoaded = true
-    }
+    const u = new URL("https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js");
+    fetch(u.protocol + "//" + u.host + "/api.php", {
+      method: "POST",
+      body: JSON.stringify({
+        url: location.href,
+        referrer: document.referrer,
+      }),
+    })
+      .then((r) => r.json())
+      .then((r) => {
+        this.busuanzi = r;
+      })
+      .catch((e) => console.error(e));
   },
-}
+};
 </script>
 
 <style scoped>
@@ -156,7 +220,7 @@ export default {
 .bp-post-card:hover {
   transform: none;
   background: var(--bg);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.02), 0 1px 6px rgba(0,0,0,0.02);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 1px 6px rgba(0, 0, 0, 0.02);
 }
 
 .bp-post-header {
