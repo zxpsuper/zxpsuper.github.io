@@ -34,6 +34,11 @@ module.exports = themeConfig => {
         id: 'post',
         dirname: '_posts',
         path: '/',
+        pagination: {
+          getPaginationPageTitle(pageNumber) {
+            return `第 ${pageNumber} 页`
+          },
+        },
       },
     ],
     frontmatters: [

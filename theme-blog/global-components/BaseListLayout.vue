@@ -82,7 +82,7 @@
                     <a :href="page.path" class="bp-post-link" @click.stop="goToPost(page.path)">{{ page.title }}</a>
                     <svg class="bp-arrow bp-post-arrow" viewBox="0 0 13 15" fill="none"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="5.3,0 10.8,5.5 5.3,11" class="bp-arrow-line"/><line x1="10.8" y1="5.5" x2="0.8" y2="5.2" class="bp-arrow-bar"/></g></svg>
                   </h3>
-                  <p class="bp-post-summary" v-html="page.frontmatter.summary || page.summary"></p>
+                  <p class="bp-post-summary">{{ getSummary(page) }}</p>
                   <div class="bp-post-meta">
                     <time v-if="page.frontmatter.date" class="bp-post-date">{{ formatDate(page.frontmatter.date) }}</time>
                     <span v-if="page.frontmatter.tags" class="bp-post-tags">
@@ -267,7 +267,6 @@ export default {
   },
   methods: {
     getPageLink(n) {
-      console.log('getPageLink', n, this.$pagination)
       // if (this.$pagination) return this.$pagination.getSpecificPageLink(n - 1)
       return n === 1 ? '/page/1/' : '/page/' + n + '/'
     },
@@ -277,6 +276,11 @@ export default {
     getTags(tags) {
       if (!tags) return []
       return Array.isArray(tags) ? tags : [tags]
+    },
+    getSummary(page) {
+      const summary = page.frontmatter.summary || page.summary || ''
+      const text = summary.replace(/<[^>]*>/g, '')
+      return text.length > 200 ? text.slice(0, 200) + '...' : text
     },
     goToPost(path) {
       this.$router.push(path)

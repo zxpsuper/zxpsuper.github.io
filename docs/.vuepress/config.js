@@ -14,6 +14,12 @@ module.exports = {
                 id: 'post',
                 dirname: '_posts',
                 path: '/',
+                title: '博客',
+                pagination: {
+                    getPaginationPageTitle(pageNumber) {
+                        return `第 ${pageNumber} 页`
+                    },
+                },
             },
             // {
             //     id: 'writing', // Unique id for current classifier
