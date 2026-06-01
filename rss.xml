@@ -2,11 +2,209 @@
 <rss version="2.0">
     <channel>
         <title>小皮咖</title>
-        <link>https://zxpsuper.github.io/</link>
+        <link>https://zxpsuper.github.io</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Sun, 24 May 2026 05:22:06 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Jun 2026 04:24:59 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+        <item>
+            <title><![CDATA[NVIDIA 免费 API 接入]]></title>
+            <link>https://zxpsuper.github.io/2026/05/18/nvidia-api/</link>
+            <guid>https://zxpsuper.github.io/2026/05/18/nvidia-api/</guid>
+            <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[NVIDIA 官方悄悄放出了一批免费 API Key，支持 MiniMax、Qwen、Gemma 等大模型，而且可以免费使用一年。打开 FreeEndpoint 搜索发现还有 42 个模型可以免费薅羊毛~
+话不多说，入口在这里
+https://build.nvidia.com
+注 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/wechat_1779074772_4898c537.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[免费使用 GPT-image2 实用教程]]></title>
+            <link>https://zxpsuper.github.io/2026/05/13/deepsider/</link>
+            <guid>https://zxpsuper.github.io/2026/05/13/deepsider/</guid>
+            <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[GPT-Image2 是 OpenAI 最新发布的第三代旗舰生图模型。
+
+我亲自上手实测了一波，总结两个字便是：震撼。
+
+先看几个效果图：
+
+“生成陈皮中药材全景科普图解”
+
+短短几个字它就能给你生成出大量陈皮的药材信息，包含特征，炮制工艺，功效主治，显微鉴别，现代应用，鉴别要点等等详细信息 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/gpt-image/image1.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[GPU 天梯图实现计划]]></title>
+            <link>https://zxpsuper.github.io/superpowers/plans/2026-05-13-gpu-ladder.html</link>
+            <guid>https://zxpsuper.github.io/superpowers/plans/2026-05-13-gpu-ladder.html</guid>
+            <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[For agentic workers: REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[GPU 天梯图设计文档]]></title>
+            <link>https://zxpsuper.github.io/superpowers/specs/2026-05-13-gpu-ladder-design.html</link>
+            <guid>https://zxpsuper.github.io/superpowers/specs/2026-05-13-gpu-ladder-design.html</guid>
+            <pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[概述
+
+设计一个现代化、视觉清晰的 GPU 天梯图页面，解决原网站字体小、样式丑陋、难以查看显卡排名的问题。
+
+目标用户
+
+综合型用户：兼顾游戏和专业性能需求
+需要清晰的视觉排名和详细的参数对比
+
+设计原则
+
+清晰易读 - 大字体，高对比度，性能层次分明
+现代简约 - 柔和渐变，大面积留白，简洁设计
+功能完整 - 搜索筛选、对 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[发给那个让你加班的同事]]></title>
+            <link>https://zxpsuper.github.io/2026/05/12/overtime-pay/</link>
+            <guid>https://zxpsuper.github.io/2026/05/12/overtime-pay/</guid>
+            <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[昨天晚上赶敲代码到11点，肚子饿得咕咕叫，看着钉钉里那个"辛苦了"的表情包，突然想：能不能做个东西，让加班这件事...稍微有趣一点？
+
+于是就有了这个页面。
+
+先看效果
+
+overtime-pay
+
+这个页面有两个模式：
+
+管理模式：当你直接打开页面时，会看到左右分栏。左边可以填名字、公司、头像，右边是实 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/pay/pay1.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[支付页面管理模式与预览模式实现计划]]></title>
+            <link>https://zxpsuper.github.io/superpowers/plans/2026-05-12-pay-page-admin-preview.html</link>
+            <guid>https://zxpsuper.github.io/superpowers/plans/2026-05-12-pay-page-admin-preview.html</guid>
+            <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[For agentic workers: REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[支付页面管理模式与预览模式设计文档]]></title>
+            <link>https://zxpsuper.github.io/superpowers/specs/2026-05-12-pay-page-admin-preview-design.html</link>
+            <guid>https://zxpsuper.github.io/superpowers/specs/2026-05-12-pay-page-admin-preview-design.html</guid>
+            <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[日期: 2026-05-12
+作者: AI Assistant
+状态: 待审阅
+
+概述
+
+对 docs/.vuepress/public/pay.html 进行改造，实现「管理模式」与「预览模式」两种界面状态，通过 URL 查询参数自动切换。
+
+模式判定规则
+
+| 模式 | 触发条件 |
+|------|---------|
+ ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[如何管理 Python 版本]]></title>
+            <link>https://zxpsuper.github.io/2026/04/17/python-version/</link>
+            <guid>https://zxpsuper.github.io/2026/04/17/python-version/</guid>
+            <pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[一台电脑上装了好几个 Python，python 命令到底跑的是哪个？项目一多，版本冲突让人抓狂——这篇文章帮你彻底解决这个问题。
+Python 版本为什么会变成一团乱麻？
+如果你用 Python 开发超过半年，大概率会遇到这种场景：
+公司老项目要求 Python 3.8，你自己的新项目想用 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/python.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[CLI vs. MCP：谁才是大模型工具的未来？]]></title>
+            <link>https://zxpsuper.github.io/2026/04/16/cli-vs-mcp/</link>
+            <guid>https://zxpsuper.github.io/2026/04/16/cli-vs-mcp/</guid>
+            <pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[MCP（Model Context Protocol）曾经被誉为 Agent 的"万能接口"，是连接一切工具的标准。但最近，越来越多的顶级开发者开始悄悄抛弃它，转而用一种更原始的方式来解决问题——那就是直接使用命令行程序。
+
+比如：
+
+转换视频格式，一行 ffmpeg 命令；
+搜索文件，一行 grep；
+调整图片尺寸，一行 `Imag ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/mcp.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[微信公众号封面图片生成器]]></title>
+            <link>https://zxpsuper.github.io/2026/04/09/wechat-cover/</link>
+            <guid>https://zxpsuper.github.io/2026/04/09/wechat-cover/</guid>
+            <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[实现一个微信公众号封面图片生成工具，方便大家使用。
+
+使用说明
+
+上传图片：点击左侧区域上传大图，点击右侧区域上传小图
+调整图片：拖动图片调整位置，点击按钮调整大小
+添加文字：点击左侧区域添加文字，点击右侧区域添加文字
+调整文字：拖动文字调整位置，点击按钮调整大小，也可以设置图片颜色
+*下载图片 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/wechat-cover.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[IDEA 2026.1 最新破解教程]]></title>
+            <link>https://zxpsuper.github.io/2026/03/30/idea/</link>
+            <guid>https://zxpsuper.github.io/2026/03/30/idea/</guid>
+            <pubDate>Mon, 30 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[IntelliJ IDEA 2026.1 正式发布了，这次更新带来了许多新功能和改进，包括对AI的生态的开放，对 Java 26 的支持、Spring 支持运行时 Debug、依赖项源代码和文档开箱即用等等。IDEA 默认有 30 天的 Ultimate 订阅试用，本文将带你一步步简单破解 IntelliJ IDEA 2026.1，将订阅失效修改时间至 2099 年。
+ ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/idea-1.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[一些好用的视频网站推荐]]></title>
+            <link>https://zxpsuper.github.io/2026/03/05/video-website/</link>
+            <guid>https://zxpsuper.github.io/2026/03/05/video-website/</guid>
+            <pubDate>Thu, 05 Mar 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[个人收藏的视频观看网址，方便自己观看，也分享给大家。
+
+视频网址
+
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[如何计算你的五行属性]]></title>
+            <link>https://zxpsuper.github.io/2025/12/16/year-month/</link>
+            <guid>https://zxpsuper.github.io/2025/12/16/year-month/</guid>
+            <pubDate>Tue, 16 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[想研究下五行取名，逃不开年月日的天干地支计算。
+
+本文以简单易懂的方式带你一步步实现该功能！
+
+年份的天干地支
+
+十大天干：甲、乙、丙、丁、戊（wù）、己、庚（gēng）、辛、壬（rēn）、癸（guǐ）。
+
+十二地支：子、丑、寅（yín）、卯（mǎo）、辰、巳（sì）、午、未、申、酉（yǒu）、戌（xū）、亥（hài）。
+
+干支纪年法是根据十天干 ...]]></description>
+            <enclosure url="https://s3.cn-north-1.jdcloud-oss.com/design-tool-data/data23/c96529ab92df036ca0e1669737e2a6d9.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Window 系统激活教程]]></title>
+            <link>https://zxpsuper.github.io/2025/10/14/window-auth/</link>
+            <guid>https://zxpsuper.github.io/2025/10/14/window-auth/</guid>
+            <pubDate>Tue, 14 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[说说目前 Windows 系统比较常见的三种激活方法吧~
+
+在线 KMS 服务器激活
+
+KMS（密钥管理服务）是微软为企业提供的一种批量激活机制。在这种机制下，客户端电脑需要安装 GVLK（通用批量许可证密钥） 才能指向企业内部的 KMS 服务器进行授权。相比于一机一码的零售版，KMS 激活的系统在功能上完全一致，但属于“租借”模式：激活有效期最长为 180 天 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/window-auth-1.png">
+            </enclosure>
+        </item>
         <item>
             <title><![CDATA[ETF拯救世界]]></title>
             <link>https://zxpsuper.github.io/2024/10/23/etf/</link>
@@ -24,25 +222,175 @@
 [波段策 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
-            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
-            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
-            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
-打开终端，输入 snap list 查看已安装的软件。
-停止 snapd 服务
-`shell
-sudo ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
+            <title><![CDATA[为什么年轻人不买房了？]]></title>
+            <link>https://zxpsuper.github.io/2024/08/27/buy-house/</link>
+            <guid>https://zxpsuper.github.io/2024/08/27/buy-house/</guid>
+            <pubDate>Tue, 27 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[想当年，买房能挣钱，你对我户口限，把资验，半夜开盘不想让我看见。
+全款的优先，贷款的靠边，公积金的带着共享单车滚去外面。
+抢房卖出去赚差价，是年轻人一辈子挣不到的神话，老登击鼓传花游戏玩到赢麻。
+现在政策放开，给年轻人桌子上菜，指责年轻人不肯买房变得无赖。
+你突然给我机会，让我杠杆加倍。
+就像打工多年的村花小美，突然回来要和我双宿双飞 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[清远英德行]]></title>
+            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
+            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
+            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
+英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
+广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
-            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
-            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
-            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
+            <title><![CDATA[字幕截图生成器]]></title>
+            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
+            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
+            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
+其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
+感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[自学蛙泳]]></title>
+            <link>https://zxpsuper.github.io/2024/08/05/swimming/</link>
+            <guid>https://zxpsuper.github.io/2024/08/05/swimming/</guid>
+            <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[今年暑假办了张游泳卡，计划十次内学会蛙泳。从一开始纯憋气10米，到最后50米游全程，总耗时十次（约600分钟，每次游一小时左右！），虽然游得不是很标准，但也算是差强人意，省去了一千大洋的游泳培训费用！]]></description>
+            <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[中医五脏与情感的关系]]></title>
+            <link>https://zxpsuper.github.io/2024/07/30/health/</link>
+            <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
+            <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
+它们之间的关系可以用一个表格表示：
+| 五脏 | 七情 |
+| :--: | :--: |
+|  心  |  喜  |
+|  肝  |  怒  |
+|  脾  | 忧思 |
+|  肺  |  悲  |
+|  肾  | 恐惊 |
+喜伤心 失眠健忘心不 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[“山寨版”《草料二维码》]]></title>
+            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
+            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
+            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
+碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
+而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
+            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[颜色选择器原理]]></title>
+            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
+            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
+            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
+其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
+所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[何为 package-lock.json ?]]></title>
+            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
+            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
+            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
+因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
+我们都知道 package.json 除了 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Sass 升级之旅]]></title>
+            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
+            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
+            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
+而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
+后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
+而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[若是月亮还没来]]></title>
+            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
+            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
+            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
+年轻人接近理想好难，想要放弃却又心存不甘。
+如果人生最难得到圆满，不如选择坦然！
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[让你的 git commit 更漂亮]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
+也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
+好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
+Commit 结构
+一个规范详细的 commit 结构如下：
+` ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[多用 Git rebase ?]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
+git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
+后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[关于 babel polyfill 那些事]]></title>
+            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
+            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
+            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
+babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Vue 模板编译原理（一）]]></title>
+            <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
+            <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
+            <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[计划写一系列关于 Vue 原理的文章，学习理解后分享印象更深！
+众所周知 ，Vue 文件中写的 `` 标签都会被 vue-loader 转化成 AST 语法树，而后再根据 AST 语法树生成 render 渲染函数，最后渲染并挂载在页面上。
+本文简单实现下 Vue 模板编译原理的第一步： AST 语法树的生成过程！
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/vue-template-01.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
+            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
+            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
+            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
+]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[使用 Github Action 发布博客]]></title>
+            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
+            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
+            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
+GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
+但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
             </enclosure>
         </item>
         <item>
@@ -69,164 +417,41 @@ Created a new tsconfig.json with:
   module: commonjs ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Vue 多语言转化工具——vue-i18n-transform]]></title>
-            <link>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</link>
-            <guid>https://zxpsuper.github.io/2024/04/19/_19-vue-i18n-transform/</guid>
-            <pubDate>Fri, 19 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现有的庞大 Vue 项目突然要进军海外了，原本一开始就没有做多语言适配的准备，面对这么多文件的中文替换多语言变量的工作确实有些头疼。参考网上的一些案例和做法，我写了一款 vue 文件批量转化多语言插件————vue-i18n-transform!
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/i18n-01.gif">
+            <title><![CDATA[Ubuntu 上安装 clash for window]]></title>
+            <link>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</link>
+            <guid>https://zxpsuper.github.io/2024/03/18/ubuntu-crash/</guid>
+            <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[首先下载 Clash For Windows，备份地址点击 👉 这里, [👉 还 ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/crash-01.png">
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[关于 babel polyfill 那些事]]></title>
-            <link>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</link>
-            <guid>https://zxpsuper.github.io/2024/05/16/babel-polyfill/</guid>
-            <pubDate>Thu, 16 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[polyfill 意为“补充物”，它可以在旧版浏览器中模拟新的 API。当新的 API 在旧版浏览器中不可用时，开发人员可以使用 Polyfill 来填充这些缺失的功能。
-babel-polyfill 为不支持 ES6 或 ES7 新特性的浏览器提供了一些新的 API 和全局对象的实现，以便于在这些浏览器中使用新的 ECMAScript 语法和特性。它主要用于解决浏览器兼容性问题 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Vue 模板编译原理（一）]]></title>
-            <link>https://zxpsuper.github.io/2024/04/20/vue-template-01/</link>
-            <guid>https://zxpsuper.github.io/2024/04/20/vue-template-01/</guid>
-            <pubDate>Sat, 20 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[计划写一系列关于 Vue 原理的文章，学习理解后分享印象更深！
-众所周知 ，Vue 文件中写的 `` 标签都会被 vue-loader 转化成 AST 语法树，而后再根据 AST 语法树生成 render 渲染函数，最后渲染并挂载在页面上。
-本文简单实现下 Vue 模板编译原理的第一步： AST 语法树的生成过程！
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/vue-template-01.png">
+            <title><![CDATA[Ubuntu 22.04 LTS 移除 Snap]]></title>
+            <link>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</link>
+            <guid>https://zxpsuper.github.io/2024/03/17/ubuntu-removesnap/</guid>
+            <pubDate>Sun, 17 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
+打开终端，输入 snap list 查看已安装的软件。
+停止 snapd 服务
+`shell
+sudo ...]]></description>
+            <enclosure url="https://zxpsuper.github.io/images/snap-01.png">
             </enclosure>
         </item>
         <item>
-            <title><![CDATA[使用 Github Action 发布博客]]></title>
-            <link>https://zxpsuper.github.io/2024/04/18/publish-blog/</link>
-            <guid>https://zxpsuper.github.io/2024/04/18/publish-blog/</guid>
-            <pubDate>Thu, 18 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！
-GitHub Actions 是 GitHub 官方推出的持续集成/部署模块服务（CI/CD），和 jenkins、Travis CI 是同一类产品定位。
-但 Actions 的最大优势，就是它是与 GitHub 高度整合的，只需一个配置文件即可 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/github-action-01.png">
-            </enclosure>
+            <title><![CDATA[Suporka blog]]></title>
+            <link>https://zxpsuper.github.io/</link>
+            <guid>https://zxpsuper.github.io/</guid>
+            <pubDate>Mon, 01 Jun 2026 04:24:59 GMT</pubDate>
+            <description><![CDATA[Please visit zxpsuper.github.io or zxpsuper.netlify.app! ...]]></description>
         </item>
         <item>
-            <title><![CDATA[让你的 git commit 更漂亮]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.
-也就是，一个小功能就要开一个分支，一个分支里要有一些有意义的 commit。
-好处就是冲突会很少，review 代码速度加快，commit 都是有意义的，而且利于回退。
-Commit 结构
-一个规范详细的 commit 结构如下：
-` ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[多用 Git rebase ?]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前公司项目分支合并基本都使用 git merge , 久而久之发现有一些代码合并缺漏的问题。
-git merge 会产生一个多余的 commit, 并且这个 commit 在文件的 commit 历史的找不到的，这样导致代码遗漏缺失很难溯源。
-后来在一篇知乎问答「 [Git commits 历史是如何做到如此清爽的？](https://www.zhihu.com/question/6 ...]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[若是月亮还没来]]></title>
-            <link>https://zxpsuper.github.io/2024/05/29/the-moon/</link>
-            <guid>https://zxpsuper.github.io/2024/05/29/the-moon/</guid>
-            <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[最近刷到 “杨宗纬、王宇宙、宝石Gem” 的《若月亮还没来》，一首歌唱出多少打工人的无奈！
-年轻人接近理想好难，想要放弃却又心存不甘。
-如果人生最难得到圆满，不如选择坦然！
-]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Sass 升级之旅]]></title>
-            <link>https://zxpsuper.github.io/2024/05/31/sass/</link>
-            <guid>https://zxpsuper.github.io/2024/05/31/sass/</guid>
-            <pubDate>Fri, 31 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Sass 最早是 2006 年由 ruby 开发的
-而 ruby 是一门解释型语言，所以前端开发想编译 sass 就需要在本地安装 ruby。
-后来，随着 Node.js 的出现推动了前端工程化的发展，也就是用 Node.js 来写前端用的编译打包等工具链。
-而 Node.js 只支持 c++ 这种编译型语言的扩展包，ruby sass 就用不了了，所以出现了后来的 no ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[颜色选择器原理]]></title>
-            <link>https://zxpsuper.github.io/2024/06/13/color-picker/</link>
-            <guid>https://zxpsuper.github.io/2024/06/13/color-picker/</guid>
-            <pubDate>Thu, 13 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[前端开发最常见的颜色模型🎨就是 RGB，即红绿蓝三基色模型，而前端浏览器能支持颜色显示的颜色模型只有两种：RGB 和 HSL。
-其中，RGB 模型是以三色的值在 0-255 以内的范围内，混合成一种颜色，对机器较友好，但并不太适合❌人直观的进行颜色选择。
-所以，通常的颜色选择器一般会使用另外两种更面向视觉感知的模型：HSV 和 HSL。
-]]></description>
-        </item>
-        <item>
-            <title><![CDATA[何为 package-lock.json ?]]></title>
-            <link>https://zxpsuper.github.io/2024/06/05/package-lock/</link>
-            <guid>https://zxpsuper.github.io/2024/06/05/package-lock/</guid>
-            <pubDate>Wed, 05 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前遇到某个功能本地调试没有问题，但是一到线上该功能就出现瑕疵😭。一直无法重现，百思不得其解。后面细细对比才发现，是因为本地依赖的模块和线上打包机使用的模块版本不一致，为何呢 😕 ？
-因为 package-lock.json 被开发者删除后重新安装依赖生成新的 package-lock.json，某些模块被自动升级了。
-我们都知道 package.json 除了 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[中医五脏与情感的关系]]></title>
-            <link>https://zxpsuper.github.io/2024/07/30/health/</link>
-            <guid>https://zxpsuper.github.io/2024/07/30/health/</guid>
-            <pubDate>Tue, 30 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[五脏为：「心肝脾肺肾」| 中医七情为：「喜怒忧思悲恐惊」
-它们之间的关系可以用一个表格表示：
-| 五脏 | 七情 |
-| :--: | :--: |
-|  心  |  喜  |
-|  肝  |  怒  |
-|  脾  | 忧思 |
-|  肺  |  悲  |
-|  肾  | 恐惊 |
-喜伤心 失眠健忘心不 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[自学蛙泳]]></title>
-            <link>https://zxpsuper.github.io/2024/08/05/swimming/</link>
-            <guid>https://zxpsuper.github.io/2024/08/05/swimming/</guid>
-            <pubDate>Mon, 05 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[今年暑假办了张游泳卡，计划十次内学会蛙泳。从一开始纯憋气10米，到最后50米游全程，总耗时十次（约600分钟，每次游一小时左右！），虽然游得不是很标准，但也算是差强人意，省去了一千大洋的游泳培训费用！]]></description>
-            <enclosure url="https://img1.baidu.com/it/u=2662158282,760696711&amp;fm=253&amp;fmt=auto&amp;app=120&amp;f=JPEG?w=750&amp;h=375">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[“山寨版”《草料二维码》]]></title>
-            <link>https://zxpsuper.github.io/2024/06/27/qrcode/</link>
-            <guid>https://zxpsuper.github.io/2024/06/27/qrcode/</guid>
-            <pubDate>Thu, 27 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[之前浏览过草料二维码的网站，他的二维码美化功能很强大，可以分别自定义码眼和码点的形状和颜色，功能十分强大 💪！
-碰巧之前写过一个 npm 插件 qrcode-with-logos, 用于前端生成带 logo 的二维码。
-而且在 github 的 issues 里有外国友人 👨‍ ...]]></description>
-            <enclosure url="https://raw.githubusercontent.com/zxpsuper/qrcode-with-logos/master/images/qr-code.png">
-            </enclosure>
-        </item>
-        <item>
-            <title><![CDATA[字幕截图生成器]]></title>
-            <link>https://zxpsuper.github.io/2024/08/13/video-image-text/</link>
-            <guid>https://zxpsuper.github.io/2024/08/13/video-image-text/</guid>
-            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[昨天刷知乎的时候看到一个问题「假如一辈子不结婚会怎样？」
-其中有个回答使用罗翔老师的视频采访字幕拼接截图的形式获得了高赞，看完之后还感觉挺有道理，结果翻开评论一堆人在说图是制作的，罗翔没有说过这些话。
-感觉蛮有意思的，今天就来试试实现一个字幕截图生成器😄 ...]]></description>
-        </item>
-        <item>
-            <title><![CDATA[清远英德行]]></title>
-            <link>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</link>
-            <guid>https://zxpsuper.github.io/2024/08/26/qingyuan-yingde/</guid>
-            <pubDate>Mon, 26 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[周末和好友来了一趟清远英德（英西峰林风景区）两天一夜自驾游。
-英西峰林是群山环抱的一片谷地，喀斯特地貌，自然景观很像桂林，有“英西小桂林”之称。
-广州早上 9 点出发，途中小塞车，历时 3 小时到达英德黄花镇。
-]]></description>
-            <enclosure url="https://zxpsuper.github.io/images/T3-02.jpg">
-            </enclosure>
+            <title><![CDATA[时间线]]></title>
+            <link>https://zxpsuper.github.io/archives.html</link>
+            <guid>https://zxpsuper.github.io/archives.html</guid>
+            <pubDate>Mon, 01 Jun 2026 04:24:59 GMT</pubDate>
+            <description><![CDATA[时间线
+        按年份归档的 ...]]></description>
         </item>
     </channel>
 </rss>
