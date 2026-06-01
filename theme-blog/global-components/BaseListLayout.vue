@@ -267,7 +267,8 @@ export default {
   },
   methods: {
     getPageLink(n) {
-      if (this.$pagination) return this.$pagination.getSpecificPageLink(n - 1)
+      console.log('getPageLink', n, this.$pagination)
+      // if (this.$pagination) return this.$pagination.getSpecificPageLink(n - 1)
       return n === 1 ? '/page/1/' : '/page/' + n + '/'
     },
     formatDate(date) {
