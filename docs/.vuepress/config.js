@@ -60,7 +60,7 @@ module.exports = {
             ],
             copyright: [
                 {
-                    text: 'MIT Licensed | Copyright © 2024 小皮咖',
+                    text: 'MIT Licensed | Copyright © 2024 - 2026 小皮咖',
                 },
             ],
         },
@@ -107,7 +107,7 @@ module.exports = {
             ],
             ctaText: '在 GitHub 上关注我',
             ctaLink: 'https://github.com/zxpsuper',
-            avatar: '/images/my-avatar.jpg',
+            avatar: '/images/my-avatar2.webp',
         },
         projectsTitle: '我的项目',
         projectsDesc: '这里是我的一些开源项目，我一直在不断创造新的东西。',

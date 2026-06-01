@@ -925,7 +925,7 @@ function calendar(y, m, d) {
       if (tmp1 == -11) tmp1 = 1;
       if (tmp1 >= 0 && tmp1 < n) {
         tmp2 = lDPOS[tmp1] + Number(RegExp.$2) - 1;
-        if (tmp2 >= 0 && tmp2 < this.length && this[tmp2].isLeap != true) {
+        if (tmp2 >= 0 && tmp2 < target.length && target[tmp2].isLeap != true) {
           target[tmp2].lunarFestival += RegExp.$4 + " ";
           if (RegExp.$3 == "*") {
             target[tmp2].color = "#d74146";

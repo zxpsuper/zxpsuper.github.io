@@ -362,38 +362,23 @@ export default {
     display: block;
   }
 }
-.bp-hero-frame {
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  right: -24px;
-  bottom: -24px;
-  border: 1px dashed var(--border-dashed);
-  border-radius: 16px;
-  transition: all 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
+
 .bp-hero-img-wrap {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 50%;
 }
 .bp-hero-img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 50%;
   display: block;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 0.4s ease;
-}
-.bp-hero-visual:hover .bp-hero-frame {
-  border-color: var(--hover-border);
-  top: 20px;
-  left: 20px;
-  right: -20px;
-  bottom: -20px;
 }
 .bp-hero-visual:hover .bp-hero-img {
   transform: scale(1.04);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
 }
 
 @media (max-width: 767px) {

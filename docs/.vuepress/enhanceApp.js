@@ -1,15 +1,16 @@
 import "./styles/element-ui.css";
-// 使用异步函数也是可以的
+import ElementUI from "./components/element-ui";
+
 export default ({
-  Vue, // VuePress 正在使用的 Vue 构造函数
-  options, // 附加到根实例的一些选项
-  router, // 当前应用的路由实例
-  siteData, // 站点元数据
-  isServer, // 当前应用配置是处于 服务端渲染 或 客户端
+  Vue,
+  options,
+  router,
+  siteData,
+  isServer,
 }) => {
-  // ...做一些其他的应用级别的优化
+  Vue.use(ElementUI)
+
   if (!isServer) {
-    // 首页加入百度统计
     if (location.pathname === "/") {
       var _hmt = _hmt || [];
       (function () {
@@ -44,14 +45,5 @@ export default ({
         })();
       })({ id: "3PzSZE57tRx5JUqt", ck: "3PzSZE57tRx5JUqt", hashMode: true });
     }
-    import("./components/element-ui").then((elementUi) => {
-      Vue.use(elementUi);
-      setTimeout(() => {
-        if (router.app._vnode) {
-          router.app._vnode.key = "updated";
-          router.app.$forceUpdate();
-        }
-      }, 0);
-    });
   }
 };
