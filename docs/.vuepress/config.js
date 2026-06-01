@@ -88,8 +88,10 @@ module.exports = {
         ],
         feed: {
             canonical_base: 'https://zxpsuper.github.io',
-            posts_directories: ['/'],
             count: 50,
+            is_feed_page(page) {
+                return page.regularPath && page.regularPath.startsWith('/_posts/')
+            },
             sort: entries => entries.sort((a, b) => {
                 const da = a.date ? new Date(a.date) : new Date(0)
                 const db = b.date ? new Date(b.date) : new Date(0)
