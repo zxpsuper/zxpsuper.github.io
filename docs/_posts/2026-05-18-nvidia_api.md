@@ -2,6 +2,7 @@
 title: NVIDIA 免费 API 接入
 date: 2026-05-18
 tags: [AI, Nvidia, Claude]
+summary: "NVIDIA 悄悄放出了一批免费 API Key，支持 42 个模型，能用一整年。我试了一下接入 Claude Code，配置简单，用起来很丝滑。白嫖党的福音，薅羊毛要趁早。"
 ---
 
 NVIDIA 官方悄悄放出了一批免费 API Key，支持 MiniMax、Qwen、Gemma 等大模型，而且可以免费使用一年。打开 FreeEndpoint 搜索发现还有 42 个模型可以免费薅羊毛~

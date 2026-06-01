@@ -6,6 +6,7 @@ tags:
   - IT技术
 author: 小皮咖
 location: 广州
+summary: "在 Ubuntu 上装 Clash 踩了不少坑，从解压到创建快捷方式再到配置系统代理，每一步都有小细节。这篇文章把我折腾的过程和解决方案都记下来了，希望能帮到同样在 Linux 上折腾 Clash 的你。"
 ---
 
 ## 下载与安装

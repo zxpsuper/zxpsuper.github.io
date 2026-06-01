@@ -6,6 +6,7 @@ tags:
   - IT技术
 author: 小皮咖
 location: 广州
+summary: "tsconfig.json 里那么多配置项，你真的每个都搞懂了吗？我从顶层配置到 compilerOptions 的常用选项都梳理了一遍，还总结了一个实用的配置模板。前端同学可以收藏起来，写 TypeScript 项目时直接参考。"
 ---
 
 tsconfig.json 是用来配置 TypeScript 编译选项的，通常位于项目的根目录位置。

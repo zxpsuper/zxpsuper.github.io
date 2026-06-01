@@ -6,6 +6,7 @@ tags:
   - IT技术
 author: 小皮咖
 location: 广州
+summary: "一个好的 commit 不仅能让你自己回头看代码时少骂两句，也能让同事 Review 时少问你几句。这篇文章我把 commit 的类型、格式、最佳实践都整理出来了，照着写就对了。"
 ---
 
 对于 git 工作流，我认为 commit 数要多而有意义，branch 也要多而有意义.

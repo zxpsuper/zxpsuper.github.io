@@ -5,7 +5,8 @@ tags:
   - blog
   - IT技术
 author: 小皮咖
-location: 广州  
+location: 广州
+summary: "Travis CI 收费了？没关系，GitHub Actions 完全可以平替，而且跟 GitHub 深度整合，配置起来更方便。我把自己博客的自动化部署流程完整记录了下来，推送即部署，再也不用手动构建上传了。"
 ---
 
 原本是计划用 travis-cli 自动构建发布博客的，结果登录上去发现已经开始收费使用了，没办法只能转向 Github Action 了！

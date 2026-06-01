@@ -6,6 +6,7 @@ tags:
   - IT技术
 author: 小皮咖
 location: 广州
+summary: "一台电脑好几个 Python 版本，项目一多就乱成一锅粥。我用 pyenv 把所有版本管起来了，不同项目自动切换，再也不用担心版本冲突了。Mac 和 Windows 的安装步骤都写清楚了。"
 ---
 
 ![](/images/python.png)

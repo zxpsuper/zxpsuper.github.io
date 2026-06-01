@@ -7,6 +7,7 @@ tags:
 author: 小皮咖
 location: 广州  
 description: Ubuntu remove snap
+summary: "Firefox 打开就崩溃？别急，不是你的问题，是 Ubuntu 22.04 的 Snap 在搞鬼。我花了半小时把 Snap 彻底清理干净，顺便把 Firefox 换回了 apt 版，世界清静了。方法分享给你，希望你也能早日摆脱 Snap 的困扰 😄"
 ---
 
 之前安装 Ubunu 22.04 LTS 系统后，发现 firefox 打开就崩溃，查了下网上说了 snap 的缘故，删除即可恢复正常。步骤如下：
