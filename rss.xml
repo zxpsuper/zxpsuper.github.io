@@ -4,7 +4,7 @@
         <title>小皮咖</title>
         <link>https://zxpsuper.github.io</link>
         <description>小皮咖博客</description>
-        <lastBuildDate>Mon, 01 Jun 2026 05:43:55 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Jun 2026 06:38:20 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
         <item>
@@ -232,13 +232,6 @@
             <description><![CDATA[最近被《若月亮还没来》这首歌击中了，特别是宝石Gem 那段 rap，听完久久不能平静。分享给大家，但愿每个在大城市打拼的你，都能找到属于自己的那束光。]]></description>
         </item>
         <item>
-            <title><![CDATA[让你的 git commit 更漂亮]]></title>
-            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
-            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
-            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[一个好的 commit 不仅能让你自己回头看代码时少骂两句，也能让同事 Review 时少问你几句。这篇文章我把 commit 的类型、格式、最佳实践都整理出来了，照着写就对了。]]></description>
-        </item>
-        <item>
             <title><![CDATA[多用 Git rebase ?]]></title>
             <link>https://zxpsuper.github.io/2024/05/22/git-merge/</link>
             <guid>https://zxpsuper.github.io/2024/05/22/git-merge/</guid>
@@ -246,6 +239,13 @@
             <description><![CDATA[之前一直用 git merge，后来发现代码遗漏了很难溯源。尤雨溪说多用 rebase，我试了一下，清爽的提交历史真的回不去了。但 merge 也不是一无是处，关键是要知道什么时候该用哪个。]]></description>
             <enclosure url="https://zxpsuper.github.io/images/commit-01.webp">
             </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[让你的 git commit 更漂亮]]></title>
+            <link>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</link>
+            <guid>https://zxpsuper.github.io/2024/05/22/beautiful-commit/</guid>
+            <pubDate>Wed, 22 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[一个好的 commit 不仅能让你自己回头看代码时少骂两句，也能让同事 Review 时少问你几句。这篇文章我把 commit 的类型、格式、最佳实践都整理出来了，照着写就对了。]]></description>
         </item>
         <item>
             <title><![CDATA[关于 babel polyfill 那些事]]></title>
@@ -319,14 +319,14 @@
             <title><![CDATA[Suporka blog]]></title>
             <link>https://zxpsuper.github.io/</link>
             <guid>https://zxpsuper.github.io/</guid>
-            <pubDate>Mon, 01 Jun 2026 05:43:55 GMT</pubDate>
+            <pubDate>Mon, 01 Jun 2026 06:38:20 GMT</pubDate>
             <description><![CDATA[Please visit zxpsuper.github.io or zxpsuper.netlify.app! ...]]></description>
         </item>
         <item>
             <title><![CDATA[时间线]]></title>
             <link>https://zxpsuper.github.io/archives.html</link>
             <guid>https://zxpsuper.github.io/archives.html</guid>
-            <pubDate>Mon, 01 Jun 2026 05:43:55 GMT</pubDate>
+            <pubDate>Mon, 01 Jun 2026 06:38:20 GMT</pubDate>
             <description><![CDATA[时间线
         按年份归档的 ...]]></description>
         </item>
