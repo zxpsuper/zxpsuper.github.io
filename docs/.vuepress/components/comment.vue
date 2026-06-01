@@ -1,123 +1,73 @@
 <template>
-  <div>
-    <div class="giscus" style="margin-top: 16px"></div>
-    <script
-      src="https://giscus.app/client.js"
-      data-repo="zxpsuper/zxpsuper.github.io"
-      data-repo-id="MDEwOlJlcG9zaXRvcnk5NTMzMzM0OQ=="
-      data-category="Announcements"
-      data-category-id="DIC_kwDOBa6r5c4CevP1"
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="bottom"
-      data-theme="https://gw.alipayobjects.com/os/k/t/comment.css"
-      data-lang="zh-CN"
-      crossorigin="anonymous"
-      async
-    ></script>
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-        <h2 class="card-title">站点统计</h2>
-      </div>
-      <div class="examples">
-        <div class="example-item">
-          <i class="fa-solid fa-eye example-img"></i>今日访问量<e
-            class="example-count"
-            ><span id="busuanzi_today_pv">加载中...</span></e
-          >
-        </div>
-        <div class="example-item">
-          <i class="fa-solid fa-user example-img"></i>今日访客数<e
-            class="example-count"
-            ><span id="busuanzi_today_uv">加载中...</span></e
-          >
-        </div>
-        <div class="example-item">
-          <i class="fa-solid fa-eye example-img"></i>本站访问量<e
-            class="example-count"
-            ><span id="busuanzi_site_pv">加载中...</span></e
-          >
-        </div>
-        <div class="example-item">
-          <i class="fa-solid fa-user example-img"></i>本站访客数<e
-            class="example-count"
-            ><span id="busuanzi_site_uv">加载中...</span></e
-          >
-        </div>
-        <div class="example-item">
-          <i class="fa-solid fa-server example-img"></i>本页总阅读量<e
-            class="example-count"
-            ><span id="busuanzi_page_pv">加载中...</span></e
-          >
-        </div>
-        <div class="example-item">
-          <i class="fa-solid fa-calendar-days example-img"></i>本页总访客数<e
-            class="example-count"
-            ><span id="busuanzi_page_uv">加载中...</span></e
-          >
-        </div>
-      </div>
+  <div class="bp-comment">
+    <div class="bp-comment-inner">
+      <div ref="giscus" class="giscus"></div>
     </div>
   </div>
 </template>
 <script>
+function getGiscusTheme() {
+  if (typeof window === 'undefined') return 'light'
+  return document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+}
+
+let giscusLoaded = false
+
 export default {
-  name: "comment",
-  data() {
-    return {
-      showScript: false,
-    };
-  },
+  name: 'comment',
   mounted() {
-    fetch("https://" + "cdn.busuanzi.cc" + "/api.php", {
-      method: "POST",
-      body: JSON.stringify({
-        url: location.href,
-        referrer: document.referrer,
-      }),
+    const theme = getGiscusTheme()
+    if (!giscusLoaded) {
+      const s = document.createElement('script')
+      s.src = 'https://giscus.app/client.js'
+      s.setAttribute('data-repo', 'zxpsuper/zxpsuper.github.io')
+      s.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnk5NTMzMzM0OQ==')
+      s.setAttribute('data-category', 'Announcements')
+      s.setAttribute('data-category-id', 'DIC_kwDOBa6r5c4CevP1')
+      s.setAttribute('data-mapping', 'pathname')
+      s.setAttribute('data-strict', '0')
+      s.setAttribute('data-reactions-enabled', '1')
+      s.setAttribute('data-emit-metadata', '0')
+      s.setAttribute('data-input-position', 'bottom')
+      s.setAttribute('data-theme', theme)
+      s.setAttribute('data-lang', 'zh-CN')
+      s.setAttribute('crossorigin', 'anonymous')
+      s.async = true
+      this.$refs.giscus.appendChild(s)
+      giscusLoaded = true
+    } else {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (iframe) {
+        iframe.contentWindow.postMessage({
+          giscus: { setConfig: { theme, term: location.pathname } }
+        }, 'https://giscus.app')
+      }
+    }
+
+    this._observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains('dark')
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({
+          giscus: { setConfig: { theme: isDark ? 'dark' : 'light' } }
+        }, 'https://giscus.app')
+      }
     })
-      .then((r) => r.json())
-      .then((r) => {
-        for (const k in r)
-          document
-            .querySelectorAll("#" + k)
-            .forEach((e) => (e.innerText = r[k]));
-      })
-      .catch((e) => console.error(e));
+    this._observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    })
   },
-};
+  beforeDestroy() {
+    if (this._observer) this._observer.disconnect()
+  },
+}
 </script>
 <style scoped>
-.examples {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+.bp-comment {
+  margin-top: 32px;
 }
-.example-item {
-  background: rgba(28, 192, 136, 0.1);
-  padding: 8px 15px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  text-decoration: none;
-  color: var(--text-dark);
-  transition: all 0.3s;
-}
-.example-count {
-  margin-left: auto;
-  background: rgba(28, 192, 136, 0.15);
-  padding: 0px 6px;
-  border-radius: 5px;
-  word-break: break-all;
-  font-size: 0.9rem;
-}
-@media (min-width: 768px) {
-  .examples {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.bp-comment-inner {
+  min-height: 200px;
 }
 </style>

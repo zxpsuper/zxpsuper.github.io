@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
+    "docs:build": "node scripts/generate-search-index.js && vuepress build docs",
     "deploy": "npm run docs:build && node publish.js"
   },
   "devDependencies": {

@@ -3,7 +3,7 @@ const path = require('path')
 // .vuepress/config.js
 console.log(path.resolve(__dirname, 'fonts'))
 module.exports = {
-    theme: '@vuepress/blog',
+    theme: require.resolve('../../theme-blog'),
     title: '小皮咖',
     description: '小皮咖博客',
     themeConfig: {
@@ -64,6 +64,10 @@ module.exports = {
                 link: '/',
             },
             {
+                text: '文章',
+                link: '/page/1/',
+            },
+            {
                 text: '标签',
                 link: '/tag/',
             },
@@ -77,8 +81,69 @@ module.exports = {
             },
         ],
         feed: {
-            canonical_base: 'https://zxpsuper.github.io/',
+            canonical_base: 'https://zxpsuper.github.io',
+            posts_directories: ['/'],
+            count: 50,
+            sort: entries => entries.sort((a, b) => {
+                const da = a.date ? new Date(a.date) : new Date(0)
+                const db = b.date ? new Date(b.date) : new Date(0)
+                return db - da
+            }),
         },
+        hero: {
+            greeting: '你好，我是小皮咖',
+            intro: '热爱技术、音乐和旅行的全栈开发者。<br class="hero-br">专注于 Web 开发与开源分享。',
+            subtitle: '技能树：',
+            skills: [
+                'Vue.js / React 前端开发',
+                '网站设计与性能优化',
+                '开源项目维护',
+            ],
+            ctaText: '在 GitHub 上关注我',
+            ctaLink: 'https://github.com/zxpsuper',
+            avatar: '/images/my-avatar.jpg',
+        },
+        projectsTitle: '我的项目',
+        projectsDesc: '这里是我的一些开源项目，我一直在不断创造新的东西。',
+        projectsSectionTitle: '开源项目',
+        allProjectsLink: 'https://github.com/zxpsuper',
+        allProjectsText: '查看全部项目',
+        projects: [
+            {
+                name: 'suporka-blog',
+                description: '基于 VuePress 的个人博客系统',
+                link: 'https://github.com/zxpsuper/zxpsuper.github.io',
+                image: '/images/blog.webp',
+            },
+            {
+                name: 'qrcode-with-logos',
+                description: 'logo二维码生成工具',
+                link: 'https://zxpsuper.github.io/',
+                image: '/images/qrcode-logo.png',
+            },
+            {
+                name: 'Suporka MD',
+                description: '微信公众号 Markdown 编辑器',
+                link: 'https://markdown.suporka.site/',
+                image: '/images/suporka-md.webp',
+            },
+            {
+                name: '皮咖驿站',
+                description: '做你的资料百科库',
+                link: 'https://resource.suporka.site/',
+                image: '/images/suporka-resource.webp',
+            },
+            {
+                name: '广州百晓生',
+                description: '一个懂广州、懂吃喝玩乐、懂年轻人的本地生活号',
+                link: 'https://resource.suporka.site/',
+                image: '/images/guangzhou-baixiaosheng.webp',
+            },
+        ],
+        postsTitle: '最新文章',
+        postsDesc: '记录技术心得与生活感悟。',
+        postsSectionTitle: '最新文章',
+        allPostsText: '查看全部文章',
     },
     plugins: [
         [
