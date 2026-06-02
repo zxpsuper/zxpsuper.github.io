@@ -10,6 +10,7 @@ aside: false
     <div class="bp-card">
       <div class="bp-card-body">
         <h2 class="bp-section-title">时间线</h2>
+        <br>
         <div v-for="yearList in data" class="bp-year-group">
           <div class="bp-year-header">
             <span class="bp-year-number">{{ yearList[0].year }}</span>
