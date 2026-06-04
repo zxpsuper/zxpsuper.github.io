@@ -1,5 +1,17 @@
 import "./styles/element-ui.css";
 import ElementUI from "./components/element-ui";
+import { openImageViewer } from "./utils/imageViewer";
+
+const IMG_SELECTOR = "img";
+
+function isPreviewableImg(node, container) {
+  if (!node || node.nodeType !== 1) return false;
+  if (node.tagName !== "IMG") return false;
+  if (node.closest("a")) return false;
+  if (!container || !container.contains(node)) return false;
+  if (!node.getAttribute("src")) return false;
+  return true;
+}
 
 export default ({
   Vue,
@@ -8,7 +20,39 @@ export default ({
   siteData,
   isServer,
 }) => {
-  Vue.use(ElementUI)
+  Vue.use(ElementUI);
+
+  Vue.directive("image-preview", {
+    bind(el, binding) {
+      const containerSelector =
+        (binding && binding.value) || ".bp-post-content";
+      const handler = (event) => {
+        const container = el.querySelector(containerSelector) || el;
+        const target = event.target;
+        if (!isPreviewableImg(target, container)) return;
+        const imgs = Array.from(container.querySelectorAll(IMG_SELECTOR)).filter(
+          (n) => isPreviewableImg(n, container),
+        );
+        if (!imgs.length) return;
+        const idx = imgs.indexOf(target);
+        if (idx === -1) return;
+        event.preventDefault();
+        event.stopPropagation();
+        openImageViewer(
+          imgs.map((n) => n.currentSrc || n.src),
+          idx,
+        );
+      };
+      el.__bpImagePreviewHandler = handler;
+      el.addEventListener("click", handler, true);
+    },
+    unbind(el) {
+      if (el.__bpImagePreviewHandler) {
+        el.removeEventListener("click", el.__bpImagePreviewHandler, true);
+        delete el.__bpImagePreviewHandler;
+      }
+    },
+  });
 
   if (!isServer) {
     if (location.pathname === "/") {

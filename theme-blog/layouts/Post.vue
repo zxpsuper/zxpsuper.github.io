@@ -279,7 +279,7 @@ export default {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
   font-family: PT Serif, Serif;
 }
 

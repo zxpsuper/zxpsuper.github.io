@@ -175,11 +175,169 @@ body
 .theme-blog-tag .tag-item a:hover .tag-item-title
   padding-left 8px
 
-.theme-blog-tag .tag-item a .tag-item-date
-  font-size 14px
-  color #999
-  font-weight 400
-  transition all 0.3s ease
+  .theme-blog-tag .tag-item a .tag-item-date
+    color #999
+    font-weight 400
+    transition all 0.3s ease
+
+/* === Image preview viewer === */
+.bp-post-content img
+  cursor zoom-in
+
+body.bp-viewer-open
+  overflow hidden
+
+.bp-image-viewer
+  position fixed
+  inset 0
+  z-index 9999
+  display flex
+  align-items center
+  justify-content center
+  opacity 0
+  pointer-events none
+  transition opacity 0.2s ease
+  user-select none
+  -webkit-user-select none
+  &.is-active
+    opacity 1
+    pointer-events auto
+  &.is-dragging
+    cursor grabbing
+    .bp-image-viewer-img
+      cursor grabbing
+
+.bp-image-viewer-mask
+  position absolute
+  inset 0
+  background rgba(0, 0, 0, 0.92)
+
+.bp-image-viewer-stage
+  position relative
+  width 100%
+  height 100%
+  display flex
+  align-items center
+  justify-content center
+  overflow hidden
+  z-index 1
+
+.bp-image-viewer-img-wrap
+  position relative
+  display flex
+  align-items center
+  justify-content center
+  transform-origin center center
+  transition none
+  will-change transform
+
+.bp-image-viewer-img
+  display block
+  max-width 95vw
+  max-height 88vh
+  object-fit contain
+  cursor grab
+  user-select none
+  -webkit-user-drag none
+  box-shadow 0 12px 40px rgba(0, 0, 0, 0.5)
+
+.bp-image-viewer-btn
+  position absolute
+  z-index 3
+  display flex
+  align-items center
+  justify-content center
+  width 48px
+  height 48px
+  padding 0
+  border none
+  border-radius 50%
+  background rgba(255, 255, 255, 0.12)
+  color #fff
+  cursor pointer
+  transition background 0.15s ease, transform 0.15s ease
+  backdrop-filter blur(8px)
+  -webkit-backdrop-filter blur(8px)
+  &:hover
+    background rgba(255, 255, 255, 0.25)
+    transform scale(1.06)
+  &:active
+    transform scale(0.95)
+  &:focus
+    outline none
+
+.bp-image-viewer-close
+  top 20px
+  right 20px
+
+.bp-image-viewer-prev
+  left 20px
+  top 50%
+  transform translateY(-50%)
+  &:hover
+    transform translateY(-50%) scale(1.06)
+  &:active
+    transform translateY(-50%) scale(0.95)
+
+.bp-image-viewer-next
+  right 20px
+  top 50%
+  transform translateY(-50%)
+  &:hover
+    transform translateY(-50%) scale(1.06)
+  &:active
+    transform translateY(-50%) scale(0.95)
+
+.bp-image-viewer-counter
+  position absolute
+  top 22px
+  left 50%
+  transform translateX(-50%)
+  z-index 3
+  color #fff
+  background rgba(0, 0, 0, 0.45)
+  padding 6px 14px
+  border-radius 999px
+  font-size 13px
+  letter-spacing 0.04em
+  font-variant-numeric tabular-nums
+  pointer-events none
+  backdrop-filter blur(6px)
+  -webkit-backdrop-filter blur(6px)
+
+.bp-image-viewer-hint
+  position absolute
+  bottom 20px
+  left 50%
+  transform translateX(-50%)
+  z-index 3
+  display flex
+  gap 14px
+  color rgba(255, 255, 255, 0.7)
+  font-size 12px
+  pointer-events none
+  user-select none
+  span
+    background rgba(0, 0, 0, 0.4)
+    padding 4px 10px
+    border-radius 4px
+
+@media (max-width 640px)
+  .bp-image-viewer-btn
+    width 40px
+    height 40px
+  .bp-image-viewer-close
+    top 12px
+    right 12px
+  .bp-image-viewer-prev
+    left 8px
+  .bp-image-viewer-next
+    right 8px
+  .bp-image-viewer-img
+    max-width 100vw
+    max-height 80vh
+  .bp-image-viewer-hint
+    display none
 
 .theme-blog-tag .tag-item a:hover .tag-item-date
   color rgba(255, 255, 255, 0.9)

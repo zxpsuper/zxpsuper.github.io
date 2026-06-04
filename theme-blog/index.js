@@ -98,7 +98,6 @@ module.exports = themeConfig => {
 
   const plugins = [
     '@vuepress/plugin-nprogress',
-    ['@vuepress/medium-zoom', true],
     [
       '@vuepress/search',
       {
