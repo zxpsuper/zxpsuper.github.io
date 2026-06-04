@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{460:function(t,n,e){"use strict";e.r(n);var i={computed:{isPageOne(){return"/page/1/"===this.$route.path}}},s=e(17),a=Object(s.a)(i,(function(){var t=this._self._c;return t("div",[this.$pagination||this.isPageOne?t("BaseListLayout"):t("Content")],1)}),[],!1,null,null,null);n.default=a.exports}}]);
