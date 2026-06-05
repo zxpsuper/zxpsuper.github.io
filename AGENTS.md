@@ -39,14 +39,25 @@
 - **GitHub Actions**：`.github/workflows/deploy.yml`，推送到 `master` 分支时触发。Node 14，构建产物部署到 `gh-pages` 分支。
 - **Secret**：需要 `BLOB_DEPLOY_PRI`（SSH 私钥）。
 
+## 脚本
+
+| 脚本 | 用途 | 何时运行 |
+|------|------|----------|
+| `scripts/generate-search-index.js` | 扫 `docs/_posts/` 生成 `docs/.vuepress/public/search.json` | `npm run docs:build` 自动前置执行 |
+| `scripts/generate-summary.js` | 把硬编码的中文 summary 注入到 30 篇老文章的 frontmatter | **一次性迁移工具**，已不再使用；新文章手动写 `summary` |
+
+> **依赖陷阱**：`scripts/generate-search-index.js` 用到了 `gray-matter`，但 `package.json` 里**没有声明**它。它是 `vuepress` 传递依赖里顺带装上的。如果 `vuepress` 升级后不再传递 `gray-matter`，构建会断 — 届时需要 `npm i -D gray-matter` 补上。
+
 ## 注意事项
 
 - 构建日志中的 `[]` 空数组行是 **无害**的（来自 lunar.js 中调试输出）。
 - `element-ui.js` 是经过 **UMD 打包的单行文件**，不要格式化或编辑，替换需重新打包。
 - 暂无可用的 lint / typecheck 命令，无测试框架。
-- `docs/_posts/` 下当前 34 篇文章，每篇都有 `frontmatter.summary`（作者口吻短文案，手动生成）。
+- `docs/_posts/` 下当前 34 篇文章，每篇都有 `frontmatter.summary`（作者口吻短文案，手动生成）。其中 30 篇由 `scripts/generate-summary.js` 批量注入，剩下 4 篇（`2024-5-29-the_moon.md` 等）以及所有新文章都是手写。
 - 导航链接：首页 `/`，文章列表 `/page/1/`，标签 `/tag/`，时间线 `/archives`。
 - 修改 `theme-blog/`、`docs/.vuepress/config.js` 等主题相关文件后必须跑一次 `npm run docs:build` 验证。
+- Giscus 评论 (`docs/.vuepress/components/comment.vue`) 的 `data-repo` / `data-repo-id` / `data-category-id` **硬编码** 指向 `zxpsuper/zxpsuper.github.io`。Fork 此仓库后必须在该文件里替换为自己的 repo 与 Giscus 配置。
+- `CLAUDE.md` 是 `AGENTS.md` 的英文版（内容基本相同），不要同时改两份。更新任一文件时请同步另一份。
 
 ## 文章格式规范
 

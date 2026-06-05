@@ -29,7 +29,20 @@
       "Bash(where python *)",
       "Bash(py *)",
       "Bash(rm -f \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入.md\" \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入-1.md\" \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入-2.md\")",
-      "Bash(mv \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入-3.md\" \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入.md\")"
+      "Bash(mv \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入-3.md\" \"E:\\\\github\\\\zxpsuper.github.io\\\\docs\\\\_posts\\\\2026-05-18-NVIDIA 免费 API 接入.md\")",
+      "Bash(git ls-tree *)",
+      "Bash(git fetch *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/tag/IT%E6%8A%80%E6%9C%AF/page/2/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/tag/IT技术/page/2/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/tag/IT技术/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/tag/杂文/page/2/\")",
+      "Bash(curl -s \"http://localhost:8084/tag/IT技术/page/2/\")",
+      "Bash(curl -s \"http://localhost:8085/tag/IT技术/page/2/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8085/tag/IT技术/page/2\")",
+      "Bash(curl -s \"http://localhost:8085/tag/IT技术/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/tag/IT技术/page/2\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/\")"
     ]
   }
 }

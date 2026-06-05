@@ -267,7 +267,16 @@ export default {
   },
   methods: {
     getPageLink(n) {
-      // if (this.$pagination) return this.$pagination.getSpecificPageLink(n - 1)
+      if (this.$pagination) {
+        if (n === 1) {
+          // blog plugin 的 _paginationPages[0].path 始终是 indexPath：
+          // 根分页时是 /（首页），但分页第 1 页实际是 /page/1/，需要修正；
+          // 分类分页时 indexPath 就是分类首页，等同于第 1 页，保持原样。
+          const first = this.$pagination.getSpecificPageLink(0)
+          return first === '/' || first === '' ? '/page/1/' : first
+        }
+        return this.$pagination.getSpecificPageLink(n - 1)
+      }
       return n === 1 ? '/page/1/' : '/page/' + n + '/'
     },
     formatDate(date) {
