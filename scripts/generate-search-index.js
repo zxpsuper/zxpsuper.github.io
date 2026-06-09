@@ -26,18 +26,24 @@ function readDir(dir) {
       const { data, content } = matter(raw)
       const date = data.date
       let year, month, day
-      if (date instanceof Date) {
+
+      const fileMatch = item.name.match(/^(\d{4})-(\d{1,2})-(\d{1,2})[-_](\S+)\.md$/)
+      if (fileMatch) {
+        year = fileMatch[1]
+        month = fileMatch[2].padStart(2, '0')
+        day = fileMatch[3].padStart(2, '0')
+      } else if (date instanceof Date) {
         year = date.getFullYear()
         month = String(date.getMonth() + 1).padStart(2, '0')
         day = String(date.getDate()).padStart(2, '0')
-      } else if (typeof date === 'string' && date.length >= 10) {
-        year = date.slice(0, 4)
-        month = date.slice(5, 7)
-        day = date.slice(8, 10)
+      } else if (typeof date === 'string') {
+        const parts = date.split('-')
+        year = parts[0]
+        month = (parts[1] || '').padStart(2, '0')
+        day = (parts[2] || '').padStart(2, '0')
       }
 
-      const match = item.name.match(/^\d{4}-\d{2}-\d{2}-(.+)\.md$/)
-      const slug = match ? match[1] : item.name.replace(/\.md$/, '')
+      const slug = fileMatch ? fileMatch[4].replace(/_/g, '-') : item.name.replace(/\.md$/, '')
       const p = year && month && day ? `/${year}/${month}/${day}/${slug}/` : `/${slug}/`
 
       const plainText = stripMarkdown(
