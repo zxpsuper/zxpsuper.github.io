@@ -117,16 +117,16 @@ module.exports = {
         allProjectsLink: 'https://github.com/zxpsuper',
         allProjectsText: '查看全部项目',
         projects: [
-            {
-                name: 'suporka-blog',
-                description: '基于 VuePress 的个人博客系统',
-                link: 'https://github.com/zxpsuper/zxpsuper.github.io',
-                image: '/images/blog.webp',
-            },
+            // {
+            //     name: 'suporka-blog',
+            //     description: '基于 VuePress 的个人博客系统',
+            //     link: 'https://github.com/zxpsuper/zxpsuper.github.io',
+            //     image: '/images/blog.webp',
+            // },
             {
                 name: 'qrcode-with-logos',
                 description: 'logo二维码生成工具',
-                link: 'https://zxpsuper.github.io/',
+                link: 'https://zxpsuper.github.io/qrcode-with-logos',
                 image: '/images/qrcode-logo.png',
             },
             {
@@ -144,7 +144,7 @@ module.exports = {
             {
                 name: '广州百晓生',
                 description: '一个懂广州、懂吃喝玩乐、懂年轻人的本地生活号',
-                link: 'https://resource.suporka.site/',
+                link: 'https://guangzhou.suporka.site/',
                 image: '/images/guangzhou-baixiaosheng.webp',
             },
         ],
