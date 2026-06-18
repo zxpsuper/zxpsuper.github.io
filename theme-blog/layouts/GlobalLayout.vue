@@ -1,5 +1,5 @@
 <template>
-  <div id="vuepress-theme-blog__global-layout" v-image-preview>
+  <div id="vuepress-theme-blog__global-layout" v-image-preview v-context-menu>
     <div class="bp-bg-pattern" aria-hidden="true">
       <div class="bp-bg-side bp-bg-left"></div>
       <div class="bp-bg-side bp-bg-right"></div>

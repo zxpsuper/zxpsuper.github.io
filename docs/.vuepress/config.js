@@ -5,7 +5,7 @@ console.log(path.resolve(__dirname, 'fonts'))
 module.exports = {
     theme: require.resolve('../../theme-blog'),
     title: '小皮咖',
-    description: '小皮咖博客',
+    description: '小皮咖博客 - 全栈开发者 · 54 个开源项目 · 分享技术心得与生活感悟',
     themeConfig: {
         dateFormat: 'YYYY-MM-DD',
         // 请参考文档来查看所有可用的选项。
@@ -100,12 +100,12 @@ module.exports = {
         },
         hero: {
             greeting: '你好，我是小皮咖',
-            intro: '热爱技术、音乐和旅行的全栈开发者。<br class="hero-br">专注于 Web 开发与开源分享。',
+            intro: '坐标广州 🌟 全栈开发者',
             subtitle: '技能树：',
             skills: [
                 'Vue.js / React 前端开发',
-                '网站设计与性能优化',
-                '开源项目维护',
+                '微信生态 · 公众号工具链开发',
+                'Node.js 全栈 & 开源项目维护',
             ],
             ctaText: '在 GitHub 上关注我',
             ctaLink: 'https://github.com/zxpsuper',
@@ -113,7 +113,7 @@ module.exports = {
         },
         projectsTitle: '我的项目',
         projectsDesc: '这里是我的一些开源项目，我一直在不断创造新的东西。',
-        projectsSectionTitle: '开源项目',
+        projectsSectionTitle: '开源项目 · My Projects',
         allProjectsLink: 'https://github.com/zxpsuper',
         allProjectsText: '查看全部项目',
         projects: [
@@ -150,7 +150,7 @@ module.exports = {
         ],
         postsTitle: '最新文章',
         postsDesc: '记录技术心得与生活感悟。',
-        postsSectionTitle: '最新文章',
+        postsSectionTitle: '最新文章 · Latest Posts',
         allPostsText: '查看全部文章',
     },
     plugins: [

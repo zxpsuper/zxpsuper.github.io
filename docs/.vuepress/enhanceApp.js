@@ -1,6 +1,7 @@
 import "./styles/element-ui.css";
 import ElementUI from "./components/element-ui";
 import { openImageViewer } from "./utils/imageViewer";
+import { initContextMenu, destroyContextMenu } from "./utils/contextMenu";
 
 const IMG_SELECTOR = "img";
 
@@ -51,6 +52,17 @@ export default ({
         el.removeEventListener("click", el.__bpImagePreviewHandler, true);
         delete el.__bpImagePreviewHandler;
       }
+    },
+  });
+
+  Vue.directive("context-menu", {
+    bind() {
+      if (isServer) return;
+      initContextMenu();
+    },
+    unbind() {
+      if (isServer) return;
+      destroyContextMenu();
     },
   });
 

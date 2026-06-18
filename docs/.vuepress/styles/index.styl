@@ -369,3 +369,104 @@ body.bp-viewer-open
   .theme-blog-tag .tag-item a
     padding 14px 16px
     font-size 15px
+
+/* === Context Menu === */
+
+$cm-z = 10000
+$cm-w = 200px
+$cm-radius = 10px
+$cm-pad-v = 6px
+$cm-pad-h = 6px
+
+.bp-context-menu
+  position fixed
+  z-index $cm-z
+  min-width $cm-w
+  max-width 280px
+  padding $cm-pad-v $cm-pad-h
+  background var(--bg-card, #fff)
+  border 1px solid var(--border, #e5e7eb)
+  border-radius $cm-radius
+  box-shadow 0 10px 38px -10px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.02)
+  opacity 0
+  transform scale(0.95)
+  transform-origin top left
+  pointer-events none
+  transition opacity 0.12s ease, transform 0.12s ease
+  user-select none
+  -webkit-user-select none
+
+  &.is-active
+    opacity 1
+    transform scale(1)
+    pointer-events auto
+
+.bp-context-menu-inner
+  display flex
+  flex-direction column
+  gap 0
+  max-height 70vh
+  overflow-y auto
+  overscroll-behavior contain
+
+.bp-context-menu-separator
+  margin 4px 0
+  border none
+  height 1px
+  background var(--border, #e5e7eb)
+
+.bp-context-menu-item
+  display flex
+  align-items center
+  gap 10px
+  width 100%
+  height 34px
+  padding 0 12px
+  border none
+  border-radius 6px
+  background transparent
+  color var(--text, #171717)
+  font-size 13px
+  font-family inherit
+  text-align left
+  cursor pointer
+  white-space nowrap
+  transition background 0.1s ease
+
+  &:hover
+    background var(--bg-subtle, #f5f5f5)
+
+  &:active
+    background var(--border, #e5e7eb)
+
+  &:focus-visible
+    outline 2px solid var(--accent, #171717)
+    outline-offset -2px
+
+.bp-context-menu-icon
+  display flex
+  align-items center
+  justify-content center
+  width 18px
+  height 18px
+  flex-shrink 0
+  color var(--text-secondary, #525252)
+
+  svg
+    width 16px
+    height 16px
+
+.bp-context-menu-label
+  flex 1
+  overflow hidden
+  text-overflow ellipsis
+
+// Dark theme
+html.dark .bp-context-menu
+  border-color var(--border, #262626)
+  box-shadow 0 10px 38px -10px rgba(0,0,0,0.5)
+
+// Prevent context menu on the context menu itself
+.bp-context-menu *
+  -webkit-user-select none
+  user-select none

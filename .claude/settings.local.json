@@ -43,7 +43,23 @@
       "Bash(curl -s \"http://localhost:8085/tag/IT技术/\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/tag/IT技术/page/2\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:8080/\")",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Bash(grep -rn '--bg\\\\|--text\\\\|--border\\\\|--primary' /Users/zhengxiaopeng/github/zxpsuper.github.io/theme-blog/)",
+      "Bash(grep -rn '--bg\\\\|--text\\\\|--border\\\\|--primary\\\\|--color' /Users/zhengxiaopeng/github/zxpsuper.github.io/theme-blog/components/Header.vue)",
+      "Bash(grep -rn '--bg\\\\|--text\\\\|--border\\\\|--primary\\\\|var\\(' /Users/zhengxiaopeng/github/zxpsuper.github.io/theme-blog/ --include='*.vue' --include='*.css' --include='*.styl' --include='*.stylus')",
+      "Bash(grep -rn '--bg\\\\|--text\\\\|--border' /Users/zhengxiaopeng/github/zxpsuper.github.io/docs/.vuepress/public/activities/)",
+      "Bash(grep -rn '--bg\\\\|--text\\\\|--border\\\\|--primary\\\\|--color' /Users/zhengxiaopeng/github/zxpsuper.github.io/docs/.vuepress/styles/index.styl)",
+      "Bash(grep -rn '--\\\\w' /Users/zhengxiaopeng/github/zxpsuper.github.io/ --include='*.css' --include='*.styl' --include='*.vue' --include='*.md')",
+      "Bash(grep -rn '--b' /Users/zhengxiaopeng/github/zxpsuper.github.io/theme-blog/ --include='*.css' --include='*.styl' --include='*.vue')",
+      "Bash(grep -n '--bg\\\\|--text\\\\|--border\\\\|dark\\\\|\\\\.dark\\\\|html.dark\\\\|data-theme' /Users/zhengxiaopeng/github/zxpsuper.github.io/docs/.vuepress/styles/index.styl)",
+      "Bash(grep -n '--bg\\\\|--text\\\\|--border\\\\|dark\\\\|html.dark' /Users/zhengxiaopeng/github/zxpsuper.github.io/docs/.vuepress/styles/index.styl)",
+      "Bash(grep -rn '--bg\\\\|--border\\\\|--text\\\\|body.dark\\\\|html.dark' /Users/zhengxiaopeng/github/zxpsuper.github.io/theme-blog/ --include='*.styl' --include='*.css' --include='*.vue')",
+      "Bash(grep -rn '--bg\\\\|--text\\\\|--border' /Users/zhengxiaopeng/github/zxpsuper.github.io/theme-blog/ --include='*.styl' --include='*.css' --include='*.vue')",
+      "Bash(grep -rn '--bg:\\\\|--text:\\\\|--border:\\\\|--header-bg\\\\|body.dark\\\\|\\\\.dark' /Users/zhengxiaopeng/github/zxpsuper.github.io/theme-blog/ --include='*.styl' --include='*.css' --include='*.vue')",
+      "Bash(npx vuepress *)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "WebFetch(domain:api.github.com)"
     ]
   }
 }
